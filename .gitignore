@@ -1,0 +1,25 @@
+# License keys — never commit these
+spark_jsl.json
+license_keys.json
+*.json
+
+# Original patient data (PHI)
+file9.txt
+
+# Virtual environment
+.venv/
+
+# Cached ML models (too large)
+content/
+
+# Executed notebook outputs (contain model output / patient data)
+*_output.ipynb
+
+# macOS
+.DS_Store
+.claude/
+
+# Tutorial / reference notebooks (not part of custom pipeline)
+How_To_Build_Pipeline_Tutorials.ipynb
+NER_DEMOGRAPHICS.ipynb
+00.SparkNLP_for_Healthcare_3h_Notebook.ipynb

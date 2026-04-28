@@ -1,0 +1,2191 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cda:ClinicalDocument xmlns:cda="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3&#13;&#10; CDA.xsd">
+  
+  
+  <cda:realmCode code="US" />
+  
+  <cda:typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  
+  
+  <cda:templateId root="2.16.840.1.113883.10.20.22.1.1" />
+  
+  
+  <cda:templateId root="2.16.840.1.113883.10.20.22.1.2" />
+  
+  <cda:id extension="05397a63-f4f8-42b2-8e10-04476978d35e" root="2.16.840.1.113883.3.72" />
+  
+  <cda:code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34133-9" displayName="Summarization of Episode Note" />
+  
+  <cda:title>Community Health and Hospitals: Health Summary</cda:title>
+  
+  <cda:effectiveTime value="September 2012" />
+  
+  <cda:confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+  
+  <cda:languageCode code="en-US" />
+  
+  <cda:recordTarget>
+    
+    <cda:patientRole>
+      
+      <cda:id extension="1" root="2.16.840.1.113883.4.6" />
+      
+      
+      <cda:id extension="[SSN]" root="2.16.840.1.113883.4.1" />
+      
+      <cda:addr use="HP">
+        
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>Beaverton</cda:city>
+        <cda:state>OR</cda:state>
+        <cda:postalCode>970XX</cda:postalCode>
+        <cda:country>US</cda:country>
+        
+      </cda:addr>
+      
+      <cda:telecom value="tel:[PHONE]" use="HP" />
+      
+      
+      <cda:patient>
+        
+        <cda:name use="L">
+          
+          <cda:given>PT-00001</cda:given>
+          
+          <cda:family />
+        </cda:name>
+        <cda:administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" displayName="Female" />
+        <cda:birthTime value="78 years old" />
+        <cda:maritalStatusCode code="M" displayName="Married" codeSystem="2.16.840.1.113883.5.2" codeSystemName="MaritalStatusCode" />
+        <cda:religiousAffiliationCode code="1013" displayName="Christian (non-Catholic, non-specific)" codeSystemName="HL7 Religious Affiliation " codeSystem="2.16.840.1.113883.5.1076" />
+        
+        <cda:raceCode code="2106-3" displayName="White" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race and Ethnicity - CDC" />
+        <cda:ethnicGroupCode code="2186-5" displayName="Not Hispanic or Latino" codeSystem="2.16.840.1.113883.6.238" codeSystemName="Race and Ethnicity - CDC" />
+        <cda:birthplace>
+          <cda:place>
+            <cda:addr>
+              <cda:city>Beaverton</cda:city>
+              <cda:state>OR</cda:state>
+              <cda:postalCode>970XX</cda:postalCode>
+              <cda:country>US</cda:country>
+            </cda:addr>
+          </cda:place>
+        </cda:birthplace>
+        
+        <cda:languageCommunication>
+          <cda:languageCode code="eng" />
+          <cda:modeCode code="ESP" displayName="Expressed spoken" codeSystem="2.16.840.1.113883.5.60" codeSystemName="LanguageAbilityMode" />
+          <cda:preferenceInd value="true" />
+        </cda:languageCommunication>
+      </cda:patient>
+      <cda:providerOrganization>
+        <cda:id root="1.1.1.1.1.1.1.1.4" />
+        <cda:name>Community Health and Hospitals</cda:name>
+        <cda:telecom use="WP" value="tel:[PHONE]" />
+        <cda:addr>
+          <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+          <cda:city>Portland</cda:city>
+          <cda:state>OR</cda:state>
+          <cda:postalCode>972XX</cda:postalCode>
+          <cda:country>US</cda:country>
+        </cda:addr>
+      </cda:providerOrganization>
+    </cda:patientRole>
+  </cda:recordTarget>
+  <cda:author>
+    <cda:time value="August 2005" />
+    <cda:assignedAuthor>
+      <cda:id extension="111111" root="2.16.840.1.113883.4.6" />
+      <cda:addr>
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>Portland</cda:city>
+        <cda:state>OR</cda:state>
+        <cda:postalCode>972XX</cda:postalCode>
+        <cda:country>US</cda:country>
+      </cda:addr>
+      <cda:telecom use="WP" value="tel:[PHONE]" />
+      <cda:assignedPerson>
+        <cda:name>
+          <cda:prefix>Dr</cda:prefix>
+          <cda:given>Henry</cda:given>
+          <cda:family>Seven</cda:family>
+        </cda:name>
+      </cda:assignedPerson>
+    </cda:assignedAuthor>
+  </cda:author>
+  <cda:dataEnterer>
+    <cda:assignedEntity>
+      <cda:id root="2.16.840.1.113883.4.6" extension="999999943252" />
+      <cda:addr>
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>Portland</cda:city>
+        <cda:state>OR</cda:state>
+        <cda:postalCode>972XX</cda:postalCode>
+        <cda:country>US</cda:country>
+      </cda:addr>
+      <cda:telecom use="WP" value="tel:[PHONE]" />
+      <cda:assignedPerson>
+        <cda:name>
+          <cda:given>Mary</cda:given>
+          <cda:family>McDonald</cda:family>
+        </cda:name>
+      </cda:assignedPerson>
+    </cda:assignedEntity>
+  </cda:dataEnterer>
+  <cda:informant>
+    <cda:assignedEntity>
+      <cda:id extension="KP00017" root="2.16.840.1.113883.19.5" />
+      <cda:addr>
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>Portland</cda:city>
+        <cda:state>OR</cda:state>
+        <cda:postalCode>972XX</cda:postalCode>
+        <cda:country>US</cda:country>
+      </cda:addr>
+      <cda:telecom use="WP" value="tel:[PHONE]" />
+      <cda:assignedPerson>
+        <cda:name>
+          <cda:given>Henry</cda:given>
+          <cda:family>Seven</cda:family>
+        </cda:name>
+      </cda:assignedPerson>
+    </cda:assignedEntity>
+  </cda:informant>
+  <cda:informant>
+    <cda:relatedEntity classCode="PRS">
+      
+      <cda:code code="SPS" displayName="SPOUSE" codeSystem="2.16.840.1.113883.1.11.19563" codeSystemName="Personal Relationship Role Type Value Set" />
+      <cda:relatedPerson>
+        <cda:name>
+          <cda:given>[RELATED</cda:given>
+          <cda:family>PERSON]</cda:family>
+        </cda:name>
+      </cda:relatedPerson>
+    </cda:relatedEntity>
+  </cda:informant>
+  <cda:custodian>
+    <cda:assignedCustodian>
+      <cda:representedCustodianOrganization>
+        <cda:id extension="99999999" root="2.16.840.1.113883.4.6" />
+        <cda:name>Community Health and Hospitals</cda:name>
+        <cda:telecom value="tel:[PHONE]" use="WP" />
+        <cda:addr use="WP">
+          <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+          <cda:city>Portland</cda:city>
+          <cda:state>OR</cda:state>
+          <cda:postalCode>972XX</cda:postalCode>
+          <cda:country>US</cda:country>
+        </cda:addr>
+      </cda:representedCustodianOrganization>
+    </cda:assignedCustodian>
+  </cda:custodian>
+  <cda:informationRecipient>
+    <cda:intendedRecipient>
+      <cda:informationRecipient>
+        <cda:name>
+          <cda:given>[RELATED</cda:given>
+          <cda:family>PERSON]</cda:family>
+        </cda:name>
+      </cda:informationRecipient>
+      <cda:receivedOrganization>
+        <cda:name>Community Health and Hospitals</cda:name>
+      </cda:receivedOrganization>
+    </cda:intendedRecipient>
+  </cda:informationRecipient>
+  <cda:legalAuthenticator>
+    <cda:time value="August 2012" />
+    <cda:signatureCode code="S" />
+    <cda:assignedEntity>
+      <cda:id extension="999999999" root="2.16.840.1.113883.4.6" />
+      <cda:addr>
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>Portland</cda:city>
+        <cda:state>OR</cda:state>
+        <cda:postalCode>972XX</cda:postalCode>
+        <cda:country>US</cda:country>
+      </cda:addr>
+      <cda:telecom use="WP" value="tel:[PHONE]" />
+      <cda:assignedPerson>
+        <cda:name>
+          <cda:given>Henry</cda:given>
+          <cda:family>Seven</cda:family>
+        </cda:name>
+      </cda:assignedPerson>
+    </cda:assignedEntity>
+  </cda:legalAuthenticator>
+  <cda:authenticator>
+    <cda:time value="August 2012" />
+    <cda:signatureCode code="S" />
+    <cda:assignedEntity>
+      <cda:id extension="999999999" root="2.16.840.1.113883.4.6" />
+      <cda:addr>
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>Portland</cda:city>
+        <cda:state>OR</cda:state>
+        <cda:postalCode>972XX</cda:postalCode>
+        <cda:country>US</cda:country>
+      </cda:addr>
+      <cda:telecom use="WP" value="tel:[PHONE]" />
+      <cda:assignedPerson>
+        <cda:name>
+          <cda:given>Henry</cda:given>
+          <cda:family>Seven</cda:family>
+        </cda:name>
+      </cda:assignedPerson>
+    </cda:assignedEntity>
+  </cda:authenticator>
+  <cda:participant typeCode="IND">
+    <cda:associatedEntity classCode="PRS">
+      <cda:code code="GPARNT" displayName="Grand Parent" codeSystem="2.16.840.1.113883.1.11.19563" codeSystemName="Personal Relationship Role Type Value Set" />
+      <cda:addr use="HP">
+        
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>Beaverton</cda:city>
+        <cda:state>OR</cda:state>
+        <cda:postalCode>970XX</cda:postalCode>
+        <cda:country>US</cda:country>
+        
+      </cda:addr>
+      <cda:telecom value="tel:[PHONE]" use="WP" />
+      <cda:associatedPerson>
+        <cda:name>
+          <cda:prefix>Mr.</cda:prefix>
+          <cda:given>[RELATED</cda:given>
+          <cda:family>PERSON]</cda:family>
+        </cda:name>
+      </cda:associatedPerson>
+    </cda:associatedEntity>
+  </cda:participant>
+  <cda:participant typeCode="IND">
+    <cda:associatedEntity classCode="PRS">
+      <cda:code code="SPS" displayName="SPOUSE" codeSystem="2.16.840.1.113883.1.11.19563" codeSystemName="Personal Relationship Role Type Value Set" />
+      <cda:addr use="HP">
+        
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>Beaverton</cda:city>
+        <cda:state>OR</cda:state>
+        <cda:postalCode>970XX</cda:postalCode>
+        <cda:country>US</cda:country>
+        
+      </cda:addr>
+      <cda:telecom value="tel:[PHONE]" use="WP" />
+      <cda:associatedPerson>
+        <cda:name>
+          <cda:prefix>Mr.</cda:prefix>
+          <cda:given>[RELATED</cda:given>
+          <cda:family>PERSON]</cda:family>
+        </cda:name>
+      </cda:associatedPerson>
+    </cda:associatedEntity>
+  </cda:participant>
+  <cda:documentationOf typeCode="DOC">
+    <cda:serviceEvent classCode="PCPR">
+      <cda:code code="233604007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="Pnuemonia" />
+      <cda:effectiveTime>
+        <cda:low value="August 2012" />
+        <cda:high value="August 2012" />
+      </cda:effectiveTime>
+      <cda:performer typeCode="PRF">
+        <cda:functionCode code="PP" displayName="Primary Care Provider" codeSystem="2.16.840.1.113883.12.443" codeSystemName="Provider Role">
+          <cda:originalText>Primary Care Provider</cda:originalText>
+        </cda:functionCode>
+        <cda:time>
+          <cda:low value="August 2012" />
+          <cda:high value="August 2012" />
+        </cda:time>
+        <cda:assignedEntity>
+          <cda:id extension="PseudoMD-1" root="2.16.840.1.113883.4.6" />
+          <cda:code code="208D00000X" displayName="General Practice" codeSystemName="Provider Codes" codeSystem="2.16.840.1.113883.6.101" />
+          <cda:addr>
+            <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+            <cda:city>Portland</cda:city>
+            <cda:state>OR</cda:state>
+            <cda:postalCode>972XX</cda:postalCode>
+            <cda:country>US</cda:country>
+          </cda:addr>
+          <cda:telecom value="tel:[PHONE]" use="WP" />
+          <cda:assignedPerson>
+            <cda:name>
+              <cda:prefix>Dr.</cda:prefix>
+              <cda:given>Henry</cda:given>
+              <cda:family>Seven</cda:family>
+            </cda:name>
+          </cda:assignedPerson>
+          <cda:representedOrganization>
+            <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
+            <cda:name>Community Health and Hospitals</cda:name>
+            <cda:telecom value="tel:[PHONE]" use="WP" />
+            <cda:addr>
+              <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+              <cda:city>Portland</cda:city>
+              <cda:state>OR</cda:state>
+              <cda:postalCode>972XX</cda:postalCode>
+              <cda:country>US</cda:country>
+            </cda:addr>
+          </cda:representedOrganization>
+        </cda:assignedEntity>
+      </cda:performer>
+    </cda:serviceEvent>
+  </cda:documentationOf>
+  <cda:componentOf>
+    <cda:encompassingEncounter>
+      <cda:id extension="1" root="2.16.840.1.113883.4.6" />
+      <cda:code code="233604007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT" displayName="Pnuemonia" />
+      <cda:effectiveTime>
+        <cda:low value="August 2012" />
+        <cda:high value="August 2012" />
+      </cda:effectiveTime>
+      <cda:responsibleParty>
+        <cda:assignedEntity>
+          <cda:id root="2.16.840.1.113883.4.6" />
+          <cda:assignedPerson>
+            <cda:name>
+              <cda:prefix>Dr</cda:prefix>
+              <cda:given>Bob</cda:given>
+              <cda:family>Administrator</cda:family>
+            </cda:name>
+          </cda:assignedPerson>
+        </cda:assignedEntity>
+      </cda:responsibleParty>
+      <cda:location>
+        <cda:healthCareFacility>
+          <cda:id root="2.16.840.1.113883.4.6" />
+        </cda:healthCareFacility>
+      </cda:location>
+    </cda:encompassingEncounter>
+  </cda:componentOf>
+  
+  <cda:component>
+    <cda:structuredBody>
+      
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.6.1" />
+          
+          <cda:code code="48765-2" codeSystem="2.16.840.1.113883.6.1" />
+          <cda:title>ALLERGIES, ADVERSE REACTIONS, ALERTS</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Substance</cda:th>
+                  <cda:th>Reaction</cda:th>
+                  <cda:th>Severity</cda:th>
+                  <cda:th>Status</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="product1">Penicillin G benzathine</cda:content>
+                  </cda:td>
+                  <cda:td>
+                    <cda:content ID="reaction1">Hives</cda:content>
+                  </cda:td>
+                  <cda:td>
+                    <cda:content ID="severity1">Moderate to severe</cda:content>
+                  </cda:td>
+                  <cda:td>Inactive</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="product2">Codeine</cda:content>
+                  </cda:td>
+                  <cda:td>
+                    <cda:content ID="reaction2">Shortness of Breath</cda:content>
+                  </cda:td>
+                  <cda:td>
+                    <cda:content ID="severity2">Moderate</cda:content>
+                  </cda:td>
+                  <cda:td>Active</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="product3">Aspirin</cda:content>
+                  </cda:td>
+                  <cda:td>
+                    <cda:content ID="reaction3">Hives</cda:content>
+                  </cda:td>
+                  <cda:td>
+                    <cda:content ID="severity3">Mild to moderate</cda:content>
+                  </cda:td>
+                  <cda:td>Active</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.30" />
+              
+              <cda:id root="36e3e930-7b14-11db-9fe1-0800200c9a66" extension="1000" />
+              <cda:code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="May 2007" />
+                <cda:high value="August 2012" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.7" />
+                  <cda:id root="4adc1020-7b14-11db-9fe1-0800200c9a66" extension="1001" />
+                  <cda:code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low nullFlavor="UNK" />
+                    <cda:high value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:value xsi:type="CD" code="419511003" displayName="Propensity to adverse reaction to drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                    <cda:originalText>
+                      <cda:reference value="#reaction1" />
+                    </cda:originalText>
+                  </cda:value>
+                  <cda:participant typeCode="CSM">
+                    <cda:participantRole classCode="MANU">
+                      <cda:playingEntity classCode="MMAT">
+                        <cda:code code="7982" displayName="Penicillin G benzathine" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+                          <cda:originalText>
+                            <cda:reference value="#product1" />
+                          </cda:originalText>
+                        </cda:code>
+                      </cda:playingEntity>
+                    </cda:participantRole>
+                  </cda:participant>
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.28" />
+                      
+                      <cda:code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CE" code="73425007" codeSystem="2.16.840.1.113883.6.96" displayName="Inactive" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="MFST" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.9" />
+                      
+                      <cda:id root="4adc1020-7b14-11db-9fe1-0800200c9a64" extension="1002" />
+                      <cda:code nullFlavor="NA" />
+                      <cda:text>
+                        <cda:reference value="#reaction1" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime>
+                        <cda:low value="May 2007" />
+                      </cda:effectiveTime>
+                      <cda:value xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96" displayName="Hives" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.8" />
+                      
+                      <cda:code xsi:type="CE" code="SEV" displayName="Severity Observation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" />
+                      <cda:text>
+                        <cda:reference value="#severity1" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CD" code="371924009" displayName="Moderate to severe" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.30" />
+              
+              <cda:id root="36e3e930-7b14-11db-9fe1-0800200c9a66" extension="1003" />
+              <cda:code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts" />
+              <cda:statusCode code="active" />
+              <cda:effectiveTime>
+                <cda:low value="May 2006" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.7" />
+                  <cda:id root="4adc1020-7b14-11db-9fe1-0800200c9a66" extension="1004" />
+                  <cda:code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="May 2006" />
+                  </cda:effectiveTime>
+                  <cda:value xsi:type="CD" code="419511003" displayName="Propensity to adverse reaction to drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                    <cda:originalText>
+                      <cda:reference value="#reaction2" />
+                    </cda:originalText>
+                  </cda:value>
+                  <cda:participant typeCode="CSM">
+                    <cda:participantRole classCode="MANU">
+                      <cda:playingEntity classCode="MMAT">
+                        <cda:code code="2670" displayName="Codeine" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+                          <cda:originalText>
+                            <cda:reference value="#product2" />
+                          </cda:originalText>
+                        </cda:code>
+                      </cda:playingEntity>
+                    </cda:participantRole>
+                  </cda:participant>
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.28" />
+                      
+                      <cda:code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CE" code="55561003" codeSystem="2.16.840.1.113883.6.96" displayName="Active" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="MFST" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.9" />
+                      
+                      <cda:id root="4adc1020-7b14-11db-9fe1-0800200c9a64" extension="1005" />
+                      <cda:code nullFlavor="NA" />
+                      <cda:text>
+                        <cda:reference value="#reaction2" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime>
+                        <cda:low value="May 2006" />
+                      </cda:effectiveTime>
+                      <cda:value xsi:type="CD" code="267036007" codeSystem="2.16.840.1.113883.6.96" displayName="Shortness of Breath" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.8" />
+                      
+                      <cda:code xsi:type="CE" code="SEV" displayName="Severity Observation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" />
+                      <cda:text>
+                        <cda:reference value="#severity2" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CD" code="6736007" displayName="Moderate" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.30" />
+              
+              <cda:id root="36e3e930-7b14-11db-9fe1-0800200c9a66" extension="1006" />
+              <cda:code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts" />
+              <cda:statusCode code="active" />
+              <cda:effectiveTime>
+                <cda:low value="May 2008" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.7" />
+                  <cda:id root="4adc1020-7b14-11db-9fe1-0800200c9a66" extension="1007" />
+                  <cda:code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="May 2008" />
+                  </cda:effectiveTime>
+                  <cda:value xsi:type="CD" code="419511003" displayName="Propensity to adverse reaction to drug" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT">
+                    <cda:originalText>
+                      <cda:reference value="#reaction3" />
+                    </cda:originalText>
+                  </cda:value>
+                  <cda:participant typeCode="CSM">
+                    <cda:participantRole classCode="MANU">
+                      <cda:playingEntity classCode="MMAT">
+                        <cda:code code="1191" displayName="Aspirin" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm">
+                          <cda:originalText>
+                            <cda:reference value="#product3" />
+                          </cda:originalText>
+                        </cda:code>
+                      </cda:playingEntity>
+                    </cda:participantRole>
+                  </cda:participant>
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.28" />
+                      
+                      <cda:code code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CE" code="55561003" codeSystem="2.16.840.1.113883.6.96" displayName="Active" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="MFST" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.9" />
+                      
+                      <cda:id root="4adc1020-7b14-11db-9fe1-0800200c9a64" extension="1008" />
+                      <cda:code nullFlavor="NA" />
+                      <cda:text>
+                        <cda:reference value="#reaction3" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime>
+                        <cda:low value="May 2008" />
+                      </cda:effectiveTime>
+                      <cda:value xsi:type="CD" code="247472004" codeSystem="2.16.840.1.113883.6.96" displayName="Hives" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.8" />
+                      
+                      <cda:code xsi:type="CE" code="SEV" displayName="Severity Observation" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode" />
+                      <cda:text>
+                        <cda:reference value="#severity3" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CD" code="371923003" displayName="Mild to moderate" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.22.1" />
+          
+          <cda:code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+          <cda:title>ENCOUNTERS</cda:title>
+          <cda:text>Encounter Performer Location Date Pnuemonia Dr Henry Seven Community Health and Hospitals August 2012</cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:encounter classCode="ENC" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              
+              
+              <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4de8" extension="2000" />
+              <cda:code code="99222" displayName="InPatient Admission" codeSystemName="CPT" codeSystem="2.16.840.1.113883.6.12" codeSystemVersion="4">
+                <cda:originalText>Mild Fever<cda:reference value="#Encounter1" /></cda:originalText>
+              </cda:code>
+              <cda:effectiveTime value="August 2012" />
+              <cda:performer>
+                <cda:assignedEntity>
+                  <cda:id root="2a620155-9d11-439e-92a3-5d9815ff4de8" extension="2001" />
+                  <cda:code code="59058001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="General Physician" />
+                </cda:assignedEntity>
+              </cda:performer>
+              <cda:participant typeCode="LOC">
+                <cda:participantRole classCode="SDLOC">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.32" />
+                  
+                  <cda:code code="1160-1" codeSystem="2.16.840.1.113883.6.259" codeSystemName="HealthcareServiceLocation" displayName="Urgent Care Center" />
+                  <cda:addr>
+                    <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                    <cda:city>Portland</cda:city>
+                    <cda:state>OR</cda:state>
+                    <cda:postalCode>972XX</cda:postalCode>
+                    <cda:country>US</cda:country>
+                  </cda:addr>
+                  <cda:telecom nullFlavor="UNK" />
+                  <cda:playingEntity classCode="PLC">
+                    <cda:name>Community Health and Hospitals</cda:name>
+                  </cda:playingEntity>
+                </cda:participantRole>
+              </cda:participant>
+              <cda:entryRelationship typeCode="RSON">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.19" />
+                  <cda:id root="db734647-fc99-424c-a864-7e3cda82e703" extension="45665" />
+                  <cda:code code="404684003" displayName="Finding" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:value xsi:type="CD" code="233604007" displayName="Pneumonia" codeSystem="2.16.840.1.113883.6.96" />
+                </cda:observation>
+              </cda:entryRelationship>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="false">
+                <cda:act classCode="ACT" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.80" />
+                  <cda:id root="5a784260-6856-4f38-9638-80c751aff2fb" extension="2002" />
+                  <cda:code xsi:type="CE" code="29308-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="ENCOUNTER DIAGNOSIS" />
+                  <cda:statusCode code="active" />
+                  <cda:effectiveTime>
+                    <cda:low value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="false">
+                    <cda:observation classCode="OBS" moodCode="EVN" negationInd="false">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                      
+                      <cda:id root="ab1791b0-5c71-11db-b0de-0800200c9a66" extension="2003" />
+                      <cda:code code="409586006" codeSystem="2.16.840.1.113883.6.96" displayName="Complaint" />
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime>
+                        <cda:low value="August 2012" />
+                      </cda:effectiveTime>
+                      <cda:value xsi:type="CD" code="233604007" codeSystem="2.16.840.1.113883.6.96" displayName="Pneumonia" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                </cda:act>
+              </cda:entryRelationship>
+            </cda:encounter>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.2.1" />
+          
+          
+          <cda:code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of immunizations" />
+          <cda:title>IMMUNIZATIONS</cda:title>
+          <cda:text>
+            <cda:content ID="immunSect" />
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Vaccine</cda:th>
+                  <cda:th>Date</cda:th>
+                  <cda:th>Status</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="immun1" />Pneumococcal (Pneumovax) Vaccine</cda:td>
+                  <cda:td>August 2012</cda:td>
+                  <cda:td>Completed</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="immun2" />Influenza virus vaccine, IM</cda:td>
+                  <cda:td>May 2012</cda:td>
+                  <cda:td>Completed</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="immun4" />Tetanus and diphtheria toxoids,
+										IM</cda:td>
+                  <cda:td>Apr 2012</cda:td>
+                  <cda:td>Completed</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.52" />
+              
+              <cda:id root="e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92" extension="3000" />
+              <cda:text>
+                <cda:reference value="#immun1" />
+              </cda:text>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS" value="August 2012" />
+              <cda:doseQuantity value="0.5" unit="ml" />
+              <cda:consumable>
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.54" />
+                  
+                  <cda:manufacturedMaterial>
+                    <cda:code code="33" codeSystem="2.16.840.1.113883.12.292" displayName="pneumococcal polysaccharide vaccine, 23 valent" codeSystemName="CVX">
+                      <cda:originalText>Pnuemococcal polysaccharide vaccine, 23
+												valent (Pnuemovax)</cda:originalText>
+                    </cda:code>
+                  </cda:manufacturedMaterial>
+                  <cda:manufacturerOrganization>
+                    <cda:name>Merck Research Laboratories</cda:name>
+                  </cda:manufacturerOrganization>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                <cda:act classCode="ACT" moodCode="INT">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.20" />
+                  
+                  <cda:code xsi:type="CE" code="171044003" codeSystem="2.16.840.1.113883.6.96" displayName="immunization education" />
+                  <cda:text>
+                    <cda:reference value="#immunSect" />Injection site reactions
+										(e.g., pain, redness, swelling, hard lump), muscle/joint
+										aches, or fever may occur. Ask your doctor whether you
+										should take a fever/pain reducer (e.g., acetaminophen) to
+										help treat these symptoms. Nausea and vomiting may also
+										occur. If any of these effects persist or worsen, tell your
+										doctor or pharmacist promptly.</cda:text>
+                  <cda:statusCode code="completed" />
+                </cda:act>
+              </cda:entryRelationship>
+            </cda:substanceAdministration>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.52" />
+              
+              <cda:id root="e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92" extension="3001" />
+              <cda:text>
+                <cda:reference value="#immun2" />
+              </cda:text>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS" value="May 2012" />
+              <cda:doseQuantity value="50" unit="mcg" />
+              <cda:consumable>
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.54" />
+                  
+                  <cda:manufacturedMaterial>
+                    <cda:code code="88" codeSystem="2.16.840.1.113883.12.292" displayName="Influenza virus vaccine" codeSystemName="CVX">
+                      <cda:originalText>Influenza virus vaccine</cda:originalText>
+                    </cda:code>
+                  </cda:manufacturedMaterial>
+                  <cda:manufacturerOrganization>
+                    <cda:name>Health LS - Immuno Inc.</cda:name>
+                  </cda:manufacturerOrganization>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                <cda:act classCode="ACT" moodCode="INT">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.20" />
+                  
+                  <cda:code xsi:type="CE" code="171044003" codeSystem="2.16.840.1.113883.6.96" displayName="immunization education" />
+                  <cda:text>
+                    <cda:reference value="#immunSect" />Possible flu-like symptoms
+										for three days.</cda:text>
+                  <cda:statusCode code="completed" />
+                </cda:act>
+              </cda:entryRelationship>
+            </cda:substanceAdministration>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.52" />
+              
+              <cda:id root="e6f1ba43-c0ed-4b9b-9f12-f435d8ad8f92" extension="3002" />
+              <cda:text>
+                <cda:reference value="#immun4" />
+              </cda:text>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS" value="April 2012" />
+              <cda:doseQuantity value="50" unit="mcg" />
+              <cda:consumable>
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.54" />
+                  
+                  <cda:manufacturedMaterial>
+                    <cda:code code="103" codeSystem="2.16.840.1.113883.12.292" displayName="Tetanus and diphtheria toxoids - preservative free" codeSystemName="CVX">
+                      <cda:originalText>Tetanus and diphtheria toxoids -
+												preservative free</cda:originalText>
+                    </cda:code>
+                  </cda:manufacturedMaterial>
+                  <cda:manufacturerOrganization>
+                    <cda:name>Health LS - Immuno Inc.</cda:name>
+                  </cda:manufacturerOrganization>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                <cda:act classCode="ACT" moodCode="INT">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.20" />
+                  
+                  <cda:code xsi:type="CE" code="171044003" codeSystem="2.16.840.1.113883.6.96" displayName="immunization education" />
+                  <cda:text>
+                    <cda:reference value="#immunSect" />Possible flu-like symptoms
+										for three days.</cda:text>
+                  <cda:statusCode code="completed" />
+                </cda:act>
+              </cda:entryRelationship>
+            </cda:substanceAdministration>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.1.1" />
+          <cda:code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE" />
+          <cda:title>MEDICATIONS</cda:title>
+          <cda:text>Medication Directions Start Date End Date Status Indications Fill Instructions Ciprofloxacin 500mg oral tabs, 1 tab by mouth every 12 hours for 3
+										days August 2012 August 2012 Completed Pneumonia (233604007 SNOMED CT) Generic Substitition Allowed Albuterol 0.09 MG/ACTUAT inhalant
+											solution 0.09 MG/ACTUAT inhalant solution, 2 puffs every 6 hours as
+										needed for shortness of breath, as needed for wheezing August 2012 August 2012 Completed Asthma (195967001 SNOMED CT) Generic Substitition Allowed Label In Spanish Repeat: 1</cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              
+              <cda:id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66" extension="4000" />
+              <cda:text>
+                <cda:reference value="#Med2" />Ciprofloxacin</cda:text>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS">
+                <cda:low value="August 2012" />
+                <cda:high value="August 2012" />
+              </cda:effectiveTime>
+              <cda:effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+                <cda:period value="12" unit="h" />
+              </cda:effectiveTime>
+              <cda:routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="ORAL" />
+              <cda:doseQuantity value="500" unit="mg" />
+              <cda:administrationUnitCode code="C48542" displayName="TABLET" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" />
+              <cda:consumable>
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" extension="4001" />
+                  <cda:manufacturedMaterial>
+                    <cda:code code="309309" codeSystem="2.16.840.1.113883.6.88" displayName="Ciprofloxacin 500 MG Oral Tablet">
+                      <cda:originalText>
+                        <cda:reference value="#Med2" />
+                      </cda:originalText>
+                    </cda:code>
+                  </cda:manufacturedMaterial>
+                  <cda:manufacturerOrganization>
+                    <cda:name>Bayer A.G.</cda:name>
+                  </cda:manufacturerOrganization>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+              <cda:performer>
+                <cda:assignedEntity>
+                  <cda:id nullFlavor="NI" />
+                  <cda:addr nullFlavor="UNK" />
+                  <cda:telecom nullFlavor="UNK" />
+                  <cda:representedOrganization>
+                    <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
+                    <cda:name>Community Health and Hospitals</cda:name>
+                    <cda:telecom nullFlavor="UNK" />
+                    <cda:addr nullFlavor="UNK" />
+                  </cda:representedOrganization>
+                </cda:assignedEntity>
+              </cda:performer>
+              <cda:entryRelationship typeCode="RSON">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.19" />
+                  <cda:id root="db734647-fc99-424c-a864-7e3cda82e703" extension="45665" />
+                  <cda:code code="404684003" displayName="Finding" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low nullFlavor="UNK" />
+                    <cda:high value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:value xsi:type="CD" code="233604007" displayName="Pneumonia" codeSystem="2.16.840.1.113883.6.96" />
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:substanceAdministration>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" />
+              
+              <cda:id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66" extension="4002" />
+              <cda:text>
+                <cda:reference value="#Med1" />0.09 MG/ACTUAT inhalant solution, 2 puffs </cda:text>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS">
+                <cda:low value="August 2012" />
+                <cda:high value="August 2012" />
+              </cda:effectiveTime>
+              <cda:effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+                <cda:period value="6" unit="h" />
+              </cda:effectiveTime>
+              <cda:routeCode code="C38216" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="RESPIRATORY (INHALATION)" />
+              <cda:doseQuantity value="0.09" unit="mg/actuat" />
+              <cda:rateQuantity value="90" unit="ml/min" />
+              <cda:administrationUnitCode code="C42944" displayName="INHALANT" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" />
+              <cda:consumable>
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                  <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" extension="4003" />
+                  <cda:manufacturedMaterial>
+                    <cda:code code="573621" codeSystem="2.16.840.1.113883.6.88" displayName="Albuterol 0.09 MG/ACTUAT [Proventil]">
+                      <cda:originalText>
+                        <cda:reference value="#Med1" />
+                      </cda:originalText>
+                    </cda:code>
+                  </cda:manufacturedMaterial>
+                  <cda:manufacturerOrganization>
+                    <cda:name>Medication Factory Inc.</cda:name>
+                  </cda:manufacturerOrganization>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+              <cda:performer>
+                <cda:assignedEntity>
+                  <cda:id nullFlavor="NI" />
+                  <cda:addr nullFlavor="UNK" />
+                  <cda:telecom nullFlavor="UNK" />
+                  <cda:representedOrganization>
+                    <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
+                    <cda:name>Community Health and Hospitals</cda:name>
+                    <cda:telecom nullFlavor="UNK" />
+                    <cda:addr nullFlavor="UNK" />
+                  </cda:representedOrganization>
+                </cda:assignedEntity>
+              </cda:performer>
+              <cda:participant typeCode="CSM">
+                <cda:participantRole classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.24" />
+                  <cda:code code="412307009" displayName="drug vehicle" codeSystem="2.16.840.1.113883.6.96" />
+                  <cda:playingEntity classCode="MMAT">
+                    <cda:code code="324049" displayName="Aerosol" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                    <cda:name>Aerosol</cda:name>
+                  </cda:playingEntity>
+                </cda:participantRole>
+              </cda:participant>
+              <cda:entryRelationship typeCode="RSON">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.19" />
+                  <cda:id root="db734647-fc99-424c-a864-7e3cda82e703" extension="45665" />
+                  <cda:code code="404684003" displayName="Finding" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low nullFlavor="UNK" />
+                    <cda:high value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:value xsi:type="CD" code="195967001" displayName="Asthma" codeSystem="2.16.840.1.113883.6.96" />
+                </cda:observation>
+              </cda:entryRelationship>
+              <cda:entryRelationship typeCode="REFR">
+                <cda:supply classCode="SPLY" moodCode="INT">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                  <cda:id nullFlavor="NI" />
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime xsi:type="IVL_TS">
+                    <cda:low value="August 2012" />
+                    <cda:high value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:repeatNumber value="1" />
+                  <cda:quantity value="75" />
+                  <cda:product>
+                    <cda:manufacturedProduct classCode="MANU">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" extension="4004" />
+                      <cda:manufacturedMaterial>
+                        <cda:code code="573621" codeSystem="2.16.840.1.113883.6.88" displayName="Albuterol 0.09 MG/ACTUAT [Proventil]">
+                          <cda:originalText>
+                            <cda:reference value="#Med1" />
+                          </cda:originalText>
+                        </cda:code>
+                      </cda:manufacturedMaterial>
+                      <cda:manufacturerOrganization>
+                        <cda:name>Medication Factory Inc.</cda:name>
+                      </cda:manufacturerOrganization>
+                    </cda:manufacturedProduct>
+                  </cda:product>
+                  <cda:performer>
+                    <cda:assignedEntity>
+                      <cda:id extension="2981823" root="2.16.840.1.113883.19.5.9999.456" />
+                      <cda:addr>
+                        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                        <cda:city>Portland</cda:city>
+                        <cda:state>OR</cda:state>
+                        <cda:postalCode>972XX</cda:postalCode>
+                        <cda:country>US</cda:country>
+                      </cda:addr>
+                    </cda:assignedEntity>
+                  </cda:performer>
+                  <cda:author>
+                    <cda:time nullFlavor="UNK" />
+                    <cda:assignedAuthor>
+                      <cda:id root="2a620155-9d11-439e-92b3-5d9815fe4de8" extension="4005" />
+                      <cda:addr nullFlavor="UNK" />
+                      <cda:telecom nullFlavor="UNK" />
+                      <cda:assignedPerson>
+                        <cda:name>
+                          <cda:prefix>Dr.</cda:prefix>
+                          <cda:given>Henry</cda:given>
+                          <cda:family>Seven</cda:family>
+                        </cda:name>
+                      </cda:assignedPerson>
+                    </cda:assignedAuthor>
+                  </cda:author>
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:act classCode="ACT" moodCode="INT">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.20" />
+                      
+                      <cda:code xsi:type="CE" code="409073007" codeSystem="2.16.840.1.113883.6.96" displayName="instruction" />
+                      <cda:text>label in spanish</cda:text>
+                      <cda:statusCode code="completed" />
+                    </cda:act>
+                  </cda:entryRelationship>
+                </cda:supply>
+              </cda:entryRelationship>
+              <cda:entryRelationship typeCode="REFR">
+                <cda:supply classCode="SPLY" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.18" />
+                  
+                  <cda:id root="1.2.3.4.56789.1" extension="cb734647-fc99-424c-a864-7e3cda82e704" />
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime value="August 2012" />
+                  <cda:repeatNumber value="1" />
+                  <cda:product>
+                    <cda:manufacturedProduct classCode="MANU">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" extension="4006" />
+                      <cda:manufacturedMaterial>
+                        <cda:code code="573621" codeSystem="2.16.840.1.113883.6.88" displayName="Albuterol 0.09 MG/ACTUAT [Proventil]">
+                          <cda:originalText>
+                            <cda:reference value="#Med1" />
+                          </cda:originalText>
+                        </cda:code>
+                      </cda:manufacturedMaterial>
+                      <cda:manufacturerOrganization>
+                        <cda:name>Medication Factory Inc.</cda:name>
+                      </cda:manufacturerOrganization>
+                    </cda:manufacturedProduct>
+                  </cda:product>
+                  <cda:performer>
+                    <cda:time nullFlavor="UNK" />
+                    <cda:assignedEntity>
+                      <cda:id root="2.16.840.1.113883.19.5.9999.456" extension="2981823" />
+                      <cda:addr>
+                        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                        <cda:city>Portland</cda:city>
+                        <cda:state>OR</cda:state>
+                        <cda:postalCode>972XX</cda:postalCode>
+                        <cda:country>US</cda:country>
+                      </cda:addr>
+                      <cda:telecom nullFlavor="UNK" />
+                      <cda:assignedPerson>
+                        <cda:name>
+                          <cda:prefix>Dr.</cda:prefix>
+                          <cda:given>Henry</cda:given>
+                          <cda:family>Seven</cda:family>
+                        </cda:name>
+                      </cda:assignedPerson>
+                      <cda:representedOrganization>
+                        <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
+                        <cda:name>Community Health and Hospitals</cda:name>
+                        <cda:telecom nullFlavor="UNK" />
+                        <cda:addr nullFlavor="UNK" />
+                      </cda:representedOrganization>
+                    </cda:assignedEntity>
+                  </cda:performer>
+                </cda:supply>
+              </cda:entryRelationship>
+              <cda:precondition typeCode="PRCN">
+                <cda:templateId root="2.16.840.1.113883.10.20.22.4.25" />
+                <cda:criterion>
+                  <cda:code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                  <cda:value xsi:type="CE" code="56018004" codeSystem="2.16.840.1.113883.6.96" displayName="Wheezing" />
+                </cda:criterion>
+              </cda:precondition>
+            </cda:substanceAdministration>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.10" />
+          
+          <cda:code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment plan" />
+          <cda:title>CARE PLAN</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Planned Activity</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td> Goal: Avoidance of exacerbations and hospitalizations
+										through effective disease management. <cda:br /> Instructions:
+										<cda:br /> Asthma education provided at discharge.<cda:br /> Sputum
+										Culture on August 16th. <cda:br /> Follow-up with Dr. George
+										Potomac on August 20th. <cda:br /> Chest X-Ray on August 26th.
+									</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry>
+            <cda:encounter moodCode="INT" classCode="ENC">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.40" />
+              
+              <cda:id root="9a6d1bac-17d3-4195-89a4-1121bc809b4d" extension="5000" />
+              <cda:code code="99241" displayName="Office consultation - 15 minutes" codeSystemName="CPT" codeSystem="2.16.840.1.113883.6.12" />
+              <cda:effectiveTime>
+                <cda:center value="20120820" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                <cda:act classCode="ACT" moodCode="INT">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.20" />
+                  
+                  <cda:code xsi:type="CE" code="409073007" codeSystem="2.16.840.1.113883.6.96" displayName="instruction" />
+                  <cda:text>Follow up with Dr George Potomac for Asthma</cda:text>
+                  <cda:statusCode code="completed" />
+                </cda:act>
+              </cda:entryRelationship>
+            </cda:encounter>
+          </cda:entry>
+          <cda:entry>
+            <cda:procedure moodCode="RQO" classCode="PROC">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.41" />
+              
+              <cda:id root="9a6d1bac-17d3-4195-89c4-1121bc809b5a" extension="5001" />
+              <cda:code code="168731009" codeSystem="2.16.840.1.113883.6.96" displayName="Chest X-Ray" codeSystemName="SNOMED-CT" />
+              <cda:statusCode code="new" />
+              <cda:effectiveTime>
+                <cda:center value="20120826" />
+              </cda:effectiveTime>
+            </cda:procedure>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:observation classCode="OBS" moodCode="RQO">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.44" />
+              
+              <cda:id root="9a6d1bac-17d3-4195-89a4-1121bc809b4a" extension="5002" />
+              <cda:code code="624-7" codeSystem="2.16.840.1.113883.6.1" displayName="Sputum Culture" />
+              <cda:statusCode code="new" />
+              <cda:effectiveTime>
+                <cda:center value="20120820" />
+              </cda:effectiveTime>
+            </cda:observation>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.11.1" />
+          
+          
+          <cda:code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="10183-2" displayName=" HOSPITAL DISCHARGE MEDICATIONS " />
+          <cda:title>HOSPITAL DISCHARGE MEDICATIONS</cda:title>
+          <cda:text>Medication Directions Start Date Status Indications Fill Instructions Ciprofloxacin 500mg oral tabs, 1 tab by mouth every 12 hours for 3
+										days August 2012 Active Pneumonia (233604007 SNOMED CT) Generic Substitition Allowed 120 ACTUAT Fluticasone propionate 0.11
+											MG/ACTUAT Metered Dose Inhaler 0.11 MG/ACTUAT Metered Dose Once
+											Daily August 2012 Active Asthma (195967001 SNOMED CT) -- Wheezing Generic Substitition
+											Allowed</cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.35" />
+              <cda:id root="5a784260-6856-4f38-9638-80c751aff2fb" extension="600999" />
+              <cda:code code="10183-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge medication" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="August 2012" />
+                <cda:high value="August 2012" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ">
+                <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" />
+                  
+                  <cda:id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66" extension="6000" />
+                  <cda:text>
+                    <cda:reference value="#DM2" />Ciprofloxacin</cda:text>
+                  <cda:statusCode code="active" />
+                  <cda:effectiveTime xsi:type="IVL_TS">
+                    <cda:low value="August 2012" />
+                    <cda:high value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+                    <cda:period value="12" unit="h" />
+                  </cda:effectiveTime>
+                  <cda:routeCode code="C38288" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="ORAL" />
+                  <cda:doseQuantity value="500" unit="mg" />
+                  <cda:administrationUnitCode code="C42744" displayName="ORAL" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" />
+                  <cda:consumable>
+                    <cda:manufacturedProduct classCode="MANU">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" extension="6001" />
+                      <cda:manufacturedMaterial>
+                        <cda:code code="309309" codeSystem="2.16.840.1.113883.6.88" displayName="Ciprofloxacin 500 MG Oral Tablet">
+                          <cda:originalText>
+                            <cda:reference value="#DM2" />
+                          </cda:originalText>
+                        </cda:code>
+                      </cda:manufacturedMaterial>
+                      <cda:manufacturerOrganization>
+                        <cda:name>Bayer A.G.</cda:name>
+                      </cda:manufacturerOrganization>
+                    </cda:manufacturedProduct>
+                  </cda:consumable>
+                  <cda:performer>
+                    <cda:assignedEntity>
+                      <cda:id nullFlavor="NI" />
+                      <cda:addr nullFlavor="UNK" />
+                      <cda:telecom nullFlavor="UNK" />
+                      <cda:representedOrganization>
+                        <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
+                        <cda:name>Community Health and Hospitals</cda:name>
+                        <cda:telecom nullFlavor="UNK" />
+                        <cda:addr nullFlavor="UNK" />
+                      </cda:representedOrganization>
+                    </cda:assignedEntity>
+                  </cda:performer>
+                  <cda:participant typeCode="CSM">
+                    <cda:participantRole classCode="MANU">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.24" />
+                      <cda:code code="412307009" displayName="drug vehicle" codeSystem="2.16.840.1.113883.6.96" />
+                      <cda:playingEntity classCode="MMAT">
+                        <cda:code code="10311" displayName="Tablet" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                        <cda:name>Tablet</cda:name>
+                      </cda:playingEntity>
+                    </cda:participantRole>
+                  </cda:participant>
+                  <cda:entryRelationship typeCode="RSON">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.19" />
+                      <cda:id root="db734647-fc99-424c-a864-7e3cda82e703" extension="45665" />
+                      <cda:code code="404684003" displayName="Finding" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime>
+                        <cda:low nullFlavor="UNK" />
+                        <cda:high value="August 2012" />
+                      </cda:effectiveTime>
+                      <cda:value xsi:type="CD" code="233604007" displayName="Pneumonia" codeSystem="2.16.840.1.113883.6.96" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                </cda:substanceAdministration>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.35" />
+              <cda:id root="5a784260-6856-4f38-9638-80c751aff2fb" extension="6001" />
+              <cda:code code="10183-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge medication" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="August 2012" />
+                <cda:high value="August 2012" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ">
+                <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" />
+                  
+                  <cda:id root="cdbd33f0-6cde-11db-9fe1-0800200c9a66" />
+                  <cda:text>
+                    <cda:reference value="#DM1" />0.11 MG/ACTUAT Metered Dose Once
+										Daily </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime xsi:type="IVL_TS">
+                    <cda:low value="August 2012" />
+                    <cda:high value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:effectiveTime xsi:type="PIVL_TS" institutionSpecified="true" operator="A">
+                    <cda:period value="24" unit="h" />
+                  </cda:effectiveTime>
+                  <cda:routeCode code="C38216" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" displayName="RESPIRATORY (INHALATION)" />
+                  <cda:doseQuantity value="1" unit="mg/actuat" />
+                  <cda:rateQuantity value="110" unit="ml/min" />
+                  <cda:maxDoseQuantity nullFlavor="UNK">
+                    <cda:numerator nullFlavor="UNK" />
+                    <cda:denominator nullFlavor="UNK" />
+                  </cda:maxDoseQuantity>
+                  <cda:administrationUnitCode code="C42944" displayName="INHALANT" codeSystem="2.16.840.1.113883.3.26.1.1" codeSystemName="NCI Thesaurus" />
+                  <cda:consumable>
+                    <cda:manufacturedProduct classCode="MANU">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                      <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" />
+                      <cda:manufacturedMaterial>
+                        <cda:code code="896001" codeSystem="2.16.840.1.113883.6.88" displayName="120 ACTUAT Fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler">
+                          <cda:originalText>
+                            <cda:reference value="#DM" />
+                          </cda:originalText>
+                          <cda:translation code="896001" displayName="120 ACTUAT Fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                        </cda:code>
+                      </cda:manufacturedMaterial>
+                      <cda:manufacturerOrganization>
+                        <cda:name>Medication Factory Inc.</cda:name>
+                      </cda:manufacturerOrganization>
+                    </cda:manufacturedProduct>
+                  </cda:consumable>
+                  <cda:performer>
+                    <cda:assignedEntity>
+                      <cda:id nullFlavor="NI" />
+                      <cda:addr nullFlavor="UNK" />
+                      <cda:telecom nullFlavor="UNK" />
+                      <cda:representedOrganization>
+                        <cda:id root="2.16.840.1.113883.19.5.9999.1395" />
+                        <cda:name>Community Health and Hospitals</cda:name>
+                        <cda:telecom nullFlavor="UNK" />
+                        <cda:addr nullFlavor="UNK" />
+                      </cda:representedOrganization>
+                    </cda:assignedEntity>
+                  </cda:performer>
+                  <cda:participant typeCode="CSM">
+                    <cda:participantRole classCode="MANU">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.24" />
+                      <cda:code code="412307009" displayName="drug vehicle" codeSystem="2.16.840.1.113883.6.96" />
+                      <cda:playingEntity classCode="MMAT">
+                        <cda:code code="324049" displayName="Aerosol" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                        <cda:name>Aerosol</cda:name>
+                      </cda:playingEntity>
+                    </cda:participantRole>
+                  </cda:participant>
+                  <cda:entryRelationship typeCode="RSON">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.19" />
+                      <cda:id root="db734647-fc99-424c-a864-7e3cda82e703" extension="45665" />
+                      <cda:code code="404684003" displayName="Finding" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime>
+                        <cda:low value="January 2011" />
+                      </cda:effectiveTime>
+                      <cda:value xsi:type="CD" code="195967001" displayName="Asthma" codeSystem="2.16.840.1.113883.6.96" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="REFR">
+                    <cda:supply classCode="SPLY" moodCode="INT">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.17" />
+                      <cda:id nullFlavor="NI" />
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime xsi:type="IVL_TS">
+                        <cda:low value="August 2012" />
+                        <cda:high nullFlavor="UNK" />
+                      </cda:effectiveTime>
+                      <cda:repeatNumber value="1" />
+                      <cda:quantity value="75" />
+                      <cda:product>
+                        <cda:manufacturedProduct classCode="MANU">
+                          <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                          <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" extension="6010" />
+                          <cda:manufacturedMaterial>
+                            <cda:code code="896001" codeSystem="2.16.840.1.113883.6.88" displayName="120 ACTUAT Fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler">
+                              <cda:originalText>
+                                <cda:reference value="#DM" />
+                              </cda:originalText>
+                              <cda:translation code="896001" displayName="120 ACTUAT Fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                            </cda:code>
+                          </cda:manufacturedMaterial>
+                          <cda:manufacturerOrganization>
+                            <cda:name>Medication Factory Inc.</cda:name>
+                          </cda:manufacturerOrganization>
+                        </cda:manufacturedProduct>
+                      </cda:product>
+                      <cda:performer>
+                        <cda:assignedEntity>
+                          <cda:id extension="2981825" root="2.16.840.1.113883.19.5.9999.456" />
+                          <cda:addr>
+                            <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                            <cda:city>Portland</cda:city>
+                            <cda:state>OR</cda:state>
+                            <cda:postalCode>972XX</cda:postalCode>
+                            <cda:country>US</cda:country>
+                          </cda:addr>
+                        </cda:assignedEntity>
+                      </cda:performer>
+                      <cda:author>
+                        <cda:time nullFlavor="UNK" />
+                        <cda:assignedAuthor>
+                          <cda:id root="2a620155-9d11-439e-92b3-5d9815fe4de8" />
+                          <cda:addr nullFlavor="UNK" />
+                          <cda:telecom nullFlavor="UNK" />
+                          <cda:assignedPerson>
+                            <cda:name>
+                              <cda:prefix>Dr.</cda:prefix>
+                              <cda:given>Henry</cda:given>
+                              <cda:family>Seven</cda:family>
+                            </cda:name>
+                          </cda:assignedPerson>
+                        </cda:assignedAuthor>
+                      </cda:author>
+                      <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                        <cda:act classCode="ACT" moodCode="INT">
+                          <cda:templateId root="2.16.840.1.113883.10.20.22.4.20" />
+                          
+                          <cda:code xsi:type="CE" code="409073007" codeSystem="2.16.840.1.113883.6.96" displayName="instruction" />
+                          <cda:text>
+                            <cda:reference value="#FillIns_DM" />Generic
+												Substitution Allowed</cda:text>
+                          <cda:statusCode code="completed" />
+                        </cda:act>
+                      </cda:entryRelationship>
+                    </cda:supply>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="REFR">
+                    <cda:supply classCode="SPLY" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.18" />
+                      
+                      <cda:id root="1.2.3.4.56789.1" extension="cb734647-fc99-424c-a864-7e3cda82e704" />
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime value="August 2012" />
+                      <cda:repeatNumber value="1" />
+                      <cda:product>
+                        <cda:manufacturedProduct classCode="MANU">
+                          <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" />
+                          <cda:id root="2a620155-9d11-439e-92b3-5d9815ff4ee8" extension="6011" />
+                          <cda:manufacturedMaterial>
+                            <cda:code code="896001" codeSystem="2.16.840.1.113883.6.88" displayName="120 ACTUAT Fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler">
+                              <cda:originalText>
+                                <cda:reference value="#DM" />
+                              </cda:originalText>
+                              <cda:translation code="896001" displayName="120 ACTUAT Fluticasone propionate 0.11 MG/ACTUAT Metered Dose Inhaler" codeSystem="2.16.840.1.113883.6.88" codeSystemName="RxNorm" />
+                            </cda:code>
+                          </cda:manufacturedMaterial>
+                          <cda:manufacturerOrganization>
+                            <cda:name>Medication Factory Inc.</cda:name>
+                          </cda:manufacturerOrganization>
+                        </cda:manufacturedProduct>
+                      </cda:product>
+                      <cda:performer>
+                        <cda:time nullFlavor="UNK" />
+                        <cda:assignedEntity>
+                          <cda:id root="2.16.840.1.113883.19.5.9999.456" extension="2981825" />
+                          <cda:addr>
+                            <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                            <cda:city>Portland</cda:city>
+                            <cda:state>OR</cda:state>
+                            <cda:postalCode>972XX</cda:postalCode>
+                            <cda:country>US</cda:country>
+                          </cda:addr>
+                          <cda:telecom nullFlavor="UNK" />
+                          <cda:assignedPerson>
+                            <cda:name>
+                              <cda:prefix>Dr.</cda:prefix>
+                              <cda:given>Henry</cda:given>
+                              <cda:family>Seven</cda:family>
+                            </cda:name>
+                          </cda:assignedPerson>
+                          <cda:representedOrganization>
+                            <cda:id root="2.16.840.1.113883.19.5.9999.1395" />
+                            <cda:name>Community Health and Hospitals</cda:name>
+                            <cda:telecom nullFlavor="UNK" />
+                            <cda:addr nullFlavor="UNK" />
+                          </cda:representedOrganization>
+                        </cda:assignedEntity>
+                      </cda:performer>
+                    </cda:supply>
+                  </cda:entryRelationship>
+                  <cda:precondition typeCode="PRCN">
+                    <cda:templateId root="2.16.840.1.113883.10.20.22.4.25" />
+                    <cda:criterion>
+                      <cda:code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+                      <cda:value xsi:type="CE" code="56018004" codeSystem="2.16.840.1.113883.6.96" displayName="Wheezing" />
+                    </cda:criterion>
+                  </cda:precondition>
+                </cda:substanceAdministration>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1" />
+          
+          <cda:code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="42349-1" displayName="REASON FOR REFERRAL" />
+          <cda:title>REASON FOR REFERRAL</cda:title>
+          <cda:text>
+            <cda:paragraph> Patient with a history of moderate persistent asthma.<cda:br />
+							Patient presented to with acute onset shortness of breath with fevers,
+							chills, and cough productive of greenish sputum for the past 2 days.
+						</cda:paragraph>
+          </cda:text>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.5.1" />
+          <cda:code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST" />
+          <cda:title>PROBLEMS</cda:title>
+          <cda:text>
+            <cda:content ID="problems" />
+            <cda:list listType="ordered">
+              <cda:item>
+                <cda:content ID="problem1">Pneumonia (age at onset - 65): Status -
+									Resolved <cda:br /> Health status: Symptom Free</cda:content>
+              </cda:item>
+              <cda:item>
+                <cda:content ID="problem2">Asthma (age at onset - 65): Status - Active
+									<cda:br /> Health status: Symptom Free</cda:content>
+              </cda:item>
+            </cda:list>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <cda:id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7" extension="7000" />
+              <cda:code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="August 2012" />
+                <cda:high value="August 2012" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <cda:id root="ab1791b0-5c71-11db-b0de-0800200c9a66" extension="7001" />
+                  <cda:code code="409586006" codeSystem="2.16.840.1.113883.6.96" displayName="Complaint" />
+                  <cda:text>
+                    <cda:reference value="#problem1" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="August 2012" />
+                  </cda:effectiveTime>
+                  <cda:value xsi:type="CD" code="233604007" codeSystem="2.16.840.1.113883.6.96" displayName="Pneumonia" />
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.31" />
+                      
+                      <cda:code code="445518008" codeSystem="2.16.840.1.113883.6.96" displayName="Age At Onset" />
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="PQ" value="65" unit="a" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="REFR">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.5" />
+                      
+                      <cda:code xsi:type="CE" code="11323-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health status" />
+                      <cda:text>
+                        <cda:reference value="#problems" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CD" code="162467007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Symptom Free" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="REFR">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.6" />
+                      <cda:code xsi:type="CE" code="33999-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Status" />
+                      <cda:text>
+                        <cda:reference value="#problem2" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CD" code="413322009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Resolved" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" />
+              <cda:id root="ec8a6ff8-ed4b-4f7e-82c3-e98e58b45de7" extension="7002" />
+              <cda:code code="CONC" codeSystem="2.16.840.1.113883.5.6" displayName="Concern" />
+              <cda:statusCode code="active" />
+              <cda:effectiveTime>
+                <cda:low value="January 2007" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                  <cda:id root="ab1791b0-5c71-11db-b0de-0800200c9a66" extension="7003" />
+                  <cda:code code="409586006" codeSystem="2.16.840.1.113883.6.96" displayName="Complaint" />
+                  <cda:text>
+                    <cda:reference value="#problem2" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="January 2007" />
+                  </cda:effectiveTime>
+                  <cda:value xsi:type="CD" code="195967001" codeSystem="2.16.840.1.113883.6.96" displayName="Asthma" />
+                  <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.31" />
+                      
+                      <cda:code code="445518008" codeSystem="2.16.840.1.113883.6.96" displayName="Age At Onset" />
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="PQ" value="65" unit="a" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="REFR">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.5" />
+                      
+                      <cda:code xsi:type="CE" code="11323-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Health status" />
+                      <cda:text>
+                        <cda:reference value="#problems" />
+                      </cda:text>
+                      <cda:statusCode code="completed" />
+                      <cda:value xsi:type="CD" code="162467007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Symptom Free" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.7.1" />
+          
+          <cda:code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF PROCEDURES" />
+          <cda:title>PROCEDURES</cda:title>
+          <cda:text>Procedure Date Oxygen administration by mask August 2012 Chest X-Ray August 2012</cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:procedure classCode="PROC" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              
+              <cda:id extension="123456789a" root="2.16.840.1.113883.19" />
+              <cda:code code="371908008" codeSystem="2.16.840.1.113883.6.96" displayName="Oxygen administration by mask" codeSystemName="SNOMED-CT">
+                <cda:originalText>
+                  <cda:reference value="#Proc1" />
+                </cda:originalText>
+              </cda:code>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime value="August 2012" />
+              <cda:performer>
+                <cda:assignedEntity>
+                  <cda:id root="2.16.840.1.113883.19.5" extension="1234" />
+                  <cda:addr>
+                    <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                    <cda:city>Portland</cda:city>
+                    <cda:state>OR</cda:state>
+                    <cda:postalCode>972XX</cda:postalCode>
+                    <cda:country>US</cda:country>
+                  </cda:addr>
+                  <cda:telecom use="WP" value="(555)555-555-1234" />
+                  <cda:representedOrganization>
+                    <cda:id root="2.16.840.1.113883.19.5" />
+                    <cda:name>Community Health and Hospitals</cda:name>
+                    <cda:telecom nullFlavor="UNK" />
+                    <cda:addr nullFlavor="UNK" />
+                  </cda:representedOrganization>
+                </cda:assignedEntity>
+              </cda:performer>
+              <cda:participant typeCode="LOC">
+                <cda:participantRole classCode="SDLOC">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.32" />
+                  
+                  <cda:code code="1160-1" codeSystem="2.16.840.1.113883.6.259" codeSystemName="HealthcareServiceLocation" displayName="Urgent Care Center" />
+                  <cda:addr>
+                    <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                    <cda:city>Portland</cda:city>
+                    <cda:state>OR</cda:state>
+                    <cda:postalCode>972XX</cda:postalCode>
+                    <cda:country>US</cda:country>
+                  </cda:addr>
+                  <cda:telecom nullFlavor="UNK" />
+                  <cda:playingEntity classCode="PLC">
+                    <cda:name>Community Health and Hospitals</cda:name>
+                  </cda:playingEntity>
+                </cda:participantRole>
+              </cda:participant>
+            </cda:procedure>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:procedure classCode="PROC" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.14" />
+              
+              <cda:id extension="123456789b" root="2.16.840.1.113883.19" />
+              <cda:code code="168731009" codeSystem="2.16.840.1.113883.6.96" displayName="Chest X-Ray" codeSystemName="SNOMED-CT">
+                <cda:originalText>
+                  <cda:reference value="#Proc2" />
+                </cda:originalText>
+              </cda:code>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime value="August 2012" />
+              <cda:priorityCode code="CR" codeSystem="2.16.840.1.113883.5.7" codeSystemName="ActPriority" displayName="Callback results" />
+              <cda:methodCode nullFlavor="UNK" />
+              <cda:targetSiteCode code="82094008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Lower Respiratory Tract Structure" />
+              <cda:performer>
+                <cda:assignedEntity>
+                  <cda:id root="2.16.840.1.113883.19.5" extension="1234" />
+                  <cda:addr>
+                    <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                    <cda:city>Portland</cda:city>
+                    <cda:state>OR</cda:state>
+                    <cda:postalCode>972XX</cda:postalCode>
+                    <cda:country>US</cda:country>
+                  </cda:addr>
+                  <cda:telecom use="WP" value="(555)555-555-1234" />
+                  <cda:representedOrganization>
+                    <cda:id root="2.16.840.1.113883.19.5" />
+                    <cda:name>Community Health and Hospitals</cda:name>
+                    <cda:telecom nullFlavor="UNK" />
+                    <cda:addr nullFlavor="UNK" />
+                  </cda:representedOrganization>
+                </cda:assignedEntity>
+              </cda:performer>
+              <cda:participant typeCode="LOC">
+                <cda:participantRole classCode="SDLOC">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.32" />
+                  
+                  <cda:code code="1160-1" codeSystem="2.16.840.1.113883.6.259" codeSystemName="HealthcareServiceLocation" displayName="Urgent Care Center" />
+                  <cda:addr>
+                    <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+                    <cda:city>Portland</cda:city>
+                    <cda:state>OR</cda:state>
+                    <cda:postalCode>972XX</cda:postalCode>
+                    <cda:country>US</cda:country>
+                  </cda:addr>
+                  <cda:telecom nullFlavor="UNK" />
+                  <cda:playingEntity classCode="PLC">
+                    <cda:name>Community Health and Hospitals</cda:name>
+                  </cda:playingEntity>
+                </cda:participantRole>
+              </cda:participant>
+            </cda:procedure>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.14" />
+          
+          <cda:code code="47420-5" codeSystem="2.16.840.1.113883.6.1" />
+          <cda:title>FUNCTIONAL STATUS</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Functional Condition</cda:th>
+                  <cda:th>Effective Dates</cda:th>
+                  <cda:th>Condition Status</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="fs1">Dependence on cane</cda:content>
+                  </cda:td>
+                  <cda:td>2008</cda:td>
+                  <cda:td>Active</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="fs2">Memory impairment</cda:content>
+                  </cda:td>
+                  <cda:td>2008</cda:td>
+                  <cda:td>Active</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="fs3">Amnesia</cda:content>
+                  </cda:td>
+                  <cda:td>2008</cda:td>
+                  <cda:td>Active</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:observation classCode="OBS" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.68" />
+              <cda:id root="ab1791b0-5c71-11db-b0de-0800200c9a66" extension="8000" />
+              <cda:code xsi:type="CE" code="409586006" codeSystem="2.16.840.1.113883.6.96" displayName="Complaint" />
+              <cda:text>
+                <cda:reference value="#fs1" />
+              </cda:text>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="November 2008" />
+                <cda:high nullFlavor="UNK" />
+              </cda:effectiveTime>
+              <cda:value xsi:type="CD" code="105504002" codeSystem="2.16.840.1.113883.6.96" displayName="Dependence on Cane" />
+            </cda:observation>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:observation classCode="OBS" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.68" />
+              <cda:id root="ab1791b0-5c71-11db-b0de-0800200c9a66" extension="8001" />
+              <cda:code xsi:type="CE" code="409586006" codeSystem="2.16.840.1.113883.6.96" displayName="Complaint" />
+              <cda:text>
+                <cda:reference value="#fs2" />
+              </cda:text>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="November 2008" />
+                <cda:high nullFlavor="UNK" />
+              </cda:effectiveTime>
+              <cda:value xsi:type="CD" code="386807006" codeSystem="2.16.840.1.113883.6.96" displayName="Memory Impairment" />
+            </cda:observation>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:observation classCode="OBS" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.73" />
+              <cda:id root="ab1791b0-5c71-11db-b0de-0800200c9a66" extension="8003" />
+              <cda:code xsi:type="CE" code="373930000" codeSystem="2.16.840.1.113883.6.96" displayName="Cognitive Function Finding" />
+              <cda:text>
+                <cda:reference value="#fs3" />
+              </cda:text>
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="November 2008" />
+                <cda:high nullFlavor="UNK" />
+              </cda:effectiveTime>
+              <cda:value xsi:type="CD" code="48167000" codeSystem="2.16.840.1.113883.6.96" displayName="Amnesia" />
+            </cda:observation>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.3.1" />
+          
+          <cda:code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="RESULTS" />
+          <cda:title>RESULTS</cda:title>
+          <cda:text>LABORATORY INFORMATION Blood chemistry HGB (12-16 g/dl) 10.2 on August 2012 WBC ([DATE].8 10+3/ul) 12.3 -- HIGH on August 2012 PLT (150-350 x 10+3/ul) 123 -- LOW on August 2012</cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:organizer classCode="BATTERY" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.1" />
+              <cda:id root="7d5a02b0-67a4-11db-bd13-0800200c9a66" extension="9000" />
+              <cda:code xsi:type="CE" code="43789009" displayName="CBC WO DIFFERENTIAL" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" />
+              <cda:statusCode code="completed" />
+              <cda:component>
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                  <cda:id root="107c2dc0-67a5-11db-bd13-0800200c9a66" extension="9001" />
+                  <cda:code xsi:type="CE" code="30313-1" displayName="HGB" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  <cda:text>
+                    <cda:reference value="#result1" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime value="August 2012" />
+                  <cda:value xsi:type="PQ" value="10.2" unit="g/dl" />
+                  <cda:interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                  <cda:methodCode />
+                  <cda:targetSiteCode />
+                  <cda:referenceRange>
+                    <cda:observationRange>
+                      <cda:text>12-16 g/dl</cda:text>
+                    </cda:observationRange>
+                  </cda:referenceRange>
+                </cda:observation>
+              </cda:component>
+              <cda:component>
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                  <cda:id root="107c2dc0-67a5-11db-bd13-0800200c9a66" extension="9002" />
+                  <cda:code xsi:type="CE" code="33765-9" displayName="WBC" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  <cda:text>
+                    <cda:reference value="#result2" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime value="August 2012" />
+                  <cda:value xsi:type="PQ" value="12.3" unit="10+3/ul" />
+                  <cda:interpretationCode code="H" codeSystem="2.16.840.1.113883.5.83" />
+                  <cda:methodCode />
+                  <cda:targetSiteCode />
+                  <cda:referenceRange>
+                    <cda:observationRange>
+                      <cda:value xsi:type="IVL_PQ">
+                        <cda:low value="4.3" unit="10+3/ul" />
+                        <cda:high value="10.8" unit="10+3/ul" />
+                      </cda:value>
+                    </cda:observationRange>
+                  </cda:referenceRange>
+                </cda:observation>
+              </cda:component>
+              <cda:component>
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                  <cda:id root="107c2dc0-67a5-11db-bd13-0800200c9a66" extension="9002" />
+                  <cda:code xsi:type="CE" code="26515-7" displayName="Platelets [#/volume] in Blood" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  <cda:text>
+                    <cda:reference value="#result3" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime value="August 2012" />
+                  <cda:value xsi:type="PQ" value="123" unit="10+3/ul" />
+                  <cda:interpretationCode code="L" codeSystem="2.16.840.1.113883.5.83" />
+                  <cda:methodCode />
+                  <cda:targetSiteCode />
+                  <cda:referenceRange>
+                    <cda:observationRange>
+                      <cda:value xsi:type="IVL_PQ">
+                        <cda:low value="150" unit="10+3/ul" />
+                        <cda:high value="350" unit="10+3/ul" />
+                      </cda:value>
+                    </cda:observationRange>
+                  </cda:referenceRange>
+                </cda:observation>
+              </cda:component>
+            </cda:organizer>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.17" />
+          
+          <cda:code code="29762-2" codeSystem="2.16.840.1.113883.6.1" displayName="Social History" />
+          <cda:title>SOCIAL HISTORY</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Social History Element</cda:th>
+                  <cda:th>Description</cda:th>
+                  <cda:th>Effective Dates</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>
+                    <cda:content ID="soc1" /> smoking</cda:td>
+                  <cda:td>Former Smoker - Smoked 1 pack per day from 2005 to 2011</cda:td>
+                  <cda:td>May 1st, 2005 to Feb 27th, 2011</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:observation classCode="OBS" moodCode="EVN">
+              
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.78" />
+              <cda:id extension="123456789" root="2.16.840.1.113883.19" />
+              <cda:code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="May 2005" />
+                <cda:high value="February 2011" />
+              </cda:effectiveTime>
+              <cda:value xsi:type="CD" code="8517006" displayName="Former smoker" codeSystem="2.16.840.1.113883.6.96">
+                <cda:originalText>
+                  <cda:reference value="#soc1" />
+                </cda:originalText>
+              </cda:value>
+            </cda:observation>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.4.1" />
+          <cda:code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="VITAL SIGNS" />
+          <cda:title>VITAL SIGNS</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th align="left">Date / Time: </cda:th>
+                  <cda:th>August 13, 2012</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:th align="left">Height</cda:th>
+                  <cda:td>
+                    <cda:content ID="vit2">69 inches</cda:content>
+                  </cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:th align="left">Weight</cda:th>
+                  <cda:td>
+                    <cda:content ID="vit4">194 lbs</cda:content>
+                  </cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:th align="left">Blood Pressure</cda:th>
+                  <cda:td>
+                    <cda:content ID="vit6">145/88 mmHg</cda:content>
+                  </cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:organizer classCode="CLUSTER" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.26" />
+              
+              <cda:id root="c6f88320-67ad-11db-bd13-0800200c9a66" extension="1100" />
+              <cda:code code="46680005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED -CT" displayName="Vital signs" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime value="August 2012" />
+              <cda:component>
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.27" />
+                  
+                  <cda:id root="c6f88321-67ad-11db-bd13-0800200c9a66" extension="1101" />
+                  <cda:code code="8302-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Height" />
+                  <cda:text>
+                    <cda:reference value="#vit2" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime value="August 2012" />
+                  <cda:value xsi:type="PQ" value="69" unit="in" />
+                  <cda:interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                </cda:observation>
+              </cda:component>
+              <cda:component>
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.27" />
+                  
+                  <cda:id root="c6f88321-67ad-11db-bd13-0800200c9a66" extension="1102" />
+                  <cda:code code="3141-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Body Weight - Measured" />
+                  <cda:text>
+                    <cda:reference value="#vit4" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime value="August 2012" />
+                  <cda:value xsi:type="PQ" value="194" unit="lbs" />
+                  <cda:interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                </cda:observation>
+              </cda:component>
+              <cda:component>
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  
+                  
+                  <cda:id root="c6f88321-67ad-11db-bd13-0800200c9a66" extension="1103" />
+                  <cda:code code="8480-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Intravascular Systolic" />
+                  <cda:text>
+                    <cda:reference value="#vit6" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime value="August 2012" />
+                  <cda:interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                  <cda:entryRelationship typeCode="COMP">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.27" />
+                      <cda:id root="c6f88321-67ad-11db-bd13-0800200c9a66" extension="111103" />
+                      <cda:code code="271649006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Systolic BP" />
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime value="August 2012" />
+                      <cda:value xsi:type="PQ" value="145" unit="mm[Hg]" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                  <cda:entryRelationship typeCode="COMP">
+                    <cda:observation classCode="OBS" moodCode="EVN">
+                      <cda:templateId root="2.16.840.1.113883.10.20.22.4.27" />
+                      <cda:id root="c6f88321-67ad-11db-bd13-0800200c9a66" extension="221103" />
+                      <cda:code code="271650006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Diastolic BP" />
+                      <cda:statusCode code="completed" />
+                      <cda:effectiveTime value="August 2012" />
+                      <cda:value xsi:type="PQ" value="88" unit="mm[Hg]" />
+                    </cda:observation>
+                  </cda:entryRelationship>
+                </cda:observation>
+              </cda:component>
+            </cda:organizer>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      
+      <cda:component>
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.41" />
+          <cda:code code="8653-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HOSPITAL DISCHARGE INSTRUCTIONS" />
+          <cda:title>HOSPITAL DISCHARGE INSTRUCTIONS</cda:title>
+          <cda:text>Ms. Jones, you have been seen by Dr. Henry Seven at Local
+							Community Hospital from August 6th until August 13th 2012. You are
+							currently being discharged from Local Community Hospital. Dr. Seven has
+							provided the following instructions to you at this time; should you have
+							any questions please contact a member of your healthcare team prior to
+							discharge. If you have left the hospital and have questions, please
+							contact Dr. Seven at [PHONE]. Instructions: Take all medications as prescribed. Resume normal activity and previous diet as tolerated Please monitor your peak flows. If your peak flows drop to 50% of
+								normal, notify your primary care provider or return to the Emergency
+								Room. If you experience any of the following symptoms, notify your
+								primary care provider or return to the Emergency Room: Shortness of Breath Dizziness or Light-headedness Fever, chills, or diffuse body aches Pain or redness at the site of any previous intravenous
+										catheter Any other unusual problem</cda:text>
+        </cda:section>
+      </cda:component>
+    </cda:structuredBody>
+  </cda:component>
+</cda:ClinicalDocument>
