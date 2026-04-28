@@ -157,23 +157,43 @@ Output notebooks are saved to the project root as `<name>_output.ipynb`.
 
 ## Pipeline Architecture
 
+### Plain Text — `Custom_DeID_Pipeline.ipynb`
+
+Uses the full **JSL Spark NLP for Healthcare** stack:
+
 ```
 Plain text input
        │
        ├─ ZeroShot NER model ─────┐
-       ├─ zip_parser              ├──► ChunkMerge ──► Custom Rules ──► De-identified text
+       ├─ zip_parser              ├──► ChunkMerge ──► Custom UDF ──► De-identified text
        ├─ date_of_birth_parser    │
        ├─ email_matcher ──────────┘
        └─ country_matcher
-
-HL7 CDA XML input
-       │
-       ├─ Stage 1: XML structural rules  (direct tag/attribute targeting)
-       └─ Stage 2: Regex rules on narrative <text> sections
 ```
 
 **NER Model:** `zeroshot_ner_deid_subentity_docwise_medium`
 Detects 18 entity types: PATIENT, DOCTOR, DATE, DATE_OF_BIRTH, ZIP, SSN, PHONE, EMAIL, CITY, STREET, STATE, COUNTRY, USERNAME, ID, BIOID, ORGANIZATION, MEDICAL_RECORD_NUMBER, AGE
+
+### HL7 CDA XML — `XML_DeID_Pipeline.ipynb`
+
+Does **not** use Spark NLP. Uses two lightweight stages instead:
+
+```
+HL7 CDA XML input
+       │
+       ├─ Stage 1: xml.etree.ElementTree rules
+       │           (targets known CDA tag paths directly —
+       │            birthTime, postalCode, patient/name, effectiveTime, etc.)
+       │
+       └─ Stage 2: Pure Python regex rules
+                   (runs on free-text narrative <text> sections —
+                    catches patient names, YYYYMMDD dates, phones, ZIPs)
+```
+
+> The XML pipeline avoids Spark NLP due to a JSL floating license restriction
+> (only one active Spark session allowed at a time). Since all structured PHI
+> in a CDA document sits at known, predictable XML paths, direct tag rules
+> are both faster and sufficient.
 
 ---
 
