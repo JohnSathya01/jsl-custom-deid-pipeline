@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cda:ClinicalDocument xmlns:cda="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 CDA.xsd">
+<cda:realmCode code="US" />
+<cda:typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+<cda:templateId root="2.16.840.1.113883.10.20.1" />
+<cda:templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+<cda:templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="7e8a7842-9b03-47a2-b4c1-ed9e5d7eeef6" assigningAuthorityName="Health Gorilla Inc." />
+<cda:code code="34133-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Summarization of episode note" />
+<cda:title>[ORGANIZATION] Continuity of Care Document</cda:title>
+<cda:effectiveTime value="July 2022" />
+<cda:confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality Code" displayName="Normal" />
+<cda:languageCode code="en-US" />
+<cda:recordTarget>
+<cda:patientRole>
+<cda:id root="1.3.6.1.4.1.52618.3.1.1" extension="e615cd629ac8525c349fb24a" assigningAuthorityName="Health Gorilla Inc." />
+<cda:id root="1.3.6.1.4.1.52618.3.1.1" extension="493527" assigningAuthorityName="Health Gorilla Inc." />
+<cda:addr use="H">
+<cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+<cda:city>[CITY]</cda:city>
+<cda:state>[STATE]</cda:state>
+<cda:postalCode>554XX</cda:postalCode>
+<cda:country>[COUNTRY]</cda:country>
+</cda:addr>
+<cda:telecom nullFlavor="NI" />
+<cda:patient>
+<cda:name use="L">
+<cda:given />
+<cda:family>PT-00003</cda:family>
+</cda:name>
+<cda:administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" codeSystemName="AdministrativeGenderCode" displayName="Female" />
+<cda:birthTime value="84 years old" />
+<cda:languageCommunication>
+<cda:templateId root="2.16.840.1.113883.3.88.11.83.2" />
+<cda:templateId root="1.3.6.1.4.1.19376.1.5.3.1.2.1" />
+<cda:languageCode code="en" />
+</cda:languageCommunication>
+</cda:patient>
+</cda:patientRole>
+</cda:recordTarget>
+<cda:author>
+<cda:time value="July 2022" />
+<cda:assignedAuthor>
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_53d1b062cb794e98463789fa" />
+<cda:addr nullFlavor="NA" />
+<cda:telecom nullFlavor="NA" />
+<cda:assignedPerson>
+<cda:name>
+<cda:given>Umesh</cda:given>
+<cda:family>Yadav</cda:family>
+</cda:name>
+</cda:assignedPerson>
+<cda:representedOrganization>
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_RO_20d1b0620bd0ccfb86df3389" />
+<cda:name>Clinakos</cda:name>
+<cda:telecom nullFlavor="UNK" />
+<cda:addr>
+<cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+<cda:city>[CITY]</cda:city>
+<cda:state>[STATE]</cda:state>
+<cda:postalCode>944XX</cda:postalCode>
+<cda:country>[COUNTRY]</cda:country>
+</cda:addr>
+</cda:representedOrganization>
+</cda:assignedAuthor>
+</cda:author>
+<cda:custodian>
+<cda:assignedCustodian>
+<cda:representedCustodianOrganization>
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_P_20d1b0620bd0ccfb86df3389" />
+<cda:name>Clinakos</cda:name>
+<cda:addr>
+<cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+<cda:city>[CITY]</cda:city>
+<cda:state>[STATE]</cda:state>
+<cda:postalCode>944XX</cda:postalCode>
+<cda:country>[COUNTRY]</cda:country>
+</cda:addr>
+</cda:representedCustodianOrganization>
+</cda:assignedCustodian>
+</cda:custodian>
+<cda:documentationOf>
+<cda:serviceEvent classCode="PCPR">
+<cda:effectiveTime>
+<cda:low value="July 2022" />
+<cda:high value="July 2022" />
+</cda:effectiveTime>
+</cda:serviceEvent>
+</cda:documentationOf>
+<cda:component>
+<cda:structuredBody>
+<cda:component>
+<cda:section>
+<cda:templateId root="2.16.840.1.113883.10.20.22.2.5.1" />
+<cda:code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem list" />
+<cda:title>Problems</cda:title>
+<cda:text>
+<cda:content ID="UNK_problems">Unknown Problems</cda:content>
+</cda:text>
+<cda:entry typeCode="DRIV">
+<cda:act classCode="ACT" moodCode="EVN">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_ACT_UNK_problems" />
+<cda:code code="CONC" codeSystem="2.16.840.1.113883.5.6" codeSystemName="ActClass" displayName="Concern" />
+<cda:statusCode code="active" />
+<cda:effectiveTime nullFlavor="UNK" />
+<cda:entryRelationship typeCode="SUBJ">
+<cda:observation classCode="OBS" moodCode="EVN" negationInd="true">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_UNK_problems" />
+<cda:code code="55607006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Problem">
+<cda:translation code="75326-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem" />
+</cda:code>
+<cda:statusCode code="completed" />
+<cda:effectiveTime>
+<cda:low nullFlavor="UNK" />
+<cda:high nullFlavor="UNK" />
+</cda:effectiveTime>
+<cda:value xsi:type="CD" nullFlavor="UNK">
+<cda:originalText>
+<cda:reference value="#UNK_problems" />
+</cda:originalText>
+</cda:value>
+</cda:observation>
+</cda:entryRelationship>
+</cda:act>
+</cda:entry>
+</cda:section>
+</cda:component>
+<cda:component>
+<cda:section>
+<cda:templateId root="2.16.840.1.113883.10.20.22.2.3.1" />
+<cda:code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Results" />
+<cda:title>Results</cda:title>
+<cda:text>
+<cda:content ID="NKN_results">No Results</cda:content>
+</cda:text>
+<cda:entry typeCode="DRIV">
+<cda:organizer classCode="CLUSTER" moodCode="EVN">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.1" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="NKN_results" />
+<cda:code nullFlavor="UNK" />
+<cda:statusCode code="completed" />
+<cda:component>
+<cda:observation classCode="OBS" moodCode="EVN" negationInd="true">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.2" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="NKN_results" />
+<cda:code nullFlavor="UNK" />
+<cda:text>
+<cda:reference value="#NKN_results" />
+</cda:text>
+<cda:statusCode code="completed" />
+<cda:effectiveTime nullFlavor="UNK" />
+<cda:value xsi:type="ST" nullFlavor="UNK" />
+</cda:observation>
+</cda:component>
+</cda:organizer>
+</cda:entry>
+</cda:section>
+</cda:component>
+<cda:component>
+<cda:section>
+<cda:templateId root="2.16.840.1.113883.10.20.22.2.6.1" />
+<cda:code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergies, adverse reactions, alerts" />
+<cda:title>Allergies, adverse reactions, alerts</cda:title>
+<cda:text>
+<cda:content ID="UNK_allergies">No known allergies and adverse reactions</cda:content>
+</cda:text>
+<cda:entry typeCode="DRIV">
+<cda:act classCode="ACT" moodCode="EVN">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.30" extension="2015-08-01" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_UNK_allergies" />
+<cda:code code="CONC" codeSystem="2.16.840.1.113883.5.6" />
+<cda:statusCode code="active" />
+<cda:effectiveTime>
+<cda:low nullFlavor="UNK" />
+</cda:effectiveTime>
+<cda:entryRelationship typeCode="SUBJ">
+<cda:observation classCode="OBS" moodCode="EVN" negationInd="true">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.7" extension="2014-06-09" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HGOBS_UNK_allergies" />
+<cda:code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" />
+<cda:statusCode code="completed" />
+<cda:effectiveTime>
+<cda:low nullFlavor="UNK" />
+</cda:effectiveTime>
+<cda:value xsi:type="CD" nullFlavor="UNK">
+<cda:originalText>
+<cda:reference value="#UNK_allergies" />
+</cda:originalText>
+</cda:value>
+<cda:participant typeCode="CSM">
+<cda:participantRole classCode="MANU">
+<cda:playingEntity classCode="MMAT">
+<cda:code nullFlavor="NA">
+<cda:originalText>
+<cda:reference value="#UNK_allergies" />
+</cda:originalText>
+</cda:code>
+</cda:playingEntity>
+</cda:participantRole>
+</cda:participant>
+</cda:observation>
+</cda:entryRelationship>
+</cda:act>
+</cda:entry>
+</cda:section>
+</cda:component>
+<cda:component>
+<cda:section>
+<cda:templateId root="2.16.840.1.113883.10.20.22.2.1.1" />
+<cda:code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of medication use" />
+<cda:title>Medications</cda:title>
+<cda:text>
+<cda:content ID="UNK_medications">No administered medications reported</cda:content>
+</cda:text>
+<cda:entry typeCode="DRIV">
+<cda:substanceAdministration classCode="SBADM" moodCode="INT" negationInd="true">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_UNK_medications" />
+<cda:statusCode code="completed" />
+<cda:effectiveTime xsi:type="IVL_TS">
+<cda:low nullFlavor="UNK" />
+<cda:high nullFlavor="UNK" />
+</cda:effectiveTime>
+<cda:doseQuantity nullFlavor="NA" />
+<cda:consumable>
+<cda:manufacturedProduct classCode="MANU">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+<cda:manufacturedMaterial>
+<cda:code nullFlavor="UNK">
+<cda:originalText>
+<cda:reference value="#UNK_medications" />
+</cda:originalText>
+</cda:code>
+</cda:manufacturedMaterial>
+</cda:manufacturedProduct>
+</cda:consumable>
+</cda:substanceAdministration>
+</cda:entry>
+</cda:section>
+</cda:component>
+<cda:component>
+<cda:section>
+<cda:templateId root="2.16.840.1.113883.10.20.22.2.4.1" />
+<cda:code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital Signs" />
+<cda:title>Vital Signs</cda:title>
+<cda:text>
+<cda:content ID="UNK_vitalsigns">No vital signs reported</cda:content>
+</cda:text>
+<cda:entry typeCode="DRIV">
+<cda:organizer classCode="CLUSTER" moodCode="EVN">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.26" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="UNK_vitalsigns" />
+<cda:code code="46680005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Vital signs">
+<cda:translation code="74728-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs" />
+</cda:code>
+<cda:statusCode code="completed" />
+<cda:effectiveTime>
+<cda:low nullFlavor="UNK" />
+<cda:high nullFlavor="UNK" />
+</cda:effectiveTime>
+<cda:component>
+<cda:observation classCode="OBS" moodCode="EVN" negationInd="true">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.27" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_UNK_vitalsigns_1" />
+<cda:code nullFlavor="UNK" />
+<cda:text>
+<cda:reference value="#UNK_vitalsigns" />
+</cda:text>
+<cda:statusCode code="completed" />
+<cda:effectiveTime nullFlavor="UNK" />
+<cda:value xsi:type="ST" nullFlavor="UNK" />
+</cda:observation>
+</cda:component>
+</cda:organizer>
+</cda:entry>
+</cda:section>
+</cda:component>
+<cda:component>
+<cda:section>
+<cda:templateId root="2.16.840.1.113883.10.20.22.2.17" />
+<cda:code code="29762-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Social History" />
+<cda:title>Social History</cda:title>
+<cda:text>
+<cda:content ID="soc1">No smoking Hx information available</cda:content>
+</cda:text>
+<cda:entry typeCode="DRIV">
+<cda:observation classCode="OBS" moodCode="EVN" negationInd="true">
+<cda:templateId root="2.16.840.1.113883.10.20.22.4.38" />
+<cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="HG_UNK_social_history" />
+<cda:code code="ASSERTION" codeSystem="2.16.840.1.113883.5.4" codeSystemName="ActCode">
+<cda:originalText>
+<cda:reference value="#soc1" />
+</cda:originalText>
+</cda:code>
+<cda:statusCode code="completed" />
+<cda:effectiveTime>
+<cda:low nullFlavor="UNK" />
+<cda:high nullFlavor="UNK" />
+</cda:effectiveTime>
+<cda:value xsi:type="CD" code="266927001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="Unknown if ever smoked" />
+</cda:observation>
+</cda:entry>
+</cda:section>
+</cda:component>
+</cda:structuredBody>
+</cda:component>
+</cda:ClinicalDocument>

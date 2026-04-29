@@ -1,0 +1,500 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cda:ClinicalDocument xmlns:cda="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd">
+  <cda:realmCode code="US" />
+  <cda:typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <cda:templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+  <cda:templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01" />
+  <cda:id root="2.16.840.1.113883.19.5" extension="e312c04e-2d30-0c0b-bc84-aae58ea9d76f" assigningAuthorityName="https://github.com/synthetichealth/synthea" />
+  <cda:code code="34133-9" displayName="Summarization of episode note" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+  <cda:title>Continuity of Care Document</cda:title>
+  <cda:effectiveTime value="August 2020" />
+  <cda:confidentialityCode code="N" />
+  <cda:languageCode code="en-US" />
+  <cda:recordTarget>
+    <cda:patientRole>
+      <cda:id root="2.16.840.1.113883.19.5" extension="e312c04e-2d30-0c0b-bc84-aae58ea9d76f" assigningAuthorityName="https://github.com/synthetichealth/synthea" />
+      <cda:addr use="HP">
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>[CITY]</cda:city>
+        <cda:state>[STATE]</cda:state>
+        <cda:postalCode>016XX</cda:postalCode>
+      </cda:addr>
+      <cda:telecom nullFlavor="NI" />
+      <cda:patient>
+        <cda:name>
+          <cda:given />
+          <cda:family>PT-00002</cda:family>
+        </cda:name>
+        <cda:administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" />
+        <cda:birthTime value="58 years old" />
+        <cda:raceCode code="2106-3" displayName="white" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238" />
+        <cda:ethnicGroupCode code="2186-5" displayName="non-hispanic" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238" />
+        <cda:languageCommunication>
+          <cda:languageCode code="en-US" />
+        </cda:languageCommunication>
+      </cda:patient>
+    </cda:patientRole>
+  </cda:recordTarget>
+  <cda:author>
+    <cda:time value="August 2020" />
+    <cda:assignedAuthor>
+      <cda:id nullFlavor="NA" />
+      <cda:addr nullFlavor="NA" />
+      <cda:telecom nullFlavor="NA" />
+      <cda:assignedAuthoringDevice>
+        <cda:manufacturerModelName>https://github.com/[ORGANIZATION]/[USERNAME]</cda:manufacturerModelName>
+        <cda:softwareName>https://github.com/[ORGANIZATION]/[USERNAME]</cda:softwareName>
+      </cda:assignedAuthoringDevice>
+      <cda:representedOrganization>
+        <cda:id nullFlavor="NA" />
+        <cda:name>DANIEL E VIDERS MD PC</cda:name>
+        <cda:telecom nullFlavor="NA" />
+        <cda:addr>
+          <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+          <cda:city>[CITY]</cda:city>
+          <cda:state>[STATE]</cda:state>
+          <cda:postalCode>015XXXXXXX</cda:postalCode>
+        </cda:addr>
+      </cda:representedOrganization>
+    </cda:assignedAuthor>
+  </cda:author>
+  <cda:custodian>
+    <cda:assignedCustodian>
+      <cda:representedCustodianOrganization>
+        <cda:id nullFlavor="NA" />
+        <cda:name>DANIEL E VIDERS MD PC</cda:name>
+        <cda:telecom nullFlavor="NA" />
+        <cda:addr>
+          <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+          <cda:city>[CITY]</cda:city>
+          <cda:state>[STATE]</cda:state>
+          <cda:postalCode>015XXXXXXX</cda:postalCode>
+        </cda:addr>
+      </cda:representedCustodianOrganization>
+    </cda:assignedCustodian>
+  </cda:custodian>
+  <cda:documentationOf>
+    <cda:serviceEvent classCode="PCPR">
+      <cda:effectiveTime>
+        <cda:low value="December 1967" />
+        <cda:high value="August 2020" />
+      </cda:effectiveTime>
+    </cda:serviceEvent>
+  </cda:documentationOf>
+  <cda:component>
+    <cda:structuredBody>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.6.1" extension="2015-08-01" />
+          <cda:code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergy List" />
+          <cda:title>Allergies</cda:title>
+          <cda:text>There are no current allergies at the time of this document's creation.</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09" />
+          <cda:code code="10160-0" displayName="History of medication use" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+          <cda:title>Medications</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Start</cda:th>
+                  <cda:th>Stop</cda:th>
+                  <cda:th>Description</cda:th>
+                  <cda:th>Code</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>2009:29:16-04:00</cda:td>
+                  <cda:td>2010:29:16-04:00</cda:td>
+                  <cda:td ID="medications-desc-1">lisinopril 10 MG Oral Tablet</cda:td>
+                  <cda:td ID="medications-code-1">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2010:29:16-04:00</cda:td>
+                  <cda:td />
+                  <cda:td ID="medications-desc-2">lisinopril 10 MG Oral Tablet</cda:td>
+                  <cda:td ID="medications-code-2">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry>
+            
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <cda:id root="adf756f4-be7e-7119-5429-bbe944927e4e" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS">
+                <cda:low value="April 2009" />
+                <cda:high value="August 2010" />
+              </cda:effectiveTime>
+              <cda:doseQuantity value="1" />
+              <cda:consumable>
+                
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <cda:manufacturedMaterial>
+                    <cda:code code="314076" codeSystem="2.16.840.1.113883.6.88" displayName="lisinopril 10 MG Oral Tablet">
+                      <cda:originalText>
+                        <cda:reference value="#medications-desc-1" />
+                      </cda:originalText>
+                    </cda:code>
+                    <cda:name>lisinopril 10 MG Oral Tablet</cda:name>
+                  </cda:manufacturedMaterial>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+            </cda:substanceAdministration>
+          </cda:entry>
+          <cda:entry>
+            
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <cda:id root="336637a6-e199-d8b0-e105-0ac861fbf93e" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS">
+                <cda:low value="August 2010" />
+                <cda:high nullFlavor="UNK" />
+              </cda:effectiveTime>
+              <cda:doseQuantity value="1" />
+              <cda:consumable>
+                
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <cda:manufacturedMaterial>
+                    <cda:code code="314076" codeSystem="2.16.840.1.113883.6.88" displayName="lisinopril 10 MG Oral Tablet">
+                      <cda:originalText>
+                        <cda:reference value="#medications-desc-2" />
+                      </cda:originalText>
+                    </cda:code>
+                    <cda:name>lisinopril 10 MG Oral Tablet</cda:name>
+                  </cda:manufacturedMaterial>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+            </cda:substanceAdministration>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.3.1" extension="2015-08-01" />
+          <cda:code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Results" />
+          <cda:title>Diagnostic Results</cda:title>
+          <cda:text>There are no current results at the time of this document's creation.</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01" />
+          
+          <cda:code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem list" />
+          <cda:title>Problems</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Start</cda:th>
+                  <cda:th>Stop</cda:th>
+                  <cda:th>Description</cda:th>
+                  <cda:th>Code</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>1969:29:16-05:00</cda:td>
+                  <cda:td />
+                  <cda:td ID="conditions-desc-1">Otitis media</cda:td>
+                  <cda:td ID="conditions-code-1">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2009:29:16-04:00</cda:td>
+                  <cda:td />
+                  <cda:td ID="conditions-desc-2">Body mass index 30+ - obesity (finding)</cda:td>
+                  <cda:td ID="conditions-code-2">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              
+              <cda:id root="a49b9d82-5b95-9ec4-f782-29f8f85ac214" />
+              <cda:code nullFlavor="NA" />
+              <cda:statusCode code="active" />
+              <cda:effectiveTime>
+                <cda:low value="January 1969" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="false">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  
+                  <cda:id root="1fe9f1a3-54b9-d30f-370a-d35418fe270a" />
+                  <cda:code code="64572001" displayName="Condition" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+                    <cda:translation code="75323-6" displayName="Condition" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  </cda:code>
+                  <cda:text>
+                    <cda:reference value="#conditions-desc-1" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="January 1969" />
+                  </cda:effectiveTime>
+                  <cda:priorityCode code="8319008" codeSystem="2.16.840.1.113883.6.96" displayName="Principal diagnosis" />
+                  <cda:value xsi:type="CD" code="65363002" codeSystem="2.16.840.1.113883.6.96" displayName="Otitis media">
+                    <cda:originalText>
+                      <cda:reference value="#conditions-desc-1" />
+                    </cda:originalText>
+                    <cda:translation code="65363002" codeSystem="2.16.840.1.113883.6.96" displayName="Otitis media" />
+                  </cda:value>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              
+              <cda:id root="bc0e73ea-242b-485d-d5d6-81b18c18101b" />
+              <cda:code nullFlavor="NA" />
+              <cda:statusCode code="active" />
+              <cda:effectiveTime>
+                <cda:low value="April 2009" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="false">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  
+                  <cda:id root="980c7aff-8779-6e3e-83d7-da8e57ec51d6" />
+                  <cda:code code="64572001" displayName="Condition" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+                    <cda:translation code="75323-6" displayName="Condition" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  </cda:code>
+                  <cda:text>
+                    <cda:reference value="#conditions-desc-2" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="April 2009" />
+                  </cda:effectiveTime>
+                  <cda:priorityCode code="8319008" codeSystem="2.16.840.1.113883.6.96" displayName="Principal diagnosis" />
+                  <cda:value xsi:type="CD" code="162864005" codeSystem="2.16.840.1.113883.6.96" displayName="Body mass index 30+ - obesity (finding)">
+                    <cda:originalText>
+                      <cda:reference value="#conditions-desc-2" />
+                    </cda:originalText>
+                    <cda:translation code="162864005" codeSystem="2.16.840.1.113883.6.96" displayName="Body mass index 30+ - obesity (finding)" />
+                  </cda:value>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09" />
+          <cda:code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Procedures" />
+          <cda:title>Procedures</cda:title>
+          <cda:text>There are no current procedures at the time of this document's creation.</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.22" extension="2015-08-01" />
+          
+          
+          <cda:code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+          <cda:title>Encounters</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Start</cda:th>
+                  <cda:th>Stop</cda:th>
+                  <cda:th>Description</cda:th>
+                  <cda:th>Code</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>1969:29:16-05:00</cda:td>
+                  <cda:td>1969:44:16-05:00</cda:td>
+                  <cda:td ID="encounters-desc-1">Encounter for symptom</cda:td>
+                  <cda:td ID="encounters-code-1">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2009:29:16-04:00</cda:td>
+                  <cda:td>2009:44:16-04:00</cda:td>
+                  <cda:td ID="encounters-desc-2">Encounter for check up (procedure)</cda:td>
+                  <cda:td ID="encounters-code-2">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2010:29:16-04:00</cda:td>
+                  <cda:td>2010:44:16-04:00</cda:td>
+                  <cda:td ID="encounters-desc-3">Encounter for check up (procedure)</cda:td>
+                  <cda:td ID="encounters-code-3">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:encounter classCode="ENC" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              
+              <cda:id root="222e309b-0dc3-91f6-fae4-8de81321d974" />
+              <cda:code code="185345009" codeSystem="2.16.840.1.113883.6.96" displayName="Encounter for symptom">
+                <cda:originalText>
+                  <cda:reference value="#encounters-desc-1" />
+                </cda:originalText>
+              </cda:code>
+              <cda:text>
+                <cda:reference value="#encounters-desc-1" />
+              </cda:text>
+              <cda:effectiveTime>
+                <cda:low value="January 1969" />
+                <cda:high value="January 1969" />
+              </cda:effectiveTime>
+            </cda:encounter>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:encounter classCode="ENC" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              
+              <cda:id root="0c9e4dff-9e3c-bab8-d4a0-d06c5af2062c" />
+              <cda:code code="185349003" codeSystem="2.16.840.1.113883.6.96" displayName="Encounter for check up (procedure)">
+                <cda:originalText>
+                  <cda:reference value="#encounters-desc-2" />
+                </cda:originalText>
+              </cda:code>
+              <cda:text>
+                <cda:reference value="#encounters-desc-2" />
+              </cda:text>
+              <cda:effectiveTime>
+                <cda:low value="April 2009" />
+                <cda:high value="April 2009" />
+              </cda:effectiveTime>
+            </cda:encounter>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:encounter classCode="ENC" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              
+              <cda:id root="5b429cc9-5a94-9513-dba5-d3d3a4e3c3c6" />
+              <cda:code code="185349003" codeSystem="2.16.840.1.113883.6.96" displayName="Encounter for check up (procedure)">
+                <cda:originalText>
+                  <cda:reference value="#encounters-desc-3" />
+                </cda:originalText>
+              </cda:code>
+              <cda:text>
+                <cda:reference value="#encounters-desc-3" />
+              </cda:text>
+              <cda:effectiveTime>
+                <cda:low value="August 2010" />
+                <cda:high value="August 2010" />
+              </cda:effectiveTime>
+            </cda:encounter>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.4.1" extension="2015-08-01" />
+          
+          <cda:code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs" />
+          <cda:title>Vital Signs</cda:title>
+          <cda:text>There are no current vital signs at the time of this document's creation.</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01" />
+          
+          <cda:code code="29762-2" codeSystem="2.16.840.1.113883.6.1" />
+          <cda:title>Social History</cda:title>
+          <cda:text>There is no current social history at the time of this document's creation.</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        <cda:section>
+          <cda:code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note" />
+          <cda:title>Miscellaneous Notes</cda:title>
+          <cda:text>
+            <cda:list styleCode="TOC">
+              <cda:item>
+                <cda:paragraph><cda:br />August 2010
+<cda:br /><cda:br /># Chief Complaint
+<cda:br />No complaints.
+<cda:br /><cda:br /># History of Present Illness
+<cda:br />[USERNAME] is a [AGE] year-old non-hispanic white male.
+<cda:br /><cda:br /># Social History
+<cda:br />Patient is married. Patient is an active smoker and is an alcoholic. Patient identifies as heterosexual.
+<cda:br /><cda:br />Patient comes from a middle socioeconomic background. Patient has a high school education. Patient currently has [ORGANIZATION].
+<cda:br /><cda:br /># Allergies
+<cda:br />No Known Allergies.
+<cda:br /><cda:br /># Medications
+<cda:br />lisinopril 10 mg oral tablet
+<cda:br /><cda:br /># Assessment and Plan
+<cda:br /><cda:br /><cda:br />## Plan
+<cda:br /><cda:br />The patient was prescribed the following medications:
+<cda:br />- lisinopril 10 mg oral tablet
+<cda:br /><cda:br /><cda:br /><cda:br />April 2009
+<cda:br /><cda:br /># Chief Complaint
+<cda:br />No complaints.
+<cda:br /><cda:br /># History of Present Illness
+<cda:br />PT-32109 is a [AGE] year-old non-hispanic white male.
+<cda:br /><cda:br /># Social History
+<cda:br />Patient is married. Patient is an active smoker and is an alcoholic. Patient identifies as heterosexual.
+<cda:br /><cda:br />Patient comes from a middle socioeconomic background. Patient has a high school education. Patient currently has [ORGANIZATION].
+<cda:br /><cda:br /># Allergies
+<cda:br />No Known Allergies.
+<cda:br /><cda:br /># Medications
+<cda:br />No Active Medications.
+<cda:br /><cda:br /># Assessment and Plan
+<cda:br />Patient is presenting with body mass index 30+ - obesity (finding). 
+<cda:br /><cda:br />## Plan
+<cda:br /><cda:br />The patient was prescribed the following medications:
+<cda:br />- lisinopril 10 mg oral tablet
+<cda:br /><cda:br /><cda:br /><cda:br />January 1969
+<cda:br /><cda:br /># Chief Complaint
+<cda:br />No complaints.
+<cda:br /><cda:br /># History of Present Illness
+<cda:br />PT-32109 is a [AGE] year-old non-hispanic white male.
+<cda:br /><cda:br /># Social History
+<cda:br /> Patient has never smoked and is an alcoholic.
+<cda:br />
+<cda:br />Patient comes from a middle socioeconomic background. Patient currently has [ORGANIZATION].
+<cda:br />
+<cda:br /># Allergies
+<cda:br />No Known Allergies.
+<cda:br />
+<cda:br /># Medications
+<cda:br />No Active Medications.
+<cda:br />
+<cda:br /># Assessment and Plan
+<cda:br />Patient is presenting with otitis media. 
+<cda:br />
+<cda:br />## Plan
+<cda:br />
+<cda:br />
+<cda:br />
+<cda:br />
+
+                                            </cda:paragraph>
+              </cda:item>
+            </cda:list>
+          </cda:text>
+        </cda:section>
+      </cda:component>
+    </cda:structuredBody>
+  </cda:component>
+</cda:ClinicalDocument>

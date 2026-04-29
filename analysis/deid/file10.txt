@@ -1,0 +1,540 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cda:ClinicalDocument xmlns:cda="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <cda:realmCode code="US" />
+  <cda:typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <cda:templateId root="2.16.840.1.113883.10.20.1" />
+  <cda:templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+  <cda:templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01" />
+  <cda:id root="2.16.840.1.113883.19.5" extension="46f6aa9d-c38c-4215-833e-19268dadb4ca" assigningAuthorityName="https://github.com/synthetichealth/synthea" />
+  <cda:code code="11506-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Subsequent evaluation note" />
+  <cda:title>Refill Summary</cda:title>
+  <cda:effectiveTime value="August 2020" />
+  <cda:confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" />
+  <cda:languageCode code="en-US" />
+  <cda:recordTarget>
+    <cda:patientRole>
+      <cda:id root="2.16.840.1.113883.19.5" extension="af1e3d76-b14b-4f9e-9d67-0e076ba68491" assigningAuthorityName="https://github.com/synthetichealth/synthea" />
+      <cda:addr use="HP">
+        <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+        <cda:city>[CITY]</cda:city>
+        <cda:state>[STATE]</cda:state>
+        <cda:postalCode>024XX</cda:postalCode>
+      </cda:addr>
+      <cda:telecom nullFlavor="NI" />
+      <cda:patient>
+        <cda:name>
+          <cda:given />
+          <cda:family>PT-00006</cda:family>
+        </cda:name>
+        <cda:administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" />
+        <cda:birthTime value="78 years old" />
+        <cda:raceCode code="2106-3" displayName="white" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238" />
+        <cda:ethnicGroupCode code="2186-5" displayName="non-hispanic" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238" />
+        <cda:languageCommunication>
+          <cda:languageCode code="en-US" />
+        </cda:languageCommunication>
+      </cda:patient>
+    </cda:patientRole>
+  </cda:recordTarget>
+  <cda:author>
+    <cda:time value="August 2020" />
+    <cda:assignedAuthor>
+      <cda:id nullFlavor="NA" />
+      <cda:addr nullFlavor="NA" />
+      <cda:telecom nullFlavor="NA" />
+      <cda:assignedAuthoringDevice>
+        <cda:manufacturerModelName>https://github.com/[ORGANIZATION]/[USERNAME]</cda:manufacturerModelName>
+        <cda:softwareName>https://github.com/[ORGANIZATION]/[USERNAME]</cda:softwareName>
+      </cda:assignedAuthoringDevice>
+      <cda:representedOrganization>
+        <cda:id nullFlavor="NA" />
+        <cda:name>DRX UC WATERTOWN PC</cda:name>
+        <cda:telecom nullFlavor="NA" />
+        <cda:addr>
+          <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+          <cda:city>[CITY]</cda:city>
+          <cda:state>[STATE]</cda:state>
+          <cda:postalCode>024XXXXXXX</cda:postalCode>
+        </cda:addr>
+      </cda:representedOrganization>
+    </cda:assignedAuthor>
+  </cda:author>
+  <cda:custodian>
+    <cda:assignedCustodian>
+      <cda:representedCustodianOrganization>
+        <cda:id nullFlavor="NA" />
+        <cda:name>DRX UC WATERTOWN PC</cda:name>
+        <cda:telecom nullFlavor="NA" />
+        <cda:addr>
+          <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
+          <cda:city>[CITY]</cda:city>
+          <cda:state>[STATE]</cda:state>
+          <cda:postalCode>024XXXXXXX</cda:postalCode>
+        </cda:addr>
+      </cda:representedCustodianOrganization>
+    </cda:assignedCustodian>
+  </cda:custodian>
+  <cda:documentationOf>
+    <cda:serviceEvent classCode="PCPR">
+      <cda:effectiveTime>
+        <cda:low value="July 1947" />
+        <cda:high value="August 2020" />
+      </cda:effectiveTime>
+    </cda:serviceEvent>
+  </cda:documentationOf>
+  <cda:component>
+    <cda:structuredBody>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.22" extension="2015-08-01" />
+          <cda:code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+          <cda:title>Encounters</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Start</cda:th>
+                  <cda:th>Stop</cda:th>
+                  <cda:th>Description</cda:th>
+                  <cda:th>Code</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>2020:46:45-05:00</cda:td>
+                  <cda:td>2020:28:45-04:00</cda:td>
+                  <cda:td ID="encounters-desc-1">Hospital admission for isolation (procedure)</cda:td>
+                  <cda:td ID="encounters-code-1">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:encounter classCode="ENC" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.49" />
+              
+              <cda:id root="da770953-fc5b-46fb-8876-ed769cf48617" />
+              <cda:code code="1505002" codeSystem="2.16.840.1.113883.6.96" displayName="Hospital admission for isolation (procedure)">
+                <cda:originalText>
+                  <cda:reference value="#encounters-desc-1" />
+                </cda:originalText>
+              </cda:code>
+              <cda:text>
+                <cda:reference value="#encounters-desc-1" />
+              </cda:text>
+              <cda:effectiveTime>
+                <cda:low value="March 2020" />
+                <cda:high value="March 2020" />
+              </cda:effectiveTime>
+            </cda:encounter>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.6.1" extension="2015-08-01" />
+          <cda:code code="48765-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Allergy List" />
+          <cda:title>Allergies</cda:title>
+          <cda:text>There are no current allergies at the time of this document's creation.</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09" />
+          <cda:code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of medication use" />
+          <cda:title>Medications</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Start</cda:th>
+                  <cda:th>Stop</cda:th>
+                  <cda:th>Description</cda:th>
+                  <cda:th>Code</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>2020:46:45-05:00</cda:td>
+                  <cda:td />
+                  <cda:td ID="medications-desc-1">0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe</cda:td>
+                  <cda:td ID="medications-code-1">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2020:46:45-05:00</cda:td>
+                  <cda:td />
+                  <cda:td ID="medications-desc-2">Acetaminophen 500 MG Oral Tablet</cda:td>
+                  <cda:td ID="medications-code-2">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2020:46:45-05:00</cda:td>
+                  <cda:td />
+                  <cda:td ID="medications-desc-3">chloroquine phosphate 500 MG Oral Tablet</cda:td>
+                  <cda:td ID="medications-code-3">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm 1116758</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry>
+            
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <cda:id root="6fddd4d7-4c4e-4064-9201-621834d4405b" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS">
+                <cda:low value="March 2020" />
+                <cda:high nullFlavor="UNK" />
+              </cda:effectiveTime>
+              <cda:doseQuantity value="1" />
+              <cda:consumable>
+                
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <cda:manufacturedMaterial>
+                    <cda:code code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe">
+                      <cda:originalText>
+                        <cda:reference value="#medications-desc-1" />
+                      </cda:originalText>
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                      <cda:translation code="854235" codeSystem="2.16.840.1.113883.6.88" displayName="0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe" />
+                    </cda:code>
+                    <cda:name>0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe</cda:name>
+                  </cda:manufacturedMaterial>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+            </cda:substanceAdministration>
+          </cda:entry>
+          <cda:entry>
+            
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <cda:id root="b443fb6d-eb8a-4f4d-97a3-12767fd60c7f" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS">
+                <cda:low value="March 2020" />
+                <cda:high nullFlavor="UNK" />
+              </cda:effectiveTime>
+              <cda:doseQuantity value="1" />
+              <cda:consumable>
+                
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <cda:manufacturedMaterial>
+                    <cda:code code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet">
+                      <cda:originalText>
+                        <cda:reference value="#medications-desc-2" />
+                      </cda:originalText>
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                      <cda:translation code="198440" codeSystem="2.16.840.1.113883.6.88" displayName="Acetaminophen 500 MG Oral Tablet" />
+                    </cda:code>
+                    <cda:name>Acetaminophen 500 MG Oral Tablet</cda:name>
+                  </cda:manufacturedMaterial>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+            </cda:substanceAdministration>
+          </cda:entry>
+          <cda:entry>
+            
+            <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" extension="2014-06-09" />
+              <cda:id root="01428d1a-786d-466e-a2bf-0a70e6b907a2" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime xsi:type="IVL_TS">
+                <cda:low value="March 2020" />
+                <cda:high nullFlavor="UNK" />
+              </cda:effectiveTime>
+              <cda:doseQuantity value="1" />
+              <cda:consumable>
+                
+                <cda:manufacturedProduct classCode="MANU">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.23" extension="2014-06-09" />
+                  <cda:manufacturedMaterial>
+                    <cda:code code="1116758" codeSystem="2.16.840.1.113883.6.88" displayName="chloroquine phosphate 500 MG Oral Tablet">
+                      <cda:originalText>
+                        <cda:reference value="#medications-desc-3" />
+                      </cda:originalText>
+                      <cda:translation code="1116758" codeSystem="2.16.840.1.113883.6.88" displayName="chloroquine phosphate 500 MG Oral Tablet" />
+                      <cda:translation code="1116758" codeSystem="2.16.840.1.113883.6.88" displayName="chloroquine phosphate 500 MG Oral Tablet" />
+                      <cda:translation code="1116758" codeSystem="2.16.840.1.113883.6.88" displayName="chloroquine phosphate 500 MG Oral Tablet" />
+                      <cda:translation code="1116758" codeSystem="2.16.840.1.113883.6.88" displayName="chloroquine phosphate 500 MG Oral Tablet" />
+                    </cda:code>
+                    <cda:name>chloroquine phosphate 500 MG Oral Tablet</cda:name>
+                  </cda:manufacturedMaterial>
+                </cda:manufacturedProduct>
+              </cda:consumable>
+            </cda:substanceAdministration>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.3.1" extension="2015-08-01" />
+          <cda:code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Results" />
+          <cda:title>Diagnostic Results</cda:title>
+          <cda:text>Data Unknown</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01" />
+          <cda:code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem List" />
+          <cda:title>Problems</cda:title>
+          <cda:text>
+            <cda:table border="1" width="100%">
+              <cda:thead>
+                <cda:tr>
+                  <cda:th>Start</cda:th>
+                  <cda:th>Stop</cda:th>
+                  <cda:th>Description</cda:th>
+                  <cda:th>Code</cda:th>
+                </cda:tr>
+              </cda:thead>
+              <cda:tbody>
+                <cda:tr>
+                  <cda:td>2020:46:45-05:00</cda:td>
+                  <cda:td>2020:46:45-04:00</cda:td>
+                  <cda:td ID="conditions-desc-1">Pneumonia (disorder)</cda:td>
+                  <cda:td ID="conditions-code-1">http://snomed.info/sct 233604007</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2020:46:45-05:00</cda:td>
+                  <cda:td />
+                  <cda:td ID="conditions-desc-2">Hypoxemia (disorder)</cda:td>
+                  <cda:td ID="conditions-code-2">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2020:46:45-05:00</cda:td>
+                  <cda:td>2020:46:45-04:00</cda:td>
+                  <cda:td ID="conditions-desc-3">Respiratory distress (finding)</cda:td>
+                  <cda:td ID="conditions-code-3">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+                <cda:tr>
+                  <cda:td>2020:46:45-05:00</cda:td>
+                  <cda:td>2020:46:45-04:00</cda:td>
+                  <cda:td ID="conditions-desc-4">Sepsis caused by virus (disorder)</cda:td>
+                  <cda:td ID="conditions-code-4">http://snomed.info/sct [MEDICALRECORD]</cda:td>
+                </cda:tr>
+              </cda:tbody>
+            </cda:table>
+          </cda:text>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              
+              <cda:id root="aa68e23d-614b-4e19-b357-e6921bf9dc4a" />
+              <cda:code nullFlavor="NA" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="March 2020" />
+                <cda:high value="March 2020" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="false">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  
+                  <cda:id root="9e4d6a40-49f3-4494-8238-491492abf557" />
+                  <cda:code code="64572001" displayName="Condition" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+                    <cda:translation code="75323-6" displayName="Condition" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  </cda:code>
+                  <cda:text>
+                    <cda:reference value="#conditions-desc-1" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="March 2020" />
+                    <cda:high value="March 2020" />
+                  </cda:effectiveTime>
+                  <cda:priorityCode code="8319008" codeSystem="2.16.840.1.113883.6.96" displayName="Principal diagnosis" />
+                  <cda:value xsi:type="CD" code="233604007" codeSystem="2.16.840.1.113883.6.96" displayName="Pneumonia (disorder)">
+                    <cda:originalText>
+                      <cda:reference value="#conditions-desc-1" />
+                    </cda:originalText>
+                  </cda:value>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              
+              <cda:id root="c096e375-cd4e-4d9a-8c65-62192c8a6fcb" />
+              <cda:code nullFlavor="NA" />
+              <cda:statusCode code="active" />
+              <cda:effectiveTime>
+                <cda:low value="March 2020" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="false">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  
+                  <cda:id root="03afc984-ca98-45e2-90ae-06a9fb4d6f32" />
+                  <cda:code code="64572001" displayName="Condition" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+                    <cda:translation code="75323-6" displayName="Condition" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  </cda:code>
+                  <cda:text>
+                    <cda:reference value="#conditions-desc-2" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="March 2020" />
+                  </cda:effectiveTime>
+                  <cda:priorityCode code="8319008" codeSystem="2.16.840.1.113883.6.96" displayName="Principal diagnosis" />
+                  <cda:value xsi:type="CD" code="389087006" codeSystem="2.16.840.1.113883.6.96" displayName="Hypoxemia (disorder)">
+                    <cda:originalText>
+                      <cda:reference value="#conditions-desc-2" />
+                    </cda:originalText>
+                  </cda:value>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              
+              <cda:id root="ec58446a-cd13-43ff-95c7-e20b60bab592" />
+              <cda:code nullFlavor="NA" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="March 2020" />
+                <cda:high value="March 2020" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="false">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  
+                  <cda:id root="f370ea55-47e4-414b-9660-ec99b6b50f21" />
+                  <cda:code code="64572001" displayName="Condition" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+                    <cda:translation code="75323-6" displayName="Condition" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  </cda:code>
+                  <cda:text>
+                    <cda:reference value="#conditions-desc-3" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="March 2020" />
+                    <cda:high value="March 2020" />
+                  </cda:effectiveTime>
+                  <cda:priorityCode code="8319008" codeSystem="2.16.840.1.113883.6.96" displayName="Principal diagnosis" />
+                  <cda:value xsi:type="CD" code="271825005" codeSystem="2.16.840.1.113883.6.96" displayName="Respiratory distress (finding)">
+                    <cda:originalText>
+                      <cda:reference value="#conditions-desc-3" />
+                    </cda:originalText>
+                  </cda:value>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+          <cda:entry typeCode="DRIV">
+            <cda:act classCode="ACT" moodCode="EVN">
+              <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+              
+              <cda:id root="a06c7cfc-9369-499e-9a91-8faead6aa5f8" />
+              <cda:code nullFlavor="NA" />
+              <cda:statusCode code="completed" />
+              <cda:effectiveTime>
+                <cda:low value="March 2020" />
+                <cda:high value="March 2020" />
+              </cda:effectiveTime>
+              <cda:entryRelationship typeCode="SUBJ" inversionInd="false">
+                <cda:observation classCode="OBS" moodCode="EVN">
+                  <cda:templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                  
+                  <cda:id root="ba0d4a0d-3e05-444e-a4c1-1984bb82ee54" />
+                  <cda:code code="64572001" displayName="Condition" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+                    <cda:translation code="75323-6" displayName="Condition" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                  </cda:code>
+                  <cda:text>
+                    <cda:reference value="#conditions-desc-4" />
+                  </cda:text>
+                  <cda:statusCode code="completed" />
+                  <cda:effectiveTime>
+                    <cda:low value="March 2020" />
+                    <cda:high value="March 2020" />
+                  </cda:effectiveTime>
+                  <cda:priorityCode code="8319008" codeSystem="2.16.840.1.113883.6.96" displayName="Principal diagnosis" />
+                  <cda:value xsi:type="CD" code="770349000" codeSystem="2.16.840.1.113883.6.96" displayName="Sepsis caused by virus (disorder)">
+                    <cda:originalText>
+                      <cda:reference value="#conditions-desc-4" />
+                    </cda:originalText>
+                  </cda:value>
+                </cda:observation>
+              </cda:entryRelationship>
+            </cda:act>
+          </cda:entry>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.7.1" extension="2014-06-09" />
+          <cda:code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Procedures" />
+          <cda:title>Procedures</cda:title>
+          <cda:text>Data Unknown</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.4.1" extension="2015-08-01" />
+          <cda:code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Vital signs" />
+          <cda:title>Vital Signs</cda:title>
+          <cda:text>Data Unknown</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section nullFlavor="NI">
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.17" />
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.17" extension="2015-08-01" />
+          <cda:code code="29762-2" codeSystem="2.16.840.1.113883.6.1" />
+          <cda:title>Social History</cda:title>
+          <cda:text>There is no current social history at the time of this document's creation.</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        
+        <cda:section>
+          <cda:templateId root="2.16.840.1.113883.10.20.22.2.10" extension="2014-06-09" />
+          <cda:code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment plan" />
+          <cda:title>Plan of Care</cda:title>
+          <cda:text>Data Unknown</cda:text>
+        </cda:section>
+      </cda:component>
+      <cda:component>
+        <cda:section>
+          <cda:code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note" />
+          <cda:title>Miscellaneous Notes</cda:title>
+          <cda:text>
+            <cda:list styleCode="TOC">
+              <cda:item>
+                <cda:paragraph><cda:br />March 2020<cda:br /><cda:br /><cda:br /> Medications<cda:br />No Active Medications.<cda:br /><cda:br /><cda:br /> Plan<cda:br /><cda:br />The following procedures were conducted:<cda:br />- plain chest x-ray (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />The patient was prescribed the following medications:<cda:br />- 0.4 ml enoxaparin sodium 100 mg/ml prefilled syringe<cda:br />- acetaminophen 500 mg oral tablet<cda:br />- chloroquine phosphate 500 mg oral tablet<cda:br /><cda:br /><cda:br /><cda:br /><cda:br />
+                                                                </cda:paragraph>
+              </cda:item>
+            </cda:list>
+          </cda:text>
+        </cda:section>
+      </cda:component>
+    </cda:structuredBody>
+  </cda:component>
+</cda:ClinicalDocument>
