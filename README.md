@@ -197,9 +197,11 @@ XML input
    │          telecom → [PHONE] | streetAddressLine → [STREET]
    │          effectiveTime/low/high → Month YYYY | SSN id root → [SSN]
    │
-   └─ Pass 2: ZeroShot NER on every text node
-              Walks all element.text and element.tail in the document tree,
-              runs the full JSL NLP pipeline, writes replacements back.
+   └─ Pass 2: ZeroShot NER (JSL — primary detection)
+              Context-enriched inputs: attribute values are wrapped in readable
+              sentences ("Date of birth: 19470501", "ZIP code: 97006") so the
+              NER model understands what it is reading.
+              Section-level narrative text is extracted as full blocks.
               Works on any XML structure — no tag-name assumptions.
 ```
 
@@ -213,20 +215,20 @@ Runs the same two-pass pipeline across **all XML files in a folder**:
 analysis/*.txt  (10 files, 6 unique patients)
        │
        ├─ Spark starts once
-       ├─ Per file: Pass 1 (structural) + Pass 2 (ZeroShot NER)
+       ├─ Per file: Pass 1 (structural) + Pass 2 (ZeroShot NER — primary)
        ├─ Saves de-identified XML → analysis/deid/
        └─ Saves audit log → analysis/Batch_DeID_Results.xlsx
-          (Summary tab + one sheet per file, 1,393 total changes)
+          (Summary tab + one sheet per file, 1,072 total changes)
 ```
 
-| File | Patient | Pass 1 | Pass 2 | Total |
+| File | Patient | Pass 1 | Pass 2 (JSL NER) | Total |
 |---|---|---|---|---|
-| file1.txt | Bryce Zemlak → PT-00002 | 25 | 35 | 60 |
-| file2.txt | Elizabeth Itasca → PT-00003 | 12 | 10 | 23 |
-| file3.txt | Kimberly Olympic → PT-00004 | 12 | 10 | 23 |
-| file4.txt | Grant Custer → PT-00005 | 12 | 10 | 23 |
-| file5–9.txt | Myra Jones → PT-00001 | 132 | 97 | 241 each |
-| file10.txt | Minh Kulas → PT-00006 | 31 | 28 | 59 |
+| file1.txt | Bryce Zemlak → PT-00002 | ~25 | ~10 | 35 |
+| file2.txt | Elizabeth Itasca → PT-00003 | ~12 | ~9 | 21 |
+| file3.txt | Kimberly Olympic → PT-00004 | ~12 | ~8 | 20 |
+| file4.txt | Grant Custer → PT-00005 | ~12 | ~8 | 20 |
+| file5–9.txt | Myra Jones → PT-00001 | 132 | 55 | 187 each |
+| file10.txt | Minh Kulas → PT-00006 | ~31 | ~10 | 41 |
 
 ---
 

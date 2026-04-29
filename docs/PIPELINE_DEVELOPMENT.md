@@ -200,33 +200,66 @@ NS = _ns_match.group(1) if _ns_match else ""
 def t(name): return f"{{{NS}}}{name}" if NS else name
 ```
 
-### Pass 2 — ZeroShot NER on text nodes
+### Pass 2 — ZeroShot NER (primary detection)
+
+Pass 2 is the main PHI detection mechanism. It runs the full JSL NLP pipeline on
+every piece of text in the document, with two key improvements over naive text-node
+walking:
+
+**1. Context-enriched inputs**
+
+Raw XML attribute values (`19470501`, `97006`, `tel:503-555-0101`) are meaningless
+to an NER model without context. Each value is wrapped in a plain-English sentence
+before being sent to NLP:
+
+| Source | NLP input sent |
+|---|---|
+| `birthTime value="19470501"` | `"Date of birth: 19470105"` |
+| `effectiveTime value="20120806"` | `"Service date: 20120806"` |
+| `postalCode` text | `"ZIP code: 97006"` |
+| `telecom value="tel:503-555-0101"` | `"Phone number: tel:503-555-0101"` |
+| `streetAddressLine` text | `"Street address: NW 3rd Ave"` |
+| SSN `id extension` | `"Social security number: 123-45-6789"` |
+
+**2. Section-level narrative extraction**
+
+Instead of walking individual `element.text` / `element.tail` fragments (which
+can be a single word torn from its sentence), Pass 2 extracts complete `<section>`
+→ `<text>` blocks as full paragraphs. This gives the NER model sentence-level
+context — matching how it was trained.
 
 ```python
-# Collect every text/tail node regardless of tag name
-text_nodes = []
+# A) Attribute values with context labels
 for el in root.iter():
-    if el.text and el.text.strip():
-        text_nodes.append((el, "text", el.text))
-    if el.tail and el.tail.strip():
-        text_nodes.append((el, "tail", el.tail))
+    tag = local(el)
+    v = el.get("value", "")
+    if v and re.match(r"^(19|20)\d{6}", v):
+        prefix = "Date of birth: " if tag == "birthTime" else "Service date: "
+        items.append({"nlp_text": prefix + v, "prefix": prefix,
+                      "el": el, "attr": "value", "orig": v})
 
-# Deduplicate, run NLP once per unique string
-unique_texts = list({txt for _, _, txt in text_nodes})
+# B–E) SSN, phone, ZIP, street — similar wrapping
+
+# F) Section-level narrative blocks
+for section_el in root.iter(t("section")):
+    for text_el in section_el.findall(f".//{t('text')}"):
+        flat = " ".join(s.strip() for s in text_el.itertext() if s.strip())
+        items.append({"nlp_text": flat, "prefix": "", "attr": "text_content", ...})
+
+# G) Remaining header text nodes with tag label
+
+# Run NER once on all unique context strings
+unique_texts = list({item["nlp_text"] for item in items})
 df = spark.createDataFrame(enumerate(unique_texts), ["idx", "text"])
 result_df = nlp_model.transform(df).withColumn("deid_text", custom_deid_udf(...))
+deid_map = {r["text"]: r["deid_text"] for r in result_df.select("text","deid_text").collect()}
 
-# Build lookup and write back
-deid_map = {row["text"]: row["deid_text"] for row in result_df.collect()
-            if row["text"] != row["deid_text"]}
-for el, attr, orig in text_nodes:
-    deid = deid_map.get(orig)
-    if deid:
-        setattr(el, attr, deid)  # el.text = deid  or  el.tail = deid
+# Strip prefix from result, write back to element attribute or text node
 ```
 
-Deduplication ensures each unique string is processed only once through Spark NLP,
-reducing compute time when the same phrase appears in multiple table cells.
+Deduplication (`list({item["nlp_text"] for item in items})`) ensures each unique
+string is processed only once through Spark, reducing compute when the same phrase
+appears in multiple cells.
 
 ---
 
@@ -310,7 +343,25 @@ at the replacement stage.
 
 ---
 
-### 5 — YYYYMMDD dates in XML narrative table cells
+### 5 — Pass 2 accuracy: raw attribute values vs context-enriched inputs
+
+Feeding raw attribute values (`19470501`, `97006`) directly to the ZeroShot NER model
+produced low accuracy — the model did not recognise them as PHI without surrounding
+context.
+
+**Fix:** Wrap each value in a plain-English sentence before sending to NLP:
+```python
+prefix = "Date of birth: " if tag == "birthTime" else "Service date: "
+nlp_input = prefix + v          # "Date of birth: 19470501"
+```
+After NER runs, strip the prefix from the replacement to write back the correct value.
+
+Also switched from individual `element.text` / `element.tail` fragments to section-level
+`<text>` block extraction so narrative notes are read as complete sentences.
+
+---
+
+### 6 — YYYYMMDD dates in XML narrative table cells
 
 Service dates stored as `20120806` inside `<td>` elements were not caught by
 Pass 1 (which targets attributes, not table cell text content) and were not caught
@@ -345,8 +396,12 @@ Output: `outputs/DeID_Test_Results.xlsx` — yellow = detected entities, green =
 
 XML pipeline tested against `file9.txt` (HL7 CDA, 119 KB):
 - 132 changes from Pass 1 (structural rules)
-- 97 text nodes updated from Pass 2 (ZeroShot NER)
-- 241 total changes logged in `outputs/XML_DeID_Results.xlsx`
+- 55 nodes updated from Pass 2 (ZeroShot NER with context-enriched inputs)
+- 187 total changes logged in `outputs/XML_DeID_Results.xlsx`
+
+Batch pipeline tested across 10 files (6 unique patients):
+- 1,072 total changes across all files
+- Per-file results logged in `analysis/Batch_DeID_Results.xlsx` (Summary + 10 sheets)
 
 ---
 

@@ -133,10 +133,14 @@ XML document in
       │             effectiveTime service dates → August 2012                   │
       │             streetAddressLine → [STREET]                                │
       │                                                                         │
-      └── PASS 2 ── AI (ZeroShot NER) on every text node ─────────────────────┘
-                    Reads every piece of text in the document —
-                    table cells, narrative notes, comments —
-                    and applies the same five rules as Approach 1
+      └── PASS 2 ── AI (ZeroShot NER) — primary detection ───────────────────┘
+                    Before sending any text to the AI, a plain-English label
+                    is added: "Date of birth: 19470501", "ZIP code: 97006".
+                    This gives the model enough context to understand what it
+                    is reading, even for values that look like raw codes.
+                    Full narrative sections are extracted as complete blocks
+                    rather than small fragments, so the AI reads sentences in
+                    context — just like a human reviewer would.
 
                                         │
                                         ▼
@@ -147,11 +151,12 @@ XML document in
 
 | | Pass 1 | Pass 2 |
 |---|---|---|
-| What it handles | Structured fields with predictable locations | Free text anywhere in the document |
-| How it works | Reads the XML tag directly | Runs the AI model |
+| What it handles | Structured fields at known tag/attribute locations | All text in the document — narrative, table cells, comments |
+| How it works | Reads the XML tag directly | JSL ZeroShot NER with context-enriched inputs |
 | Speed | Very fast | Slower (AI model) |
 | Why it is enough for structured fields | The tag name tells us exactly what the data is — no ambiguity | — |
-| Why AI is still needed | Some PHI appears in narrative notes with no fixed location | AI reads context regardless of where text sits |
+| Why AI is the primary mechanism | Pass 1 covers predictable structure; Pass 2 is the safety net that catches everything else regardless of where it appears | — |
+| Context enrichment | — | Raw values like `19470501` are labelled before sending to the AI: `"Date of birth: 19470501"` — this dramatically improves accuracy |
 
 ### Works on any XML structure
 
