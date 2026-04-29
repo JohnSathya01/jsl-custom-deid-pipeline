@@ -1,6 +1,6 @@
 # JSL Custom De-Identification Pipeline
 
-A custom clinical text de-identification pipeline built on [John Snow Labs Spark NLP for Healthcare](https://www.johnsnowlabs.com/), supporting both plain text and HL7 CDA XML documents.
+A custom clinical text de-identification pipeline built on [John Snow Labs Spark NLP for Healthcare](https://www.johnsnowlabs.com/), supporting plain text, single XML files, and batch processing of multiple XML documents.
 
 ---
 
@@ -26,20 +26,25 @@ Everything else (SSN, phone, email, address) is replaced with a placeholder: `[S
 jsl-custom-deid-pipeline/
 │
 ├── notebooks/
-│   ├── Custom_DeID_Pipeline.ipynb   # Main pipeline — plain text de-identification
+│   ├── Custom_DeID_Pipeline.ipynb   # Plain text de-identification
 │   ├── Test_Cases_DeID.ipynb        # 20 test cases with Excel output
-│   └── XML_DeID_Pipeline.ipynb      # HL7 CDA XML de-identification
+│   ├── XML_DeID_Pipeline.ipynb      # Single XML file de-identification
+│   └── Batch_XML_DeID.ipynb         # Batch — process all XMLs in a folder
+│
+├── analysis/
+│   ├── Batch_DeID_Results.xlsx      # Batch results — Summary + one sheet per file
+│   └── deid/                        # De-identified XML outputs (10 files)
 │
 ├── outputs/
-│   ├── DeID_Test_Results.xlsx       # Test case results (colour-coded)
-│   ├── XML_DeID_Results.xlsx        # XML de-ID audit log (145 changes)
+│   ├── DeID_Test_Results.xlsx       # Plain text test results (20 cases)
+│   ├── XML_DeID_Results.xlsx        # Single XML de-ID audit log
 │   └── file9_deid.xml               # De-identified sample CDA document
 │
 ├── docs/
 │   ├── HOW_IT_WORKS.md              # Plain-language explanation (non-technical)
-│   └── PIPELINE_DEVELOPMENT.md      # Technical development notes and decisions
+│   └── PIPELINE_DEVELOPMENT.md      # Technical architecture and development notes
 │
-├── run_notebook.py                  # Headless notebook runner (command line)
+├── run_notebook.py                  # Headless notebook runner
 ├── .gitignore
 └── README.md
 ```
@@ -124,7 +129,7 @@ Place your JSL license at the project root as `spark_jsl.json`:
 }
 ```
 
-> `spark_jsl.json` is in `.gitignore` — it will never be committed to the repository.
+> `spark_jsl.json` is in `.gitignore` — it will never be committed.
 
 ---
 
@@ -139,14 +144,17 @@ Place your JSL license at the project root as `spark_jsl.json`:
 ### Option B — Command Line (headless)
 
 ```bash
-# Run the XML de-identification pipeline (default)
-python run_notebook.py XML_DeID_Pipeline
-
-# Run the plain-text pipeline
+# Plain text pipeline
 python run_notebook.py Custom_DeID_Pipeline
 
-# Run the 20 test cases
+# 20 test cases
 python run_notebook.py Test_Cases_DeID
+
+# Single XML file
+python run_notebook.py XML_DeID_Pipeline
+
+# Batch — all XML files in analysis/
+python run_notebook.py Batch_XML_DeID
 ```
 
 Output notebooks are saved to the project root as `<name>_output.ipynb`.
@@ -174,37 +182,62 @@ Plain text input
 **NER Model:** `zeroshot_ner_deid_subentity_docwise_medium`
 Detects 18 entity types: PATIENT, DOCTOR, DATE, DATE_OF_BIRTH, ZIP, SSN, PHONE, EMAIL, CITY, STREET, STATE, COUNTRY, USERNAME, ID, BIOID, ORGANIZATION, MEDICAL_RECORD_NUMBER, AGE
 
-### HL7 CDA XML — `XML_DeID_Pipeline.ipynb`
+---
 
-Does **not** use Spark NLP. Uses two lightweight stages instead:
+### Single XML — `XML_DeID_Pipeline.ipynb`
+
+Two-pass approach for any XML schema (HL7 CDA, FHIR, custom):
 
 ```
-HL7 CDA XML input
-       │
-       ├─ Stage 1: xml.etree.ElementTree rules
-       │           (targets known CDA tag paths directly —
-       │            birthTime, postalCode, patient/name, effectiveTime, etc.)
-       │
-       └─ Stage 2: Pure Python regex rules
-                   (runs on free-text narrative <text> sections —
-                    catches patient names, YYYYMMDD dates, phones, ZIPs)
+XML input
+   │
+   ├─ Pass 1: Structural rules (xml.etree.ElementTree)
+   │          Targets PHI at known tag/attribute locations:
+   │          birthTime → age | postalCode → 970XX | patient/name → PT-XXXXX
+   │          telecom → [PHONE] | streetAddressLine → [STREET]
+   │          effectiveTime/low/high → Month YYYY | SSN id root → [SSN]
+   │
+   └─ Pass 2: ZeroShot NER on every text node
+              Walks all element.text and element.tail in the document tree,
+              runs the full JSL NLP pipeline, writes replacements back.
+              Works on any XML structure — no tag-name assumptions.
 ```
 
-> The XML pipeline avoids Spark NLP due to a JSL floating license restriction
-> (only one active Spark session allowed at a time). Since all structured PHI
-> in a CDA document sits at known, predictable XML paths, direct tag rules
-> are both faster and sufficient.
+---
+
+### Batch XML — `Batch_XML_DeID.ipynb`
+
+Runs the same two-pass pipeline across **all XML files in a folder**:
+
+```
+analysis/*.txt  (10 files, 6 unique patients)
+       │
+       ├─ Spark starts once
+       ├─ Per file: Pass 1 (structural) + Pass 2 (ZeroShot NER)
+       ├─ Saves de-identified XML → analysis/deid/
+       └─ Saves audit log → analysis/Batch_DeID_Results.xlsx
+          (Summary tab + one sheet per file, 1,393 total changes)
+```
+
+| File | Patient | Pass 1 | Pass 2 | Total |
+|---|---|---|---|---|
+| file1.txt | Bryce Zemlak → PT-00002 | 25 | 35 | 60 |
+| file2.txt | Elizabeth Itasca → PT-00003 | 12 | 10 | 23 |
+| file3.txt | Kimberly Olympic → PT-00004 | 12 | 10 | 23 |
+| file4.txt | Grant Custer → PT-00005 | 12 | 10 | 23 |
+| file5–9.txt | Myra Jones → PT-00001 | 132 | 97 | 241 each |
+| file10.txt | Minh Kulas → PT-00006 | 31 | 28 | 59 |
 
 ---
 
 ## Customising the Patient Lookup
 
-In `notebooks/Custom_DeID_Pipeline.ipynb`, edit the `PATIENT_ID_MAP` cell:
+Edit `PATIENT_ID_MAP` in the relevant notebook:
 
 ```python
 PATIENT_ID_MAP = {
     "Myra Jones"    : "PT-00001",
-    "Daniel Foster" : "PT-10042",
+    "Bryce Zemlak"  : "PT-00002",
     # Add your patients here
 }
 ```
@@ -225,11 +258,11 @@ PATIENT_ID_MAP = dict(rows)
 | Ubuntu / Debian | `/usr/lib/jvm/java-11-openjdk-amd64` |
 | Windows | `C:\Program Files\Eclipse Adoptium\jdk-11.x.x.x-hotspot` |
 
-If you are on Linux or Windows, update the `JAVA_HOME` line in the setup cell of each notebook.
+Update the `JAVA_HOME` line in the setup cell of each notebook if not on macOS.
 
 ---
 
 ## Documentation
 
-- [HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md) — Plain-language explanation (no coding knowledge needed)
-- [PIPELINE_DEVELOPMENT.md](docs/PIPELINE_DEVELOPMENT.md) — Technical notes: architecture decisions, pitfalls, and how each feature was built
+- [HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md) — Plain-language explanation covering both pipelines (no coding knowledge needed)
+- [PIPELINE_DEVELOPMENT.md](docs/PIPELINE_DEVELOPMENT.md) — Technical architecture, all pitfalls encountered, and implementation details for both pipelines
