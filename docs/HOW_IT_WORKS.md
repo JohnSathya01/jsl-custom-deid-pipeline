@@ -1,166 +1,171 @@
-# How the Custom De-Identification Pipeline Works
+# How the De-Identification Pipeline Works
 
-This document explains the pipeline in plain language — no coding experience needed.
+*Plain-language guide — no coding experience needed.*
 
 ---
 
 ## What Problem Does It Solve?
 
-Medical records contain sensitive personal information: patient names, dates of birth,
-social security numbers, addresses, phone numbers, and so on.
+Medical records contain sensitive personal information — patient names, dates of birth, social security numbers, addresses, phone numbers, and more.
 
-Before sharing these records (for research, audits, or transfers), that information must
-be **removed or replaced** so no one can identify the patient. This process is called
-**de-identification**.
+Before sharing these records for research, audits, or transfers, that information must be **removed or replaced** so no one can identify the patient. This process is called **de-identification**.
 
-The challenge is doing it automatically across thousands of records, while following
-specific rules — for example, keeping the doctor's name visible but replacing the
-patient's name with an ID number.
-
----
-
-## The Five Rules We Implemented
+The pipeline does this automatically, following five specific rules:
 
 | What was found | What happens to it |
 |---|---|
 | **Patient name** (e.g. *Myra Jones*) | Replaced with a Patient ID (e.g. *PT-00001*) |
 | **Doctor name** (e.g. *Dr. Henry Seven*) | Left exactly as-is — not changed |
-| **Service dates** (e.g. *08/06/2012*) | Shortened to month and year only (e.g. *August 2012*) |
+| **Service date** (e.g. *08/06/2012*) | Shortened to month and year only (e.g. *August 2012*) |
 | **Date of birth** (e.g. *01/05/1947*) | Converted to the patient's current age (e.g. *78 years old*) |
 | **ZIP / postcode** (e.g. *97006*) | First 3 digits kept, rest replaced with X (e.g. *970XX*) |
 
-Everything else — SSN, phone number, email, street address — is replaced with a
-placeholder like `[SSN]`, `[PHONE]`, or `[STREET]`.
+Everything else — SSN, phone number, email, street address — is replaced with a placeholder like `[SSN]`, `[PHONE]`, or `[STREET]`.
 
 ---
 
-## How the Pipeline Reads a Document
+## Two Types of Documents, Two Approaches
 
-Think of the pipeline as an assembly line with two checkpoints:
+The pipeline handles two very different types of medical records:
+
+| Document type | Example | How it is processed |
+|---|---|---|
+| **Plain text** | Clinical notes, discharge summaries, typed reports | Approach 1 — AI reads the text and labels PHI |
+| **XML files** (HL7 CDA, FHIR, etc.) | Electronic health records, hospital data exports | Approach 2 — Structural rules + AI on text sections |
+
+---
+
+## Approach 1 — Plain Text Pipeline
+
+Used by: `Custom_DeID_Pipeline.ipynb` and `Test_Cases_DeID.ipynb`
+
+Think of this as an assembly line with two stations:
 
 ```
-Raw document
-     │
-     ▼
-┌──────────────────────────────────┐
-│  CHECKPOINT 1 — "Find the PHI"   │
-│                                  │
-│  Two types of detectors run:     │
-│  • AI model (reads context)      │
-│  • Rule-based scanner (patterns) │
-└──────────────┬───────────────────┘
-               │  List of detected names, dates, ZIPs, etc.
-               ▼
-┌──────────────────────────────────┐
-│  CHECKPOINT 2 — "Replace it"     │
-│                                  │
-│  Each detected item goes through │
-│  the five rules above            │
-└──────────────┬───────────────────┘
+Plain text in
+      │
+      ▼
+┌─────────────────────────────────────┐
+│  STATION 1 — "Find the PHI"         │
+│                                     │
+│  • AI model reads each sentence     │
+│    and labels names, dates, ZIPs…   │
+│                                     │
+│  • Pattern scanners check for       │
+│    ZIPs, DOBs, emails, countries    │
+└──────────────┬──────────────────────┘
                │
                ▼
-     De-identified document
+┌─────────────────────────────────────┐
+│  STATION 2 — "Replace it"           │
+│                                     │
+│  Each detected item goes through    │
+│  the five rules                     │
+└──────────────┬──────────────────────┘
+               │
+               ▼
+      De-identified text
+```
+
+### Station 1 — Finding the PHI
+
+**The AI model** reads every sentence and labels the sensitive pieces:
+
+> *"Patient **Myra Jones** was seen by **Dr. Henry Seven** on **August 6, 2012**."*
+
+The model returns:
+- `Myra Jones` → **PATIENT**
+- `Dr. Henry Seven` → **DOCTOR**
+- `August 6, 2012` → **DATE**
+
+It recognises 18 types of information: names, dates, cities, phone numbers, emails, SSNs, medical record numbers, usernames, and more.
+
+**The pattern scanners** run alongside the AI and catch things that always follow a fixed format — ZIPs, email addresses, and dates of birth. Think of them like a spell-checker using a dictionary rather than guessing. They never miss a pattern they were built to recognise.
+
+Both results are combined. If the AI and a scanner both flag the same word, the more specific match wins.
+
+### Station 2 — Replacing the PHI
+
+Once every sensitive item is labelled, the replacement rules run:
+
+```
+PATIENT  →  look up Patient ID
+DOCTOR   →  do nothing, keep as-is
+DATE     →  keep month and year only
+DOB      →  calculate the person's age today
+ZIP      →  keep first 3 characters + XXs
+SSN      →  [SSN]
+PHONE    →  [PHONE]
+EMAIL    →  [EMAIL]
+…and so on
 ```
 
 ---
 
-## Checkpoint 1 — Finding the PHI
+## Approach 2 — XML Pipeline
 
-### The AI Model
+Used by: `XML_DeID_Pipeline.ipynb`
 
-The first detector is an **AI language model** made by John Snow Labs called
-`zeroshot_ner_deid_subentity_docwise_medium`.
-
-*NER* stands for **Named Entity Recognition** — the model has been trained to read
-a sentence and label the important pieces:
-
-> *"Patient **Daniel Foster** was seen by **Dr. Henry Seven** on **August 6, 2012**."*
-
-The model reads this and returns:
-- `Daniel Foster` → label: **PATIENT**
-- `Dr. Henry Seven` → label: **DOCTOR**
-- `August 6, 2012` → label: **DATE**
-
-It can recognise 18 different types of information including names, dates, cities,
-phone numbers, email addresses, usernames, and medical record numbers.
-
-### The Rule-Based Scanners
-
-The AI model is very good at reading context, but certain things are more reliably
-caught by fixed patterns — the same way a spell-checker uses a dictionary rather
-than guessing.
-
-Four pattern-based scanners run alongside the AI model:
-
-| Scanner | What it finds |
-|---|---|
-| `zip_parser` | ZIP codes and postcodes (e.g. `97006`, `M13 9PL`) |
-| `date_of_birth_parser` | Dates preceded by DOB labels |
-| `email_matcher` | Email addresses |
-| `country_matcher` | Country names |
-
-The results from all five sources are merged together. If two detectors flag the
-same piece of text, the longer / more specific match wins.
-
----
-
-## Checkpoint 2 — Applying the Rules
-
-Once the pipeline has a list of detected items and their labels, a custom piece of
-code (called a **UDF** — User-Defined Function) goes through each one and decides
-what to do:
-
-```
-Label = PATIENT      →  look up Patient ID in the database
-Label = DOCTOR       →  do nothing, leave it as-is
-Label = DATE         →  keep only the month and year
-Label = DOB          →  calculate the person's age
-Label = ZIP          →  keep first 3 characters, replace the rest with X
-Label = SSN          →  replace with [SSN]
-Label = PHONE        →  replace with [PHONE]
-Label = EMAIL        →  replace with [EMAIL]
-… and so on
-```
-
-Replacements are made from the **end of the document backwards**. This is a
-technical trick — if you replace text from the beginning, the positions of
-everything after it shift, and the next replacement lands in the wrong place.
-Working backwards avoids that problem.
-
----
-
-## How XML / CDA Files Are Handled Differently
-
-Plain text and XML medical records need slightly different treatment.
-
-XML files (like HL7 CDA documents used in hospitals) are structured — information
-sits in specific, labelled locations:
+XML medical records (like HL7 CDA documents used in hospitals) have a specific structure. Information sits in labelled slots:
 
 ```xml
-<birthTime value="19470501"/>          ← date of birth is always here
-<postalCode>97006</postalCode>         ← ZIP is always here
-<given>Myra</given><family>Jones</family>  ← patient name is always here
+<birthTime value="19470501"/>           ← DOB always lives here
+<postalCode>97006</postalCode>          ← ZIP always lives here
+<given>Myra</given><family>Jones</family>  ← name always lives here
 ```
 
-For these known locations, the pipeline goes **directly to the right tag and
-changes the value** — no AI needed, because the structure tells us exactly what
-each piece of data is.
+Because we know exactly where PHI sits in a structured document, we can go directly to the right place and change it — no AI guessing needed for those fields.
 
-For the **narrative sections** (free-flowing clinical notes written by doctors),
-the same rules as plain text apply: find dates, names, and codes using patterns,
-then replace them.
+But XML records also contain **free-text narrative sections** — doctors' notes written in plain English, sitting inside `<text>` blocks. Those sections need the same AI treatment as Approach 1.
+
+So the XML pipeline runs two passes:
+
+```
+XML document in
+      │
+      ├── PASS 1 ── Structural rules ──────────────────────────────────────────┐
+      │             Goes directly to known tag locations:                       │
+      │             birthTime → age                                             │
+      │             postalCode → 970XX                                          │
+      │             patient name tags → PT-00001                                │
+      │             SSN id tag → [SSN]                                          │
+      │             telecom phone → [PHONE]                                     │
+      │             effectiveTime service dates → August 2012                   │
+      │             streetAddressLine → [STREET]                                │
+      │                                                                         │
+      └── PASS 2 ── AI (ZeroShot NER) on every text node ─────────────────────┘
+                    Reads every piece of text in the document —
+                    table cells, narrative notes, comments —
+                    and applies the same five rules as Approach 1
+
+                                        │
+                                        ▼
+                             De-identified XML + Excel audit log
+```
+
+### Why two passes?
+
+| | Pass 1 | Pass 2 |
+|---|---|---|
+| What it handles | Structured fields with predictable locations | Free text anywhere in the document |
+| How it works | Reads the XML tag directly | Runs the AI model |
+| Speed | Very fast | Slower (AI model) |
+| Why it is enough for structured fields | The tag name tells us exactly what the data is — no ambiguity | — |
+| Why AI is still needed | Some PHI appears in narrative notes with no fixed location | AI reads context regardless of where text sits |
+
+### Works on any XML structure
+
+Pass 2 does not know or care about tag names. It walks every single text node in the document and runs the AI on it. This means the pipeline works on **CDA, FHIR, custom XML formats**, or any other XML structure without any changes.
 
 ---
 
-## Why We Kept Doctors' Names
+## Why Doctor Names Are Never Removed
 
-A deliberate design decision: **doctor names are never removed**.
+A deliberate design decision: **doctor names are always kept**.
 
-The AI model reliably tells the difference between a `DOCTOR` label and a `PATIENT`
-label, so in the replacement step the code simply skips any item labelled `DOCTOR`.
+The AI model reliably distinguishes a `DOCTOR` label from a `PATIENT` label. In the replacement step, the code simply skips anything labelled `DOCTOR`.
 
-This matters because care teams reviewing de-identified records still need to know
-which clinician authored a note or performed a procedure.
+Care teams reviewing de-identified records still need to know which clinician authored a note or performed a procedure.
 
 ---
 
@@ -170,34 +175,27 @@ After the pipeline finishes, two files are created:
 
 | File | What it contains |
 |---|---|
-| `file9_deid.xml` (or de-identified text) | The original document with all PHI replaced |
-| `XML_DeID_Results.xlsx` | A log of every single change made — what was found, where it was, what it was replaced with |
+| De-identified document | The original record with all PHI replaced |
+| Excel audit log (`.xlsx`) | Every single change — what was found, where, what it became |
 
 The Excel log is colour-coded:
 - **Orange column** — the original sensitive value
 - **Green column** — what it was replaced with
 
-This makes it easy to review and audit the de-identification without having to
-compare the two documents manually.
+This makes auditing straightforward — no need to compare two documents manually.
 
 ---
 
 ## Summary
 
 ```
-Document in
-    │
-    ├─ Structured XML fields → direct tag rules (fast, exact)
-    │
-    └─ Free text sections ──→ AI model + pattern scanners
-                                        │
-                                        ▼
-                              Custom replacement rules
-                              (patient ID / age / month+year / partial ZIP)
-                                        │
-                                        ▼
-                              De-identified document + Excel audit log
+Plain text                         XML document
+     │                                  │
+     ▼                                  ├── Pass 1: direct tag rules
+AI model + pattern scanners             │   (fast, exact, any XML schema)
+     │                                  │
+     ▼                                  └── Pass 2: AI on all text nodes
+Five replacement rules                              │
+     │                                              ▼
+     └──────────────────────────────► De-identified output + Excel audit log
 ```
-
-The whole process runs automatically — no manual review needed for standard cases.
-The Excel log lets a human spot-check the results at any time.
