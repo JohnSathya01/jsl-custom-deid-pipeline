@@ -7,7 +7,7 @@
 <cda:templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01" />
 <cda:id root="1.3.6.1.4.1.52618.3.1.4" extension="7e8a7842-9b03-47a2-b4c1-ed9e5d7eeef6" assigningAuthorityName="Health Gorilla Inc." />
 <cda:code code="34133-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Summarization of episode note" />
-<cda:title>[ORGANIZATION] Continuity of Care Document</cda:title>
+<cda:title>Health Gorilla Inc. Continuity of Care Document</cda:title>
 <cda:effectiveTime value="July 2022" />
 <cda:confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality Code" displayName="Normal" />
 <cda:languageCode code="en-US" />
@@ -18,9 +18,9 @@
 <cda:addr use="H">
 <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
 <cda:city>[CITY]</cda:city>
-<cda:state>[STATE]</cda:state>
-<cda:postalCode>554XX</cda:postalCode>
-<cda:country>[COUNTRY]</cda:country>
+<cda:state>MN</cda:state>
+<cda:postalCode>[MEDICALRECORD]</cda:postalCode>
+<cda:country>US</cda:country>
 </cda:addr>
 <cda:telecom nullFlavor="NI" />
 <cda:patient>
@@ -46,8 +46,8 @@
 <cda:telecom nullFlavor="NA" />
 <cda:assignedPerson>
 <cda:name>
-<cda:given>Umesh</cda:given>
-<cda:family>Yadav</cda:family>
+<cda:given>PT-21715</cda:given>
+<cda:family>PT-62611</cda:family>
 </cda:name>
 </cda:assignedPerson>
 <cda:representedOrganization>
@@ -57,9 +57,9 @@
 <cda:addr>
 <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
 <cda:city>[CITY]</cda:city>
-<cda:state>[STATE]</cda:state>
-<cda:postalCode>944XX</cda:postalCode>
-<cda:country>[COUNTRY]</cda:country>
+<cda:state>CA</cda:state>
+<cda:postalCode>[MEDICALRECORD]</cda:postalCode>
+<cda:country>US</cda:country>
 </cda:addr>
 </cda:representedOrganization>
 </cda:assignedAuthor>
@@ -72,9 +72,9 @@
 <cda:addr>
 <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
 <cda:city>[CITY]</cda:city>
-<cda:state>[STATE]</cda:state>
-<cda:postalCode>944XX</cda:postalCode>
-<cda:country>[COUNTRY]</cda:country>
+<cda:state>CA</cda:state>
+<cda:postalCode>[MEDICALRECORD]</cda:postalCode>
+<cda:country>US</cda:country>
 </cda:addr>
 </cda:representedCustodianOrganization>
 </cda:assignedCustodian>

@@ -42,8 +42,8 @@
       <cda:addr nullFlavor="NA" />
       <cda:telecom nullFlavor="NA" />
       <cda:assignedAuthoringDevice>
-        <cda:manufacturerModelName>https://github.com/[ORGANIZATION]/[USERNAME]</cda:manufacturerModelName>
-        <cda:softwareName>https://github.com/[ORGANIZATION]/[USERNAME]</cda:softwareName>
+        <cda:manufacturerModelName>https://github.com/[ORGANIZATION]/synthea</cda:manufacturerModelName>
+        <cda:softwareName>https://github.com/[ORGANIZATION]/synthea</cda:softwareName>
       </cda:assignedAuthoringDevice>
       <cda:representedOrganization>
         <cda:id nullFlavor="NA" />
@@ -52,7 +52,7 @@
         <cda:addr>
           <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
           <cda:city>[CITY]</cda:city>
-          <cda:state>[STATE]</cda:state>
+          <cda:state>MA</cda:state>
           <cda:postalCode>015XXXXXXX</cda:postalCode>
         </cda:addr>
       </cda:representedOrganization>
@@ -67,7 +67,7 @@
         <cda:addr>
           <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
           <cda:city>[CITY]</cda:city>
-          <cda:state>[STATE]</cda:state>
+          <cda:state>MA</cda:state>
           <cda:postalCode>015XXXXXXX</cda:postalCode>
         </cda:addr>
       </cda:representedCustodianOrganization>
@@ -98,32 +98,7 @@
           <cda:templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09" />
           <cda:code code="10160-0" displayName="History of medication use" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
           <cda:title>Medications</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Start</cda:th>
-                  <cda:th>Stop</cda:th>
-                  <cda:th>Description</cda:th>
-                  <cda:th>Code</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>2009:29:16-04:00</cda:td>
-                  <cda:td>2010:29:16-04:00</cda:td>
-                  <cda:td ID="medications-desc-1">lisinopril 10 MG Oral Tablet</cda:td>
-                  <cda:td ID="medications-code-1">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2010:29:16-04:00</cda:td>
-                  <cda:td />
-                  <cda:td ID="medications-desc-2">lisinopril 10 MG Oral Tablet</cda:td>
-                  <cda:td ID="medications-code-2">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Start Stop Description Code 2009:29:16-04:00 2010:29:16-04:00 lisinopril 10 MG Oral Tablet http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD] 2010:29:16-04:00 lisinopril 10 MG Oral Tablet http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:text>
           <cda:entry>
             
             <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
@@ -196,32 +171,7 @@
           
           <cda:code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem list" />
           <cda:title>Problems</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Start</cda:th>
-                  <cda:th>Stop</cda:th>
-                  <cda:th>Description</cda:th>
-                  <cda:th>Code</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>1969:29:16-05:00</cda:td>
-                  <cda:td />
-                  <cda:td ID="conditions-desc-1">Otitis media</cda:td>
-                  <cda:td ID="conditions-code-1">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2009:29:16-04:00</cda:td>
-                  <cda:td />
-                  <cda:td ID="conditions-desc-2">Body mass index 30+ - obesity (finding)</cda:td>
-                  <cda:td ID="conditions-code-2">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Start Stop Description Code 1969:29:16-05:00 Otitis media http://[ORGANIZATION]/sct [MEDICALRECORD] 2009:29:16-04:00 Body mass index 30+ - obesity (finding) http://[ORGANIZATION]/sct [MEDICALRECORD]</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:act classCode="ACT" moodCode="EVN">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
@@ -313,38 +263,7 @@
           
           <cda:code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
           <cda:title>Encounters</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Start</cda:th>
-                  <cda:th>Stop</cda:th>
-                  <cda:th>Description</cda:th>
-                  <cda:th>Code</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>1969:29:16-05:00</cda:td>
-                  <cda:td>1969:44:16-05:00</cda:td>
-                  <cda:td ID="encounters-desc-1">Encounter for symptom</cda:td>
-                  <cda:td ID="encounters-code-1">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2009:29:16-04:00</cda:td>
-                  <cda:td>2009:44:16-04:00</cda:td>
-                  <cda:td ID="encounters-desc-2">Encounter for check up (procedure)</cda:td>
-                  <cda:td ID="encounters-code-2">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2010:29:16-04:00</cda:td>
-                  <cda:td>2010:44:16-04:00</cda:td>
-                  <cda:td ID="encounters-desc-3">Encounter for check up (procedure)</cda:td>
-                  <cda:td ID="encounters-code-3">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Start Stop Description Code 1969:29:16-05:00 1969:44:16-05:00 Encounter for symptom http://[ORGANIZATION]/sct [MEDICALRECORD] 2009:29:16-04:00 2009:44:16-04:00 Encounter for check up (procedure) http://[ORGANIZATION]/sct [MEDICALRECORD] 2010:29:16-04:00 2010:44:16-04:00 Encounter for check up (procedure) http://[ORGANIZATION]/sct [MEDICALRECORD]</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:encounter classCode="ENC" moodCode="EVN">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.49" />
@@ -428,71 +347,7 @@
         <cda:section>
           <cda:code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note" />
           <cda:title>Miscellaneous Notes</cda:title>
-          <cda:text>
-            <cda:list styleCode="TOC">
-              <cda:item>
-                <cda:paragraph><cda:br />August 2010
-<cda:br /><cda:br /># Chief Complaint
-<cda:br />No complaints.
-<cda:br /><cda:br /># History of Present Illness
-<cda:br />[USERNAME] is a [AGE] year-old non-hispanic white male.
-<cda:br /><cda:br /># Social History
-<cda:br />Patient is married. Patient is an active smoker and is an alcoholic. Patient identifies as heterosexual.
-<cda:br /><cda:br />Patient comes from a middle socioeconomic background. Patient has a high school education. Patient currently has [ORGANIZATION].
-<cda:br /><cda:br /># Allergies
-<cda:br />No Known Allergies.
-<cda:br /><cda:br /># Medications
-<cda:br />lisinopril 10 mg oral tablet
-<cda:br /><cda:br /># Assessment and Plan
-<cda:br /><cda:br /><cda:br />## Plan
-<cda:br /><cda:br />The patient was prescribed the following medications:
-<cda:br />- lisinopril 10 mg oral tablet
-<cda:br /><cda:br /><cda:br /><cda:br />April 2009
-<cda:br /><cda:br /># Chief Complaint
-<cda:br />No complaints.
-<cda:br /><cda:br /># History of Present Illness
-<cda:br />PT-32109 is a [AGE] year-old non-hispanic white male.
-<cda:br /><cda:br /># Social History
-<cda:br />Patient is married. Patient is an active smoker and is an alcoholic. Patient identifies as heterosexual.
-<cda:br /><cda:br />Patient comes from a middle socioeconomic background. Patient has a high school education. Patient currently has [ORGANIZATION].
-<cda:br /><cda:br /># Allergies
-<cda:br />No Known Allergies.
-<cda:br /><cda:br /># Medications
-<cda:br />No Active Medications.
-<cda:br /><cda:br /># Assessment and Plan
-<cda:br />Patient is presenting with body mass index 30+ - obesity (finding). 
-<cda:br /><cda:br />## Plan
-<cda:br /><cda:br />The patient was prescribed the following medications:
-<cda:br />- lisinopril 10 mg oral tablet
-<cda:br /><cda:br /><cda:br /><cda:br />January 1969
-<cda:br /><cda:br /># Chief Complaint
-<cda:br />No complaints.
-<cda:br /><cda:br /># History of Present Illness
-<cda:br />PT-32109 is a [AGE] year-old non-hispanic white male.
-<cda:br /><cda:br /># Social History
-<cda:br /> Patient has never smoked and is an alcoholic.
-<cda:br />
-<cda:br />Patient comes from a middle socioeconomic background. Patient currently has [ORGANIZATION].
-<cda:br />
-<cda:br /># Allergies
-<cda:br />No Known Allergies.
-<cda:br />
-<cda:br /># Medications
-<cda:br />No Active Medications.
-<cda:br />
-<cda:br /># Assessment and Plan
-<cda:br />Patient is presenting with otitis media. 
-<cda:br />
-<cda:br />## Plan
-<cda:br />
-<cda:br />
-<cda:br />
-<cda:br />
-
-                                            </cda:paragraph>
-              </cda:item>
-            </cda:list>
-          </cda:text>
+          <cda:text>August 2010 # Chief Complaint No complaints. # History of Present Illness PT-32109 is a [AGE] year-old non-hispanic white male. # Social History Patient is married. Patient is an active smoker and is an alcoholic. Patient identifies as heterosexual. Patient comes from a middle socioeconomic background. Patient has a high school education. Patient currently has [ORGANIZATION]. # Allergies No Known Allergies. # Medications lisinopril 10 mg oral tablet # Assessment and Plan ## Plan The patient was prescribed the following medications: - lisinopril 10 mg oral tablet April 2009 # Chief Complaint No complaints. # History of Present Illness PT-32109 is a [AGE] year-old non-hispanic white male. # Social History Patient is married. Patient is an active smoker and is an alcoholic. Patient identifies as heterosexual. Patient comes from a middle socioeconomic background. Patient has a high school education. Patient currently has [ORGANIZATION]. # Allergies No Known Allergies. # Medications No Active Medications. # Assessment and Plan Patient is presenting with body mass index 30+ - obesity (finding). ## Plan The patient was prescribed the following medications: - lisinopril 10 mg oral tablet January 1969 # Chief Complaint No complaints. # History of Present Illness PT-32109 is a [AGE] year-old non-hispanic white male. # Social History Patient has never smoked and is an alcoholic. Patient comes from a middle socioeconomic background. Patient currently has [ORGANIZATION]. # Allergies No Known Allergies. # Medications No Active Medications. # Assessment and Plan Patient is presenting with otitis media. ## Plan</cda:text>
         </cda:section>
       </cda:component>
     </cda:structuredBody>

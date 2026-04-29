@@ -16,7 +16,7 @@
   
   <cda:code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="34133-9" displayName="Summarization of Episode Note" />
   
-  <cda:title>[ORGANIZATION]: Health Summary</cda:title>
+  <cda:title>Community Health and Hospitals: Health Summary</cda:title>
   
   <cda:effectiveTime value="September 2012" />
   
@@ -31,7 +31,7 @@
       <cda:id extension="1" root="2.16.840.1.113883.4.6" />
       
       
-      <cda:id extension="[SSN]" root="2.16.840.1.113883.4.1" />
+      <cda:id extension="[[SSN]]" root="2.16.840.1.113883.4.1" />
       
       <cda:addr use="HP">
         
@@ -39,7 +39,7 @@
         <cda:city>[CITY]</cda:city>
         <cda:state>OR</cda:state>
         <cda:postalCode>970XX</cda:postalCode>
-        <cda:country>[COUNTRY]</cda:country>
+        <cda:country>US</cda:country>
         
       </cda:addr>
       
@@ -67,7 +67,7 @@
               <cda:city>[CITY]</cda:city>
               <cda:state>OR</cda:state>
               <cda:postalCode>970XX</cda:postalCode>
-              <cda:country>[COUNTRY]</cda:country>
+              <cda:country>US</cda:country>
             </cda:addr>
           </cda:place>
         </cda:birthplace>
@@ -87,7 +87,7 @@
           <cda:city>[CITY]</cda:city>
           <cda:state>OR</cda:state>
           <cda:postalCode>972XX</cda:postalCode>
-          <cda:country>[COUNTRY]</cda:country>
+          <cda:country>US</cda:country>
         </cda:addr>
       </cda:providerOrganization>
     </cda:patientRole>
@@ -101,14 +101,14 @@
         <cda:city>[CITY]</cda:city>
         <cda:state>OR</cda:state>
         <cda:postalCode>972XX</cda:postalCode>
-        <cda:country>[COUNTRY]</cda:country>
+        <cda:country>US</cda:country>
       </cda:addr>
       <cda:telecom use="WP" value="tel:[PHONE]" />
       <cda:assignedPerson>
         <cda:name>
           <cda:prefix>Dr</cda:prefix>
           <cda:given>PT-49219</cda:given>
-          <cda:family>Seven</cda:family>
+          <cda:family>[AGE]</cda:family>
         </cda:name>
       </cda:assignedPerson>
     </cda:assignedAuthor>
@@ -121,7 +121,7 @@
         <cda:city>[CITY]</cda:city>
         <cda:state>OR</cda:state>
         <cda:postalCode>972XX</cda:postalCode>
-        <cda:country>[COUNTRY]</cda:country>
+        <cda:country>US</cda:country>
       </cda:addr>
       <cda:telecom use="WP" value="tel:[PHONE]" />
       <cda:assignedPerson>
@@ -140,13 +140,13 @@
         <cda:city>[CITY]</cda:city>
         <cda:state>OR</cda:state>
         <cda:postalCode>972XX</cda:postalCode>
-        <cda:country>[COUNTRY]</cda:country>
+        <cda:country>US</cda:country>
       </cda:addr>
       <cda:telecom use="WP" value="tel:[PHONE]" />
       <cda:assignedPerson>
         <cda:name>
           <cda:given>PT-49219</cda:given>
-          <cda:family>Seven</cda:family>
+          <cda:family>[AGE]</cda:family>
         </cda:name>
       </cda:assignedPerson>
     </cda:assignedEntity>
@@ -174,7 +174,7 @@
           <cda:city>[CITY]</cda:city>
           <cda:state>OR</cda:state>
           <cda:postalCode>972XX</cda:postalCode>
-          <cda:country>[COUNTRY]</cda:country>
+          <cda:country>US</cda:country>
         </cda:addr>
       </cda:representedCustodianOrganization>
     </cda:assignedCustodian>
@@ -202,13 +202,13 @@
         <cda:city>[CITY]</cda:city>
         <cda:state>OR</cda:state>
         <cda:postalCode>972XX</cda:postalCode>
-        <cda:country>[COUNTRY]</cda:country>
+        <cda:country>US</cda:country>
       </cda:addr>
       <cda:telecom use="WP" value="tel:[PHONE]" />
       <cda:assignedPerson>
         <cda:name>
           <cda:given>PT-49219</cda:given>
-          <cda:family>Seven</cda:family>
+          <cda:family>[AGE]</cda:family>
         </cda:name>
       </cda:assignedPerson>
     </cda:assignedEntity>
@@ -223,13 +223,13 @@
         <cda:city>[CITY]</cda:city>
         <cda:state>OR</cda:state>
         <cda:postalCode>972XX</cda:postalCode>
-        <cda:country>[COUNTRY]</cda:country>
+        <cda:country>US</cda:country>
       </cda:addr>
       <cda:telecom use="WP" value="tel:[PHONE]" />
       <cda:assignedPerson>
         <cda:name>
           <cda:given>PT-49219</cda:given>
-          <cda:family>Seven</cda:family>
+          <cda:family>[AGE]</cda:family>
         </cda:name>
       </cda:assignedPerson>
     </cda:assignedEntity>
@@ -243,7 +243,7 @@
         <cda:city>[CITY]</cda:city>
         <cda:state>OR</cda:state>
         <cda:postalCode>970XX</cda:postalCode>
-        <cda:country>[COUNTRY]</cda:country>
+        <cda:country>US</cda:country>
         
       </cda:addr>
       <cda:telecom value="tel:[PHONE]" use="WP" />
@@ -265,7 +265,7 @@
         <cda:city>[CITY]</cda:city>
         <cda:state>OR</cda:state>
         <cda:postalCode>970XX</cda:postalCode>
-        <cda:country>[COUNTRY]</cda:country>
+        <cda:country>US</cda:country>
         
       </cda:addr>
       <cda:telecom value="tel:[PHONE]" use="WP" />
@@ -301,14 +301,14 @@
             <cda:city>[CITY]</cda:city>
             <cda:state>OR</cda:state>
             <cda:postalCode>972XX</cda:postalCode>
-            <cda:country>[COUNTRY]</cda:country>
+            <cda:country>US</cda:country>
           </cda:addr>
           <cda:telecom value="tel:[PHONE]" use="WP" />
           <cda:assignedPerson>
             <cda:name>
               <cda:prefix>Dr.</cda:prefix>
               <cda:given>PT-49219</cda:given>
-              <cda:family>Seven</cda:family>
+              <cda:family>[AGE]</cda:family>
             </cda:name>
           </cda:assignedPerson>
           <cda:representedOrganization>
@@ -320,7 +320,7 @@
               <cda:city>[CITY]</cda:city>
               <cda:state>OR</cda:state>
               <cda:postalCode>972XX</cda:postalCode>
-              <cda:country>[COUNTRY]</cda:country>
+              <cda:country>US</cda:country>
             </cda:addr>
           </cda:representedOrganization>
         </cda:assignedEntity>
@@ -657,27 +657,7 @@
           
           <cda:code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
           <cda:title>ENCOUNTERS</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Encounter</cda:th>
-                  <cda:th>Performer</cda:th>
-                  <cda:th>Location</cda:th>
-                  <cda:th>Date</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="Encounter1" /> Pnuemonia</cda:td>
-                  <cda:td>Dr Henry Seven</cda:td>
-                  <cda:td>[ORGANIZATION]</cda:td>
-                  <cda:td>[DATE]</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Encounter Performer Location Date PT-42521 Dr Henry Seven Community Health and Hospitals [DATE]</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:encounter classCode="ENC" moodCode="EVN">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.49" />
@@ -701,14 +681,14 @@
                   <cda:code code="1160-1" codeSystem="2.16.840.1.113883.6.259" codeSystemName="HealthcareServiceLocation" displayName="Urgent Care Center" />
                   <cda:addr>
                     <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                    <cda:city>[CITY]</cda:city>
+                    <cda:city>Portland</cda:city>
                     <cda:state>OR</cda:state>
                     <cda:postalCode>972XX</cda:postalCode>
-                    <cda:country>[COUNTRY]</cda:country>
+                    <cda:country>US</cda:country>
                   </cda:addr>
                   <cda:telecom nullFlavor="UNK" />
                   <cda:playingEntity classCode="PLC">
-                    <cda:name>[ORGANIZATION]</cda:name>
+                    <cda:name>Community Health and Hospitals</cda:name>
                   </cda:playingEntity>
                 </cda:participantRole>
               </cda:participant>
@@ -761,39 +741,8 @@
           
           <cda:code code="11369-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of immunizations" />
           <cda:title>IMMUNIZATIONS</cda:title>
-          <cda:text>
-            <cda:content ID="immunSect" />
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Vaccine</cda:th>
-                  <cda:th>Date</cda:th>
-                  <cda:th>Status</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="immun1" />Pneumococcal (Pneumovax) Vaccine</cda:td>
-                  <cda:td>2012</cda:td>
-                  <cda:td>Completed</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="immun2" />Influenza virus vaccine, IM</cda:td>
-                  <cda:td>2012</cda:td>
-                  <cda:td>Completed</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="immun4" />Tetanus and diphtheria toxoids,
-										IM</cda:td>
-                  <cda:td>2012</cda:td>
-                  <cda:td>Completed</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Vaccine Date Status Pneumococcal (Pneumovax) Vaccine 2012 Completed Influenza virus vaccine, IM 2012 Completed Tetanus and diphtheria toxoids,
+										IM 2012 Completed</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:substanceAdministration classCode="SBADM" moodCode="EVN" negationInd="false">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.52" />
@@ -816,7 +765,7 @@
                     </cda:code>
                   </cda:manufacturedMaterial>
                   <cda:manufacturerOrganization>
-                    <cda:name>[ORGANIZATION]</cda:name>
+                    <cda:name>Merck Research Laboratories</cda:name>
                   </cda:manufacturerOrganization>
                 </cda:manufacturedProduct>
               </cda:consumable>
@@ -923,57 +872,10 @@
           <cda:templateId root="2.16.840.1.113883.10.20.22.2.1.1" />
           <cda:code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF MEDICATION USE" />
           <cda:title>MEDICATIONS</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Medication</cda:th>
-                  <cda:th>Directions</cda:th>
-                  <cda:th>Start Date</cda:th>
-                  <cda:th>End Date</cda:th>
-                  <cda:th>Status</cda:th>
-                  <cda:th>Indications</cda:th>
-                  <cda:th>Fill Instructions</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="Med2">Ciprofloxacin</cda:content>
-                  </cda:td>
-                  <cda:td>500mg oral tabs, 1 tab by mouth every 12 hours for 3
-										days</cda:td>
-                  <cda:td>[DATE]</cda:td>
-                  <cda:td>[DATE]</cda:td>
-                  <cda:td>Completed</cda:td>
-                  <cda:td>Pneumonia (233604007 SNOMED CT)</cda:td>
-                  <cda:td>
-                    <cda:content ID="Fill">Generic Substitition Allowed</cda:content>
-                  </cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="Med1">Albuterol 0.09 MG/ACTUAT inhalant
-											solution</cda:content>
-                  </cda:td>
-                  <cda:td>0.09 MG/ACTUAT inhalant solution, 2 puffs every 6 hours as
-										needed for shortness of breath, as needed for wheezing</cda:td>
-                  <cda:td>[DATE]</cda:td>
-                  <cda:td>[DATE]</cda:td>
-                  <cda:td>Completed</cda:td>
-                  <cda:td>Asthma ([MEDICALRECORD] SNOMED CT)</cda:td>
-                  <cda:td>
-                    <cda:content ID="Filllns" />
-                    <cda:list listType="unordered">
-                      <cda:item>Generic Substitition Allowed</cda:item>
-                      <cda:item>Label In Spanish</cda:item>
-                      <cda:item>Repeat: 1</cda:item>
-                    </cda:list>
-                  </cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Medication Directions Start Date End Date Status Indications Fill Instructions Ciprofloxacin 500mg oral tabs, 1 tab by mouth every 12 hours for 3
+										days [DATE] [DATE] Completed Pneumonia ([MEDICALRECORD] SNOMED CT) Generic Substitition Allowed Albuterol 0.09 MG/ACTUAT inhalant
+											solution 0.09 MG/ACTUAT inhalant solution, 2 puffs every 6 hours as
+										needed for shortness of breath, as needed for wheezing [DATE] [DATE] Completed Asthma ([MEDICALRECORD] SNOMED CT) Generic Substitition Allowed Label In Spanish Repeat: 1</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.16" />
@@ -1015,7 +917,7 @@
                   <cda:telecom nullFlavor="UNK" />
                   <cda:representedOrganization>
                     <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
-                    <cda:name>[ORGANIZATION]</cda:name>
+                    <cda:name>Community Health and Hospitals</cda:name>
                     <cda:telecom nullFlavor="UNK" />
                     <cda:addr nullFlavor="UNK" />
                   </cda:representedOrganization>
@@ -1078,7 +980,7 @@
                   <cda:telecom nullFlavor="UNK" />
                   <cda:representedOrganization>
                     <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
-                    <cda:name>[ORGANIZATION]</cda:name>
+                    <cda:name>Community Health and Hospitals</cda:name>
                     <cda:telecom nullFlavor="UNK" />
                     <cda:addr nullFlavor="UNK" />
                   </cda:representedOrganization>
@@ -1139,10 +1041,10 @@
                       <cda:id extension="2981823" root="2.16.840.1.113883.19.5.9999.456" />
                       <cda:addr>
                         <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                        <cda:city>[CITY]</cda:city>
+                        <cda:city>Portland</cda:city>
                         <cda:state>OR</cda:state>
                         <cda:postalCode>972XX</cda:postalCode>
-                        <cda:country>[COUNTRY]</cda:country>
+                        <cda:country>US</cda:country>
                       </cda:addr>
                     </cda:assignedEntity>
                   </cda:performer>
@@ -1155,7 +1057,7 @@
                       <cda:assignedPerson>
                         <cda:name>
                           <cda:prefix>Dr.</cda:prefix>
-                          <cda:given>PT-49219</cda:given>
+                          <cda:given>Henry</cda:given>
                           <cda:family>Seven</cda:family>
                         </cda:name>
                       </cda:assignedPerson>
@@ -1202,22 +1104,22 @@
                       <cda:id root="2.16.840.1.113883.19.5.9999.456" extension="2981823" />
                       <cda:addr>
                         <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                        <cda:city>[CITY]</cda:city>
+                        <cda:city>Portland</cda:city>
                         <cda:state>OR</cda:state>
                         <cda:postalCode>972XX</cda:postalCode>
-                        <cda:country>[COUNTRY]</cda:country>
+                        <cda:country>US</cda:country>
                       </cda:addr>
                       <cda:telecom nullFlavor="UNK" />
                       <cda:assignedPerson>
                         <cda:name>
                           <cda:prefix>Dr.</cda:prefix>
-                          <cda:given>PT-49219</cda:given>
+                          <cda:given>Henry</cda:given>
                           <cda:family>Seven</cda:family>
                         </cda:name>
                       </cda:assignedPerson>
                       <cda:representedOrganization>
                         <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
-                        <cda:name>[ORGANIZATION]</cda:name>
+                        <cda:name>Community Health and Hospitals</cda:name>
                         <cda:telecom nullFlavor="UNK" />
                         <cda:addr nullFlavor="UNK" />
                       </cda:representedOrganization>
@@ -1243,25 +1145,10 @@
           
           <cda:code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Treatment plan" />
           <cda:title>CARE PLAN</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Planned Activity</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td> Goal: Avoidance of exacerbations and hospitalizations
-										through effective disease management. <cda:br /> Instructions:
-										<cda:br /> Asthma education provided at discharge.<cda:br /> Sputum
-										Culture on [DATE]. <cda:br /> Follow-up with Dr. George
-										Potomac on [DATE]. <cda:br /> Chest X-Ray on [DATE].
-									</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Planned Activity Goal: Avoidance of exacerbations and hospitalizations
+										through effective disease management. Instructions: Asthma education provided at discharge. Sputum
+										Culture on [DATE]. Follow-up with Dr. George
+										Potomac on [DATE]. Chest X-Ray on [DATE].</cda:text>
           <cda:entry>
             <cda:encounter moodCode="INT" classCode="ENC">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.40" />
@@ -1269,7 +1156,7 @@
               <cda:id root="9a6d1bac-17d3-4195-89a4-1121bc809b4d" extension="5000" />
               <cda:code code="99241" displayName="Office consultation - 15 minutes" codeSystemName="CPT" codeSystem="2.16.840.1.113883.6.12" />
               <cda:effectiveTime>
-                <cda:center value="20120820" />
+                <cda:center value="[DATE]" />
               </cda:effectiveTime>
               <cda:entryRelationship typeCode="SUBJ" inversionInd="true">
                 <cda:act classCode="ACT" moodCode="INT">
@@ -1290,7 +1177,7 @@
               <cda:code code="168731009" codeSystem="2.16.840.1.113883.6.96" displayName="Chest X-Ray" codeSystemName="SNOMED-CT" />
               <cda:statusCode code="new" />
               <cda:effectiveTime>
-                <cda:center value="20120826" />
+                <cda:center value="[DATE]" />
               </cda:effectiveTime>
             </cda:procedure>
           </cda:entry>
@@ -1302,7 +1189,7 @@
               <cda:code code="624-7" codeSystem="2.16.840.1.113883.6.1" displayName="Sputum Culture" />
               <cda:statusCode code="new" />
               <cda:effectiveTime>
-                <cda:center value="20120820" />
+                <cda:center value="[DATE]" />
               </cda:effectiveTime>
             </cda:observation>
           </cda:entry>
@@ -1316,52 +1203,11 @@
           
           <cda:code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="10183-2" displayName=" HOSPITAL DISCHARGE MEDICATIONS " />
           <cda:title>HOSPITAL DISCHARGE MEDICATIONS</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Medication</cda:th>
-                  <cda:th>Directions</cda:th>
-                  <cda:th>Start Date</cda:th>
-                  <cda:th>Status</cda:th>
-                  <cda:th>Indications</cda:th>
-                  <cda:th>Fill Instructions</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="DM2">Ciprofloxacin</cda:content>
-                  </cda:td>
-                  <cda:td>500mg oral tabs, 1 tab by mouth every 12 hours for 3
-										days</cda:td>
-                  <cda:td>[DATE]</cda:td>
-                  <cda:td>Active</cda:td>
-                  <cda:td>Pneumonia (233604007 SNOMED CT)</cda:td>
-                  <cda:td>
-                    <cda:content ID="Fill_DM">Generic Substitition Allowed</cda:content>
-                  </cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="DM">120 ACTUAT Fluticasone propionate 0.11
-											MG/ACTUAT Metered Dose Inhaler</cda:content>
-                  </cda:td>
-                  <cda:td>
-                    <cda:content ID="DM1">0.11 MG/ACTUAT Metered Dose Once
-											Daily</cda:content>
-                  </cda:td>
-                  <cda:td>[DATE]</cda:td>
-                  <cda:td>Active</cda:td>
-                  <cda:td>Asthma ([MEDICALRECORD] SNOMED CT) -- Wheezing</cda:td>
-                  <cda:td>
-                    <cda:content ID="FillIns_DM">Generic Substitition
-											Allowed</cda:content>
-                  </cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Medication Directions Start Date Status Indications Fill Instructions Ciprofloxacin 500mg oral tabs, 1 tab by mouth every 12 hours for 3
+										days [DATE] Active Pneumonia ([MEDICALRECORD] SNOMED CT) Generic Substitition Allowed 120 ACTUAT Fluticasone propionate 0.11
+											MG/ACTUAT Metered Dose Inhaler 0.11 MG/ACTUAT Metered Dose Once
+											Daily [DATE] Active Asthma ([MEDICALRECORD] SNOMED CT) -- Wheezing Generic Substitition
+											Allowed</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:act classCode="ACT" moodCode="EVN">
               
@@ -1414,7 +1260,7 @@
                       <cda:telecom nullFlavor="UNK" />
                       <cda:representedOrganization>
                         <cda:id root="2.16.840.1.113883.19.5.9999.1393" />
-                        <cda:name>[ORGANIZATION]</cda:name>
+                        <cda:name>Community Health and Hospitals</cda:name>
                         <cda:telecom nullFlavor="UNK" />
                         <cda:addr nullFlavor="UNK" />
                       </cda:representedOrganization>
@@ -1506,7 +1352,7 @@
                       <cda:telecom nullFlavor="UNK" />
                       <cda:representedOrganization>
                         <cda:id root="2.16.840.1.113883.19.5.9999.1395" />
-                        <cda:name>[ORGANIZATION]</cda:name>
+                        <cda:name>Community Health and Hospitals</cda:name>
                         <cda:telecom nullFlavor="UNK" />
                         <cda:addr nullFlavor="UNK" />
                       </cda:representedOrganization>
@@ -1567,10 +1413,10 @@
                           <cda:id extension="2981825" root="2.16.840.1.113883.19.5.9999.456" />
                           <cda:addr>
                             <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                            <cda:city>[CITY]</cda:city>
+                            <cda:city>Portland</cda:city>
                             <cda:state>OR</cda:state>
                             <cda:postalCode>972XX</cda:postalCode>
-                            <cda:country>[COUNTRY]</cda:country>
+                            <cda:country>US</cda:country>
                           </cda:addr>
                         </cda:assignedEntity>
                       </cda:performer>
@@ -1583,7 +1429,7 @@
                           <cda:assignedPerson>
                             <cda:name>
                               <cda:prefix>Dr.</cda:prefix>
-                              <cda:given>PT-49219</cda:given>
+                              <cda:given>Henry</cda:given>
                               <cda:family>Seven</cda:family>
                             </cda:name>
                           </cda:assignedPerson>
@@ -1633,22 +1479,22 @@
                           <cda:id root="2.16.840.1.113883.19.5.9999.456" extension="2981825" />
                           <cda:addr>
                             <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                            <cda:city>[CITY]</cda:city>
+                            <cda:city>Portland</cda:city>
                             <cda:state>OR</cda:state>
                             <cda:postalCode>972XX</cda:postalCode>
-                            <cda:country>[COUNTRY]</cda:country>
+                            <cda:country>US</cda:country>
                           </cda:addr>
                           <cda:telecom nullFlavor="UNK" />
                           <cda:assignedPerson>
                             <cda:name>
                               <cda:prefix>Dr.</cda:prefix>
-                              <cda:given>PT-49219</cda:given>
+                              <cda:given>Henry</cda:given>
                               <cda:family>Seven</cda:family>
                             </cda:name>
                           </cda:assignedPerson>
                           <cda:representedOrganization>
                             <cda:id root="2.16.840.1.113883.19.5.9999.1395" />
-                            <cda:name>[ORGANIZATION]</cda:name>
+                            <cda:name>Community Health and Hospitals</cda:name>
                             <cda:telecom nullFlavor="UNK" />
                             <cda:addr nullFlavor="UNK" />
                           </cda:representedOrganization>
@@ -1690,19 +1536,8 @@
           <cda:templateId root="2.16.840.1.113883.10.20.22.2.5.1" />
           <cda:code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST" />
           <cda:title>PROBLEMS</cda:title>
-          <cda:text>
-            <cda:content ID="problems" />
-            <cda:list listType="ordered">
-              <cda:item>
-                <cda:content ID="problem1">Pneumonia (age at onset - [AGE]): Status -
-									Resolved <cda:br /> Health status: Symptom Free</cda:content>
-              </cda:item>
-              <cda:item>
-                <cda:content ID="problem2">Asthma (age at onset - [AGE]): Status - Active
-									<cda:br /> Health status: Symptom Free</cda:content>
-              </cda:item>
-            </cda:list>
-          </cda:text>
+          <cda:text>Pneumonia (age at onset - [AGE]): Status -
+									Resolved Health status: Symptom Free Asthma (age at onset - [AGE]): Status - Active Health status: Symptom Free</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:act classCode="ACT" moodCode="EVN">
               
@@ -1823,30 +1658,7 @@
           
           <cda:code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HISTORY OF PROCEDURES" />
           <cda:title>PROCEDURES</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Procedure</cda:th>
-                  <cda:th>Date</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="Proc1">Oxygen administration by mask</cda:content>
-                  </cda:td>
-                  <cda:td>August 2012</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="Proc2">Chest X-Ray</cda:content>
-                  </cda:td>
-                  <cda:td>August 2012</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Procedure Date Oxygen administration by mask August 2012 Chest X-Ray August 2012</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:procedure classCode="PROC" moodCode="EVN">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.14" />
@@ -1864,15 +1676,15 @@
                   <cda:id root="2.16.840.1.113883.19.5" extension="1234" />
                   <cda:addr>
                     <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                    <cda:city>[CITY]</cda:city>
+                    <cda:city>Portland</cda:city>
                     <cda:state>OR</cda:state>
                     <cda:postalCode>972XX</cda:postalCode>
-                    <cda:country>[COUNTRY]</cda:country>
+                    <cda:country>US</cda:country>
                   </cda:addr>
                   <cda:telecom use="WP" value="(555)555-555-1234" />
                   <cda:representedOrganization>
                     <cda:id root="2.16.840.1.113883.19.5" />
-                    <cda:name>[ORGANIZATION]</cda:name>
+                    <cda:name>Community Health and Hospitals</cda:name>
                     <cda:telecom nullFlavor="UNK" />
                     <cda:addr nullFlavor="UNK" />
                   </cda:representedOrganization>
@@ -1885,14 +1697,14 @@
                   <cda:code code="1160-1" codeSystem="2.16.840.1.113883.6.259" codeSystemName="HealthcareServiceLocation" displayName="Urgent Care Center" />
                   <cda:addr>
                     <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                    <cda:city>[CITY]</cda:city>
+                    <cda:city>Portland</cda:city>
                     <cda:state>OR</cda:state>
                     <cda:postalCode>972XX</cda:postalCode>
-                    <cda:country>[COUNTRY]</cda:country>
+                    <cda:country>US</cda:country>
                   </cda:addr>
                   <cda:telecom nullFlavor="UNK" />
                   <cda:playingEntity classCode="PLC">
-                    <cda:name>[ORGANIZATION]</cda:name>
+                    <cda:name>Community Health and Hospitals</cda:name>
                   </cda:playingEntity>
                 </cda:participantRole>
               </cda:participant>
@@ -1918,15 +1730,15 @@
                   <cda:id root="2.16.840.1.113883.19.5" extension="1234" />
                   <cda:addr>
                     <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                    <cda:city>[CITY]</cda:city>
+                    <cda:city>Portland</cda:city>
                     <cda:state>OR</cda:state>
                     <cda:postalCode>972XX</cda:postalCode>
-                    <cda:country>[COUNTRY]</cda:country>
+                    <cda:country>US</cda:country>
                   </cda:addr>
                   <cda:telecom use="WP" value="(555)555-555-1234" />
                   <cda:representedOrganization>
                     <cda:id root="2.16.840.1.113883.19.5" />
-                    <cda:name>[ORGANIZATION]</cda:name>
+                    <cda:name>Community Health and Hospitals</cda:name>
                     <cda:telecom nullFlavor="UNK" />
                     <cda:addr nullFlavor="UNK" />
                   </cda:representedOrganization>
@@ -1939,14 +1751,14 @@
                   <cda:code code="1160-1" codeSystem="2.16.840.1.113883.6.259" codeSystemName="HealthcareServiceLocation" displayName="Urgent Care Center" />
                   <cda:addr>
                     <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
-                    <cda:city>[CITY]</cda:city>
+                    <cda:city>Portland</cda:city>
                     <cda:state>OR</cda:state>
                     <cda:postalCode>972XX</cda:postalCode>
-                    <cda:country>[COUNTRY]</cda:country>
+                    <cda:country>US</cda:country>
                   </cda:addr>
                   <cda:telecom nullFlavor="UNK" />
                   <cda:playingEntity classCode="PLC">
-                    <cda:name>[ORGANIZATION]</cda:name>
+                    <cda:name>Community Health and Hospitals</cda:name>
                   </cda:playingEntity>
                 </cda:participantRole>
               </cda:participant>
@@ -2055,38 +1867,7 @@
           
           <cda:code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="RESULTS" />
           <cda:title>RESULTS</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th colspan="2">LABORATORY INFORMATION</cda:th>
-                </cda:tr>
-                <cda:tr>
-                  <cda:th colspan="2">Blood chemistry</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="result1">HGB (12-16 g/dl)</cda:content>
-                  </cda:td>
-                  <cda:td>10.2 on August 2012</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="result2">WBC (4.3-10.8 10+3/ul)</cda:content>
-                  </cda:td>
-                  <cda:td>12.3 -- HIGH on August 2012</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="result3">PLT (150-350 x 10+3/ul)</cda:content>
-                  </cda:td>
-                  <cda:td>123 -- LOW on August 2012</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>LABORATORY INFORMATION Blood chemistry HGB (12-16 g/dl) 10.2 on August 2012 WBC (4.3-10.8 10+3/ul) 12.3 -- HIGH on August 2012 PLT (150-350 x 10+3/ul) 123 -- LOW on August 2012</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:organizer classCode="BATTERY" moodCode="EVN">
               
@@ -2178,25 +1959,7 @@
           
           <cda:code code="29762-2" codeSystem="2.16.840.1.113883.6.1" displayName="Social History" />
           <cda:title>SOCIAL HISTORY</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Social History Element</cda:th>
-                  <cda:th>Description</cda:th>
-                  <cda:th>Effective Dates</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>
-                    <cda:content ID="soc1" /> smoking</cda:td>
-                  <cda:td>Former Smoker - Smoked 1 pack per day from 2005 to 2011</cda:td>
-                  <cda:td>May 2005 to February 2011</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Social History Element Description Effective Dates smoking Former Smoker - Smoked 1 pack per day from 2005 to 2011 May 2005 to February 2011</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:observation classCode="OBS" moodCode="EVN">
               
@@ -2223,36 +1986,7 @@
           <cda:templateId root="2.16.840.1.113883.10.20.22.2.4.1" />
           <cda:code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="VITAL SIGNS" />
           <cda:title>VITAL SIGNS</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th align="left">Date / Time: </cda:th>
-                  <cda:th>August 2012</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:th align="left">Height</cda:th>
-                  <cda:td>
-                    <cda:content ID="vit2">69 inches</cda:content>
-                  </cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:th align="left">Weight</cda:th>
-                  <cda:td>
-                    <cda:content ID="vit4">194 lbs</cda:content>
-                  </cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:th align="left">Blood Pressure</cda:th>
-                  <cda:td>
-                    <cda:content ID="vit6">145/88 mmHg</cda:content>
-                  </cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Date / Time: August 2012 Height 69 inches Weight 194 lbs Blood Pressure 145/88 mmHg</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:organizer classCode="CLUSTER" moodCode="EVN">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.26" />
@@ -2335,24 +2069,16 @@
           <cda:templateId root="2.16.840.1.113883.10.20.22.2.41" />
           <cda:code code="8653-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="HOSPITAL DISCHARGE INSTRUCTIONS" />
           <cda:title>HOSPITAL DISCHARGE INSTRUCTIONS</cda:title>
-          <cda:text>
-            <cda:content> Ms. PT-36671, you have been seen by Dr. Henry Seven at [ORGANIZATION] from [DATE] until August 2012. You are
+          <cda:text>Ms. PT-36671, you have been seen by Dr. Henry Seven at [ORGANIZATION] from [DATE] until August 2012. You are
 							currently being discharged from [ORGANIZATION]. Dr. Seven has
 							provided the following instructions to you at this time; should you have
 							any questions please contact a member of your healthcare team prior to
 							discharge. If you have left the hospital and have questions, please
-							contact Dr. Seven at [PHONE]. Instructions: </cda:content>
-            <cda:list listType="ordered">
-              <cda:item>Take all medications as prescribed.</cda:item>
-              <cda:item>Resume normal activity and previous diet as tolerated</cda:item>
-              <cda:item>Please monitor your peak flows. If your peak flows drop to 50% of
+							contact Dr. Seven at [PHONE]. Instructions: Take all medications as prescribed. Resume normal activity and previous diet as tolerated Please monitor your peak flows. If your peak flows drop to 50% of
 								normal, notify your primary care provider or return to the Emergency
-								Room.</cda:item>
-              <cda:item>If you experience any of the following symptoms, notify your
-								primary care provider or return to the Emergency Room: <cda:list listType="ordered"><cda:item>Shortness of Breath</cda:item><cda:item>Dizziness or Light-headedness</cda:item><cda:item>Fever, chills, or diffuse body aches</cda:item><cda:item>Pain or redness at the site of any previous intravenous
-										catheter</cda:item><cda:item>Any other unusual problem</cda:item></cda:list></cda:item>
-            </cda:list>
-          </cda:text>
+								Room. If you experience any of the following symptoms, notify your
+								primary care provider or return to the Emergency Room: Shortness of Breath Dizziness or Light-headedness Fever, chills, or diffuse body aches Pain or redness at the site of any previous intravenous
+										catheter Any other unusual problem</cda:text>
         </cda:section>
       </cda:component>
     </cda:structuredBody>

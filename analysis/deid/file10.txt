@@ -43,8 +43,8 @@
       <cda:addr nullFlavor="NA" />
       <cda:telecom nullFlavor="NA" />
       <cda:assignedAuthoringDevice>
-        <cda:manufacturerModelName>https://github.com/[ORGANIZATION]/[USERNAME]</cda:manufacturerModelName>
-        <cda:softwareName>https://github.com/[ORGANIZATION]/[USERNAME]</cda:softwareName>
+        <cda:manufacturerModelName>https://github.com/[ORGANIZATION]/synthea</cda:manufacturerModelName>
+        <cda:softwareName>https://github.com/[ORGANIZATION]/synthea</cda:softwareName>
       </cda:assignedAuthoringDevice>
       <cda:representedOrganization>
         <cda:id nullFlavor="NA" />
@@ -53,7 +53,7 @@
         <cda:addr>
           <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
           <cda:city>[CITY]</cda:city>
-          <cda:state>[STATE]</cda:state>
+          <cda:state>MA</cda:state>
           <cda:postalCode>024XXXXXXX</cda:postalCode>
         </cda:addr>
       </cda:representedOrganization>
@@ -68,7 +68,7 @@
         <cda:addr>
           <cda:streetAddressLine>[STREET]</cda:streetAddressLine>
           <cda:city>[CITY]</cda:city>
-          <cda:state>[STATE]</cda:state>
+          <cda:state>MA</cda:state>
           <cda:postalCode>024XXXXXXX</cda:postalCode>
         </cda:addr>
       </cda:representedCustodianOrganization>
@@ -90,26 +90,7 @@
           <cda:templateId root="2.16.840.1.113883.10.20.22.2.22" extension="2015-08-01" />
           <cda:code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
           <cda:title>Encounters</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Start</cda:th>
-                  <cda:th>Stop</cda:th>
-                  <cda:th>Description</cda:th>
-                  <cda:th>Code</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>2020:46:45-05:00</cda:td>
-                  <cda:td>2020:28:45-04:00</cda:td>
-                  <cda:td ID="encounters-desc-1">Hospital admission for isolation (procedure)</cda:td>
-                  <cda:td ID="encounters-code-1">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Start Stop Description Code 2020:46:45-05:00 2020:28:45-04:00 Hospital admission for isolation (procedure) http://snomed.info/sct [MEDICALRECORD]</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:encounter classCode="ENC" moodCode="EVN">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.49" />
@@ -146,38 +127,7 @@
           <cda:templateId root="2.16.840.1.113883.10.20.22.2.1.1" extension="2014-06-09" />
           <cda:code code="10160-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of medication use" />
           <cda:title>Medications</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Start</cda:th>
-                  <cda:th>Stop</cda:th>
-                  <cda:th>Description</cda:th>
-                  <cda:th>Code</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>2020:46:45-05:00</cda:td>
-                  <cda:td />
-                  <cda:td ID="medications-desc-1">0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe</cda:td>
-                  <cda:td ID="medications-code-1">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2020:46:45-05:00</cda:td>
-                  <cda:td />
-                  <cda:td ID="medications-desc-2">Acetaminophen 500 MG Oral Tablet</cda:td>
-                  <cda:td ID="medications-code-2">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2020:46:45-05:00</cda:td>
-                  <cda:td />
-                  <cda:td ID="medications-desc-3">chloroquine phosphate 500 MG Oral Tablet</cda:td>
-                  <cda:td ID="medications-code-3">http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm 1116758</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Start Stop Description Code 2020:46:45-05:00 0.4 ML Enoxaparin sodium 100 MG/ML Prefilled Syringe http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD] 2020:46:45-05:00 Acetaminophen 500 MG Oral Tablet http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD] 2020:46:45-05:00 chloroquine phosphate 500 MG Oral Tablet http://www.nlm.[ORGANIZATION].gov/research/umls/rxnorm [MEDICALRECORD]</cda:text>
           <cda:entry>
             
             <cda:substanceAdministration classCode="SBADM" moodCode="EVN">
@@ -298,44 +248,7 @@
           <cda:templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01" />
           <cda:code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Problem List" />
           <cda:title>Problems</cda:title>
-          <cda:text>
-            <cda:table border="1" width="100%">
-              <cda:thead>
-                <cda:tr>
-                  <cda:th>Start</cda:th>
-                  <cda:th>Stop</cda:th>
-                  <cda:th>Description</cda:th>
-                  <cda:th>Code</cda:th>
-                </cda:tr>
-              </cda:thead>
-              <cda:tbody>
-                <cda:tr>
-                  <cda:td>2020:46:45-05:00</cda:td>
-                  <cda:td>2020:46:45-04:00</cda:td>
-                  <cda:td ID="conditions-desc-1">Pneumonia (disorder)</cda:td>
-                  <cda:td ID="conditions-code-1">http://snomed.info/sct 233604007</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2020:46:45-05:00</cda:td>
-                  <cda:td />
-                  <cda:td ID="conditions-desc-2">Hypoxemia (disorder)</cda:td>
-                  <cda:td ID="conditions-code-2">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2020:46:45-05:00</cda:td>
-                  <cda:td>2020:46:45-04:00</cda:td>
-                  <cda:td ID="conditions-desc-3">Respiratory distress (finding)</cda:td>
-                  <cda:td ID="conditions-code-3">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-                <cda:tr>
-                  <cda:td>2020:46:45-05:00</cda:td>
-                  <cda:td>2020:46:45-04:00</cda:td>
-                  <cda:td ID="conditions-desc-4">Sepsis caused by virus (disorder)</cda:td>
-                  <cda:td ID="conditions-code-4">http://snomed.info/sct [MEDICALRECORD]</cda:td>
-                </cda:tr>
-              </cda:tbody>
-            </cda:table>
-          </cda:text>
+          <cda:text>Start Stop Description Code 2020:46:45-05:00 2020:46:45-04:00 Pneumonia (disorder) http://[ORGANIZATION]/sct [MEDICALRECORD] 2020:46:45-05:00 Hypoxemia (disorder) http://[ORGANIZATION]/sct [MEDICALRECORD] 2020:46:45-05:00 2020:46:45-04:00 Respiratory distress (finding) http://[ORGANIZATION]/sct [MEDICALRECORD] 2020:46:45-05:00 2020:46:45-04:00 Sepsis caused by virus (disorder) http://[ORGANIZATION]/sct [MEDICALRECORD]</cda:text>
           <cda:entry typeCode="DRIV">
             <cda:act classCode="ACT" moodCode="EVN">
               <cda:templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
@@ -525,14 +438,7 @@
         <cda:section>
           <cda:code code="34109-9" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Note" />
           <cda:title>Miscellaneous Notes</cda:title>
-          <cda:text>
-            <cda:list styleCode="TOC">
-              <cda:item>
-                <cda:paragraph><cda:br />March 2020<cda:br /><cda:br /><cda:br /> Medications<cda:br />No Active Medications.<cda:br /><cda:br /><cda:br /> Plan<cda:br /><cda:br />The following procedures were conducted:<cda:br />- plain chest x-ray (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />- oxygen administration by mask (procedure)<cda:br />- placing subject in prone position (procedure)<cda:br />The patient was prescribed the following medications:<cda:br />- 0.4 ml enoxaparin sodium 100 mg/ml prefilled syringe<cda:br />- acetaminophen 500 mg oral tablet<cda:br />- chloroquine phosphate 500 mg oral tablet<cda:br /><cda:br /><cda:br /><cda:br /><cda:br />
-                                                                </cda:paragraph>
-              </cda:item>
-            </cda:list>
-          </cda:text>
+          <cda:text>March 2020 Medications No Active Medications. Plan The following procedures were conducted: - plain chest x-ray (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) - oxygen administration by mask (procedure) - placing subject in prone position (procedure) The patient was prescribed the following medications: - 0.4 ml enoxaparin sodium 100 mg/ml prefilled syringe - acetaminophen 500 mg oral tablet - chloroquine phosphate 500 mg oral tablet</cda:text>
         </cda:section>
       </cda:component>
     </cda:structuredBody>
