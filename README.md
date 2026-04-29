@@ -267,4 +267,5 @@ Update the `JAVA_HOME` line in the setup cell of each notebook if not on macOS.
 ## Documentation
 
 - [HOW_IT_WORKS.md](docs/HOW_IT_WORKS.md) — Plain-language explanation covering both pipelines (no coding knowledge needed)
+- [INPUT_FILE_FORMATS.md](docs/INPUT_FILE_FORMATS.md) — Plain-language guide to the XML file formats (CDA, CCD, what the three document groups are)
 - [PIPELINE_DEVELOPMENT.md](docs/PIPELINE_DEVELOPMENT.md) — Technical architecture, all pitfalls encountered, and implementation details for both pipelines
